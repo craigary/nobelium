@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("/fonts/Inter-roman.var.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("/fonts/Inter-italic.var.woff2") format("woff2");
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.sticky-nav {
+  position: sticky;
+  z-index: 10;
+  top: -1px;
+  backdrop-filter: saturate(180%) blur(20px);
+  /* transition: background-color 0.1 ease-in-out; */
+  transition: all 1s cubic-bezier(.4,0,0,1)
+}
+
+.sticky-nav-full {
+  /* max-width: 100%; */
+}
+
+.header-name {
+  display: none;
+  opacity: 0;
+  overflow: hidden;
+  /* transform: translateY(-3rem);
+  transition: all .2s cubic-bezier(.4,0,0,1) */
+}
+
+.sticky-nav-full .header-name {
+  /* transform: translateY(0); */
+  /* opacity: 0; */
+  /* display: none */
+}
+.notion {
+  @apply text-gray-700
+}
+.notion p {
+  @apply leading-7
+}
+
+.notion-h1,
+.notion-h2,
+.notion-h3,
+.notion-blank,
+.notion-text,
+.notion-block,
+.notion-toggle {
+  padding: 8px 2px;
+}
+
+@media (min-width: 768px) {
+  .sticky-nav-full {
+    max-width: 100%;
+  }
+  .header-name {
+    display: block;
+    opacity: 0;
+    transform: translateY(-3rem);
+    transition: all .5s cubic-bezier(.4,0,0,1);
+  }
+  .sticky-nav-full .header-name {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+@supports not (backdrop-filter: none) {
+  .sticky-nav {
+    backdrop-filter: none;
+    @apply bg-opacity-100;
+  }
+}
