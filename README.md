@@ -1,34 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nobelium
 
-## Getting Started
+Nobelium 是一个使用 NextJS + Notion 第三方 API 实现的，部署在 Vercel 上的静态博客系统。
 
-First, run the development server:
+演示地址：[https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 这个东西啊，Excited!
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- 部署在 Vercel，配合 NextJS，实现超快的相应速度
+- 使用 NextJS 实现，配合 ISG，更新 Notion 文章无需重新部署
+- 响应式设计，移动端友好
+- 支持搜索，单独筛选页面
+- Tag 标签、RSS feed… 还有更多！
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 部署流程
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Fork 此项目
+- 将[此 Notion 模版](https://www.notion.so/68be9021bca34b8e89f0246f27e608df)在你的工作区制作副本，并确保此页面是公开分享的
+- 修改 `blog.config.js` 文件，定义你的内容
+- 替换 `/public` 下的头像和 Logo
+- 使用 vercel 部署，并定义以下两个环境变量：
+    - `NOTION_API_ENDPOINT`：Notion 第三方 API 地址，可以使用 `https://notion.craigary.net/api`，也可以 [参考此处](https://github.com/splitbee/notion-api-worker) 自行部署，请不要使用 `/` 结尾
+    - `NOTION_PAGE_ID` ：此前你公开分享的 Notion 页面的 ID，通常为你的工作区地址后面的 32 位字符。
 
-## Learn More
+## Roadmap
 
-To learn more about Next.js, take a look at the following resources:
+稍后会更新在 Notion 中。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ]  部署时使用 Preact
+- [ ]  深色模式
+- [ ]  站点地图
+- [ ]  更好的 RSS feed
+- [ ]  SEO 优化
+- [ ]  Open Graph 支持
+- [ ]  Figma 设计文件
+- [ ]  ...
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 特别感谢
 
-## Deploy on Vercel
+[Notion 中文社区](https://notion.so/cnotion)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[Lee Rob](https://leerob.io/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Spencer Woo](https://spencerwoo.com/)
