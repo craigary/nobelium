@@ -77,11 +77,11 @@
   .header-name {
     display: block;
     opacity: 0;
-    transform: translateY(-3rem);
+    /* transform: translateY(-3rem); */
     transition: all .5s cubic-bezier(.4,0,0,1);
   }
   .sticky-nav-full .header-name {
-    transform: translateY(0);
+    /* transform: translateY(0); */
     opacity: 1
   }
 }
