@@ -26,7 +26,7 @@ Nobelium 是一个使用 NextJS + Notion 第三方 API 实现的，部署在 Ver
 
 ## Roadmap
 
-稍后会更新在 Notion 中。
+在此处查看我们的 [Roadmap](https://www.notion.so/craigary/Public-Roadmap-3cfc4d0f0ca642ef8f652673c37add22)
 
 - [ ]  部署时使用 Preact
 - [ ]  深色模式

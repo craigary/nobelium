@@ -4,7 +4,7 @@ import BLOG from '@/blog.config'
 const Pagination = ({ totalPages, page }) => {
   const currentPage = +page
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between font-medium">
       <Link href={ currentPage - 1 === 1 ? `${BLOG.path || '/'}` : `/page/${currentPage - 1}`}>
         <p className={currentPage === 1 ? 'invisible' : 'block'}>
           <a rel="prev">← Prev</a>

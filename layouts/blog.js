@@ -17,7 +17,7 @@ const BlogLayout = ({ children, blocks, frontMatter }) => {
     >
       <article>
         <h1 className="font-sans font-bold text-3xl">{frontMatter.title}</h1>
-        <nav className="flex mt-4 mb-2 items-center text-gray-600">
+        <nav className="flex mt-4 mb-2 items-center text-gray-600 font-medium">
           <div className="flex">
             <a href={BLOG.socialLink} className="flex">
                 <Image
@@ -42,10 +42,15 @@ const BlogLayout = ({ children, blocks, frontMatter }) => {
         </nav>
         {children}
         <NotionRenderer blockMap={blocks}/>
-        <p onClick={() => router.back()} className="mt-2">
-          ← Back
-        </p>
       </article>
+      <div className="flex justify-between font-medium">
+          <p onClick={() => router.back()} className="mt-2">
+            ← Back
+          </p>
+          <p onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="mt-2">
+            ↑ Top
+          </p>
+        </div>
     </Container>
   )
 }
