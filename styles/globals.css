@@ -57,7 +57,7 @@
   @apply text-gray-700
 }
 .notion p {
-  @apply leading-7
+  @apply leading-8
 }
 
 .notion-h1,
@@ -67,7 +67,7 @@
 .notion-text,
 .notion-block,
 .notion-toggle {
-  padding: 8px 2px;
+  padding: 12px 2px;
 }
 
 @media (min-width: 768px) {
