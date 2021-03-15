@@ -1,7 +1,6 @@
 const { NotionAPI } = require('notion-client')
 
 module.exports = async (req, res) => {
-  // console.log(req.query.id)
   const api = new NotionAPI()
   const page = await api.getPage(req.query.id)
   const collectionId = Object.keys(page.collection)[0]
@@ -25,7 +24,6 @@ module.exports = async (req, res) => {
         return properties
       }, {})
     }
-    // console.log(artMeta[tag])
     if (artMeta.properties.tags) {
       artMeta.properties.tags = artMeta.properties.tags.split(',')
     }

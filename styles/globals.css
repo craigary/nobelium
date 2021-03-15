@@ -67,13 +67,17 @@
   padding: 12px 2px;
 }
 
+.notion-viewport {
+  position: unset;
+}
+
 .notion-text,
 .notion p {
   @apply leading-8
 }
 
 .notion-page {
-  @apply px-0 mx-0
+  @apply px-0 mx-0;
 }
 
 @media (min-width: 768px) {

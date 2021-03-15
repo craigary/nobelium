@@ -41,7 +41,7 @@ const BlogLayout = ({ children, recordMap, frontMatter }) => {
           )}
         </nav>
         {children}
-        <NotionRenderer recordMap={recordMap} darkMode={false}/>
+        {recordMap && <NotionRenderer recordMap={recordMap} darkMode={false}/> }
       </article>
       <div className="flex justify-between font-medium">
           <p onClick={() => router.back()} className="mt-2">
