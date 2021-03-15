@@ -21,6 +21,7 @@ export async function getStaticProps ({ params: { slug } }) {
   let posts = await getAllPosts()
   posts = posts.filter(post => post.status === 'Published' && post.type === 'Post')
   const post = posts.find((t) => t.slug === slug)
+  const recordMap = await getPostBlocks(post.id)
   return {
     props: { post, recordMap },
     revalidate: 1
