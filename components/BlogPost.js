@@ -14,7 +14,7 @@ const BlogPost = ({ post }) => {
         <time className="flex-shrink-0 text-gray-600  md:mb-2">{formatDate(post.date, BLOG.lang)}</time>
       </header>
       <main>
-        <p className="hidden md:block text-gray-700 leading-7">{post.summary}</p>
+        <p className="hidden md:block text-gray-700 leading-8">{post.summary}</p>
       </main>
     </article>
   )
