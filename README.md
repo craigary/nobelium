@@ -8,7 +8,7 @@ Nobelium 是一个使用 NextJS + Notion 第三方 API 实现的，部署在 Ver
 
 ## 这个东西啊，Excited!
 
-- 部署在 Vercel，配合 NextJS，实现超快的相应速度
+- 部署在 Vercel，配合 NextJS，实现超快的响应速度
 - 使用 NextJS 实现，配合 ISG，更新 Notion 文章无需重新部署
 - 使用 Tailwind CSS 实现样式，方便二次定制
 - 响应式设计，移动端友好
