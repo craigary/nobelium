@@ -60,10 +60,10 @@ const Header = ({ navBarTitle }) => {
           </Link>
           {navBarTitle
             ? (
-            <p className="ml-2 italic header-name font-medium">{navBarTitle}</p>
+            <p className="ml-2 header-name font-medium">{navBarTitle}</p>
               )
             : (
-            <p className="ml-2 italic header-name font-medium">
+            <p className="ml-2 header-name font-medium">
               {BLOG.title},{' '}
               <span className="font-normal">{BLOG.description}</span>
             </p>

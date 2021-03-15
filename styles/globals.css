@@ -68,7 +68,7 @@
 }
 
 .notion-viewport {
-  position: unset;
+  /* position: unset; */
 }
 
 .notion-text,
