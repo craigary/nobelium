@@ -23,7 +23,7 @@ Nobelium 是一个使用 NextJS + Notion 第三方 API 实现的，部署在 Ver
 - 替换 `/public` 下的头像和 Logo
 - 使用 vercel 部署，并定义以下环境变量：
     - `NOTION_PAGE_ID` ：此前你公开分享的 Notion 页面的 ID，通常为你的工作区地址后面的 32 位字符。
-- That's it, 要不加星关注一下？
+- That's it！要不加星关注一下？
 
 ## Roadmap
 
