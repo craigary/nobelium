@@ -13,7 +13,7 @@
     "notion-client": "^4.3.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-notion-x": "^4.3.3"
+    "react-notion": "^0.9.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.4",

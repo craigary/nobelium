@@ -2,9 +2,9 @@ import BlogLayout from '@/layouts/blog'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import BLOG from '@/blog.config'
 
-const BlogPost = ({ post, recordMap }) => {
+const BlogPost = ({ post, blockMap }) => {
   if (!post) return null
-  return <BlogLayout recordMap={recordMap} frontMatter={post}>
+  return <BlogLayout blockMap={blockMap} frontMatter={post}>
     </BlogLayout>
 }
 
@@ -21,9 +21,9 @@ export async function getStaticProps ({ params: { slug } }) {
   let posts = await getAllPosts()
   posts = posts.filter(post => post.status === 'Published' && post.type === 'Post')
   const post = posts.find((t) => t.slug === slug)
-  const recordMap = await getPostBlocks(post.id)
+  const blockMap = await getPostBlocks(post.id)
   return {
-    props: { post, recordMap },
+    props: { post, blockMap },
     revalidate: 1
   }
 }

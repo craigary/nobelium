@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Container from '@/components/Container'
 import { useRouter } from 'next/router'
-import { NotionRenderer } from 'react-notion-x'
+import { NotionRenderer } from 'react-notion'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 
-const BlogLayout = ({ children, recordMap, frontMatter }) => {
+const BlogLayout = ({ children, blockMap, frontMatter }) => {
   const router = useRouter()
   return (
     <Container
@@ -41,7 +41,7 @@ const BlogLayout = ({ children, recordMap, frontMatter }) => {
           )}
         </nav>
         {children}
-        {recordMap && <NotionRenderer recordMap={recordMap} darkMode={false} fullPage={false}/> }
+        {blockMap && <NotionRenderer blockMap={blockMap} /> }
       </article>
       <div className="flex justify-between font-medium">
           <p onClick={() => router.back()} className="mt-2">
