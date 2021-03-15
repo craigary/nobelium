@@ -10,9 +10,12 @@
   "dependencies": {
     "feed": "^4.2.2",
     "next": "10.0.7",
+    "node-fetch": "^2.6.1",
+    "notion-client": "^4.3.2",
+    "notion-utils": "^4.3.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-notion": "^0.9.3"
+    "react-notion-x": "^4.3.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.4",
