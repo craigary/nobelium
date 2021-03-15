@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ['Inter', ...fontFamily.sans]
+      sans: ['Inter', ...fontFamily.sans],
+      noEmoji: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
     }
   },
   variants: {
