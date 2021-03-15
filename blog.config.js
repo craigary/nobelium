@@ -4,7 +4,7 @@ const BLOG = {
   author: 'Craig Hart',
   email: 'i@craigary.net',
   link: 'https://craigary.net',
-  lang: 'zh-CN',
+  lang: 'en-US',
   path: '', // leave this empty unless you want to deploy Nobelium in a folder
   since: 2021, // if leave this empty, current year will be used.
   postsPerPage: 7,

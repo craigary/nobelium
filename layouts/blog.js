@@ -5,7 +5,7 @@ import { NotionRenderer } from 'react-notion'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 
-const BlogLayout = ({ children, blocks, frontMatter }) => {
+const BlogLayout = ({ children, blockMap, frontMatter }) => {
   const router = useRouter()
   return (
     <Container
@@ -41,7 +41,7 @@ const BlogLayout = ({ children, blocks, frontMatter }) => {
           )}
         </nav>
         {children}
-        <NotionRenderer blockMap={blocks}/>
+        {blockMap && <NotionRenderer blockMap={blockMap} /> }
       </article>
       <div className="flex justify-between font-medium">
           <p onClick={() => router.back()} className="mt-2">
