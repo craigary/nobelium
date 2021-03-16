@@ -7,7 +7,10 @@ const Footer = () => {
       <hr />
       <div className="my-4 text-sm leading-6 font-medium">
         <p>Built with ♥ and ⚛ Next.js. Proudly deployed on ▲Vercel.</p>
-        <p>©{BLOG.author} {(BLOG.since === y || !BLOG.since) ? y : `${BLOG.since} - ${y}`} </p>
+        <p>
+          ©{BLOG.author}{' '}
+          {BLOG.since === y || !BLOG.since ? y : `${BLOG.since} - ${y}`}{' '}
+        </p>
       </div>
     </div>
   )

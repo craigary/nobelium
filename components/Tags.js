@@ -11,7 +11,9 @@ const Tags = ({ tags, handleTagClick, selectedTag }) => {
         <li
           key={key}
           onClick={() => handleTagClick(key)}
-          className={`mr-2 px-2 py-1 my-3 font-medium cursor-pointer rounded-full border-2 bg-opacity-0 border-blue-200 text-black bg-blue-400 whitespace-nowrap ${key === selectedTag ? 'bg-opacity-30' : ''}`}
+          className={`mr-2 px-2 py-1 my-3 font-medium cursor-pointer rounded-full border-2 bg-opacity-0 border-blue-200 text-black bg-blue-400 whitespace-nowrap ${
+            key === selectedTag ? 'bg-opacity-30' : ''
+          }`}
         >
           {`${key} (${tags[key]})`}
         </li>
