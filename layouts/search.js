@@ -12,7 +12,8 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
   let filteredBlogPosts = []
   if (posts) {
     filteredBlogPosts = posts.filter(post => {
-      const searchContent = post.title + post.summary + post.tags.join(' ')
+      const tagContent = post.tags ? post.tags.join(' ') : ''
+      const searchContent = post.title + post.summary + tagContent
       return searchContent.toLowerCase().includes(searchValue.toLowerCase())
     })
   }

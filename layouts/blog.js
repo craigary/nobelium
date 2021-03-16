@@ -19,7 +19,7 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
         <h1 className="font-sans font-bold text-3xl">{frontMatter.title}</h1>
         <nav className="flex mt-4 mb-2 items-center text-gray-600 font-medium">
           <div className="flex">
-            <a href={BLOG.socialLink} className="flex">
+            <a href={BLOG.socialLink || '#'} className="flex">
                 <Image
                   alt={BLOG.author}
                   width={24}
@@ -34,7 +34,7 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
           <div className="ml-2 md:ml-0">
             {formatDate(frontMatter.date, BLOG.lang)}
           </div>
-          {frontMatter.tags.length && (
+          {frontMatter.tags && (
           <div className="tag flex ml-2">
             {frontMatter.tags.map(tag => <p key={tag} className="mr-1 cursor-pointer" onClick={() => router.push(`/tag/${encodeURIComponent(tag)}`)}>#{tag}</p>)}
         </div>
