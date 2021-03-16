@@ -6,6 +6,7 @@ import BLOG from '@/blog.config'
 
 export async function getStaticProps () {
   const posts = await getAllPosts()
+  console.log(posts)
   const postsToShow = posts
     .filter(post => post.status === 'Published' && post.type === 'Post')
     .slice(0, BLOG.postsPerPage)

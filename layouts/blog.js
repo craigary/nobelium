@@ -34,7 +34,7 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
           <div className="ml-2 md:ml-0">
             {formatDate(frontMatter.date, BLOG.lang)}
           </div>
-          {frontMatter.tags.length && (
+          {frontMatter.tags && (
           <div className="tag flex ml-2">
             {frontMatter.tags.map(tag => <p key={tag} className="mr-1 cursor-pointer" onClick={() => router.push(`/tag/${encodeURIComponent(tag)}`)}>#{tag}</p>)}
         </div>
