@@ -19,7 +19,7 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
         <h1 className="font-sans font-bold text-3xl">{frontMatter.title}</h1>
         <nav className="flex mt-4 mb-2 items-center text-gray-600 font-medium">
           <div className="flex">
-            <a href={BLOG.socialLink} className="flex">
+            <a href={BLOG.socialLink || '#'} className="flex">
                 <Image
                   alt={BLOG.author}
                   width={24}
