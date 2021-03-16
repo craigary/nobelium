@@ -16,7 +16,18 @@ const BLOG = {
     googleSiteVerification: '44BYh2dDz2y4hTfmgrhM3SGE4Q-kl-twbkgO5nyGFOo' // Remove the value or replace it with your own google site verification code
   },
   notionApiEndPoint: process.env.NOTION_API_ENDPOINT,
-  notionPageId: process.env.NOTION_PAGE_ID
+  notionPageId: process.env.NOTION_PAGE_ID,
+  // comment: {  // support provider: gitalk
+  //   provider: 'gitalk', // leave it empty if you don't need any comment plugin
+  //   config: {
+  //     repo: '', // The repository of store comments
+  //     owner: '',
+  //     admin: [],
+  //     clientID: '',
+  //     clientSecret: '',
+  //     distractionFreeMode: false, // Facebook-like distraction free mode
+  //   }
+  // }
 }
 
 export default BLOG
