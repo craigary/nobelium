@@ -7,7 +7,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("/fonts/Inter-roman.var.woff2") format("woff2");
+  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Inter';
@@ -15,7 +15,7 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url("/fonts/Inter-italic.var.woff2") format("woff2");
+  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
 }
 
 .wrapper {
@@ -33,7 +33,7 @@
   top: -1px;
   backdrop-filter: saturate(180%) blur(20px);
   /* transition: background-color 0.1 ease-in-out; */
-  transition: all .5s cubic-bezier(.4,0,0,1)
+  transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
 }
 
 .sticky-nav-full {
@@ -54,7 +54,7 @@
   /* display: none */
 }
 .notion {
-  @apply text-gray-700
+  @apply text-gray-700;
 }
 
 .notion-h1,
@@ -73,7 +73,7 @@
 
 .notion-text,
 .notion p {
-  @apply leading-8
+  @apply leading-8;
 }
 
 .notion-page {
@@ -88,11 +88,11 @@
     display: block;
     opacity: 0;
     /* transform: translateY(-3rem); */
-    transition: all .5s cubic-bezier(.4,0,0,1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
   }
   .sticky-nav-full .header-name {
     /* transform: translateY(0); */
-    opacity: 1
+    opacity: 1;
   }
 }
 

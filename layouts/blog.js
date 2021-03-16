@@ -20,13 +20,13 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
         <nav className="flex mt-4 mb-2 items-center text-gray-600 font-medium">
           <div className="flex">
             <a href={BLOG.socialLink || '#'} className="flex">
-                <Image
-                  alt={BLOG.author}
-                  width={24}
-                  height={24}
-                  src="/avatar.svg"
-                  className="rounded-full"
-                />
+              <Image
+                alt={BLOG.author}
+                width={24}
+                height={24}
+                src="/avatar.svg"
+                className="rounded-full"
+              />
               <p className="hidden md:ml-2 md:block">{BLOG.author}</p>
             </a>
             <span className="hidden md:inline">&nbsp;/&nbsp;</span>
@@ -35,22 +35,33 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
             {formatDate(frontMatter.date, BLOG.lang)}
           </div>
           {frontMatter.tags && (
-          <div className="tag flex ml-2">
-            {frontMatter.tags.map(tag => <p key={tag} className="mr-1 cursor-pointer" onClick={() => router.push(`/tag/${encodeURIComponent(tag)}`)}>#{tag}</p>)}
-        </div>
+            <div className="tag flex ml-2">
+              {frontMatter.tags.map(tag => (
+                <p
+                  key={tag}
+                  className="mr-1 cursor-pointer"
+                  onClick={() => router.push(`/tag/${encodeURIComponent(tag)}`)}
+                >
+                  #{tag}
+                </p>
+              ))}
+            </div>
           )}
         </nav>
         {children}
-        {blockMap && <NotionRenderer blockMap={blockMap} /> }
+        {blockMap && <NotionRenderer blockMap={blockMap} />}
       </article>
       <div className="flex justify-between font-medium">
-          <p onClick={() => router.back()} className="mt-2">
-            ← Back
-          </p>
-          <p onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="mt-2">
-            ↑ Top
-          </p>
-        </div>
+        <p onClick={() => router.back()} className="mt-2">
+          ← Back
+        </p>
+        <p
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="mt-2"
+        >
+          ↑ Top
+        </p>
+      </div>
     </Container>
   )
 }
