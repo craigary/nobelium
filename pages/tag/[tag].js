@@ -14,7 +14,7 @@ export async function getStaticProps ({ params }) {
     post => post.status === 'Published' && post.type === 'Post'
   )
   const tags = await getAllTags()
-  const filteredPosts = posts.filter(post => post && post.tags.includes(currentTag))
+  const filteredPosts = posts.filter(post => post && post.tags && post.tags.includes(currentTag))
   return {
     props: {
       tags,
