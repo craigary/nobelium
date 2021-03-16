@@ -16,6 +16,15 @@ const Container = ({ children, layout, ...customMeta }) => {
         {/* Add more Meta Info */}
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
+        {BLOG.seo.googleSiteVerification && (
+          <meta
+            name="google-site-verification"
+            content={BLOG.seo.googleSiteVerification}
+          />
+        )}
+        {BLOG.seo.keywords && (
+          <meta name="keywords" content={BLOG.seo.keywords.join(', ')} />
+        )}
         <meta name="description" content={meta.description} />
       </Head>
       <div className="wrapper">
