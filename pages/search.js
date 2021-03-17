@@ -8,7 +8,6 @@ export async function getStaticProps () {
   let posts = await getAllPosts()
   posts = posts
     .filter(post => post.status === 'Published' && post.type === 'Post')
-    .slice(0, 10)
   const tags = await getAllTags()
   return {
     props: {
