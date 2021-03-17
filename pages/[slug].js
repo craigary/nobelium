@@ -7,7 +7,7 @@ const BlogPost = ({ post, blockMap }) => {
   return <BlogLayout blockMap={blockMap} frontMatter={post}></BlogLayout>
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths () {
   let posts = await getAllPosts()
   posts = posts.filter(
     post => post.status === 'Published' && post.type === 'Post'
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps ({ params: { slug } }) {
   let posts = await getAllPosts()
   posts = posts.filter(
     post => post.status === 'Published' && post.type === 'Post'
