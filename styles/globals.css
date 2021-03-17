@@ -54,7 +54,7 @@
   /* display: none */
 }
 .notion {
-  @apply text-gray-700;
+  @apply text-gray-700 break-words;
 }
 
 .notion-h1,
