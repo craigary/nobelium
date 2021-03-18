@@ -14,7 +14,8 @@
     "notion-client": "^4.3.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-notion": "^0.9.3"
+    "react-notion": "^0.9.3",
+    "use-ackee": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.4",
