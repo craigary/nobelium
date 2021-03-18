@@ -11,9 +11,17 @@ Nobelium 是一个使用 NextJS + Notion 第三方 API 实现的，部署在 Ver
 - 部署在 Vercel，配合 NextJS，实现超快的响应速度
 - 使用 NextJS 实现，配合 ISG，更新 Notion 文章无需重新部署
 - 使用 Tailwind CSS 实现样式，方便二次定制
+- 使用 `@tailwindcss/jit` 编译 CSS 样式，部署时间更快
 - 响应式设计，移动端友好
 - 支持搜索，单独筛选页面
-- Tag 标签、RSS feed… 还有更多！
+- 支持 Gitalk 评论，未来会增加更多评论系统
+- 支持关于页面
+- Tag 标签、RSS feed、网站统计… 还有更多！
+
+<details>
+<summary>展开查看截图</summary>
+![Screenshot](desktop.png)
+</details>
 
 ## 部署流程
 
@@ -29,11 +37,12 @@ Nobelium 是一个使用 NextJS + Notion 第三方 API 实现的，部署在 Ver
 
 在此处查看我们的 [Roadmap](https://www.notion.so/craigary/Public-Roadmap-3cfc4d0f0ca642ef8f652673c37add22)
 
+- [x]  SEO 优化
 - [ ]  部署时使用 Preact
+- [ ]  支持更多评论系统
+- [ ]  支持更多统计系统
 - [ ]  深色模式
 - [ ]  站点地图
-- [ ]  更好的 RSS feed
-- [ ]  SEO 优化
 - [ ]  Open Graph 支持
 - [ ]  Figma 设计文件
 - [ ]  ...
@@ -42,6 +51,8 @@ Nobelium 是一个使用 NextJS + Notion 第三方 API 实现的，部署在 Ver
 
 [Notion 中文社区的小伙伴们](https://notion.so/cnotion)
 
-[Lee Rob](https://leerob.io/)
+[SilentDepth](https://twitter.com/SilentDepthCN)
 
-[Spencer Woo](https://spencerwoo.com/)
+[Lee Rob](https://leerob.io)
+
+[Spencer Woo](https://spencerwoo.com)
