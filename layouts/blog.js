@@ -6,6 +6,7 @@ import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 import dynamic from 'next/dynamic'
 import 'gitalk/dist/gitalk.css'
+import { useLocale } from '@/lib/locale'
 
 const GitalkComponent = dynamic(
   () => {
@@ -15,6 +16,7 @@ const GitalkComponent = dynamic(
 )
 
 const BlogLayout = ({ children, blockMap, frontMatter }) => {
+  const locale = useLocale()
   const router = useRouter()
   return (
     <Container
@@ -62,13 +64,13 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
       </article>
       <div className="flex justify-between font-medium">
         <p onClick={() => router.back()} className="mt-2">
-          ← Back
+          ← {locale.POST.BACK}
         </p>
         <p
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="mt-2"
         >
-          ↑ Top
+          ↑ {locale.POST.TOP}
         </p>
       </div>
       {BLOG.comment && BLOG.comment.provider === 'gitalk' && (
