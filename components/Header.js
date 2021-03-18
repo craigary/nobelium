@@ -60,7 +60,7 @@ const Header = ({ navBarTitle }) => {
         <div className="flex">
           <Link href="/">
             <div className="h-6">
-              <Image src="/logo.svg" width={24} height={24} alt="Craigary" />
+              <Image src="/logo.svg" width={24} height={24} alt={BLOG.author} />
             </div>
           </Link>
           {navBarTitle
