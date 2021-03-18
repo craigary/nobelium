@@ -18,7 +18,7 @@ Nobelium 是一个使用 NextJS + Notion 第三方 API 实现的，部署在 Ver
 - 支持关于页面
 - Tag 标签、RSS feed、网站统计… 还有更多！
 
-![Screenshot](screenshot.png)
+![Screenshot](desktop.png)
 
 ## 部署流程
 
