@@ -17,11 +17,14 @@ const BLOG = {
   },
   notionPageId: process.env.NOTION_PAGE_ID,
   analytics: {
-    provider: 'ackee', // Currently we support Google Analytics and Ackee, please fill with 'ga' or 'ackee', leave it empty to disable it.
+    provider: 'ga', // Currently we support Google Analytics and Ackee, please fill with 'ga' or 'ackee', leave it empty to disable it.
     ackeeConfig: {
       tracker: 'https://ackee.craigary.net/tracker.js', // e.g 'https://ackee.craigary.net/tracker.js'
       dataAckeeServer: 'https://ackee.craigary.net/', // e.g https://ackee.craigary.net , don't end with a slash
       domainId: '0e2257a8-54d4-4847-91a1-0311ea48cc7b' // e.g '0e2257a8-54d4-4847-91a1-0311ea48cc7b'
+    },
+    gaConfig: {
+      measurementId: 'G-PPKMNRCKJK' // e.g: G-XXXXXXXXXX
     }
   },
   comment: { // support provider: gitalk

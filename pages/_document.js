@@ -20,6 +20,26 @@ class MyDocument extends Document {
               data-ackee-domain-id={BLOG.analytics.ackeeConfig.domainId}
             ></script>
           )}
+          {BLOG.analytics && BLOG.analytics.provider === 'ga' && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${BLOG.analytics.gaConfig.measurementId}`}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${BLOG.analytics.gaConfig.measurementId}', {
+              page_path: window.location.pathname,
+            });
+          `
+                }}
+              />
+            </>
+          )}
         </Head>
         <body>
           <Main />
