@@ -4,7 +4,7 @@ import '@/styles/globals.css'
 import BLOG from '@/blog.config'
 import dynamic from 'next/dynamic'
 
-const Ackee = dynamic(() => import('@/lib/ackee'), { ssr: false })
+const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
 
 function MyApp ({ Component, pageProps }) {
   return (
