@@ -4,12 +4,19 @@ import Image from 'next/image'
 import BLOG from '@/blog.config'
 
 const NavBar = () => {
-  const links = [
-    { id: 0, name: 'Blog', to: BLOG.path || '/', show: true },
-    { id: 1, name: 'About', to: '/about', show: BLOG.showAbout },
-    { id: 2, name: 'RSS', to: '/feed', show: true },
-    { id: 3, name: 'Search', to: '/search', show: true }
-  ]
+  const links = BLOG.lang.slice(0, 2).toLowerCase() === 'en'
+    ? [
+        { id: 0, name: 'Blog', to: BLOG.path || '/', show: true },
+        { id: 1, name: 'About', to: '/about', show: BLOG.showAbout },
+        { id: 2, name: 'RSS', to: '/feed', show: true },
+        { id: 3, name: 'Search', to: '/search', show: true }
+      ]
+    : [
+        { id: 0, name: '首页', to: BLOG.path || '/', show: true },
+        { id: 1, name: '关于', to: '/about', show: BLOG.showAbout },
+        { id: 2, name: '订阅', to: '/feed', show: true },
+        { id: 3, name: '搜索', to: '/search', show: true }
+      ]
   return (
     <div>
       <ul className="flex flex-row font-sans">
