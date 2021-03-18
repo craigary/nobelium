@@ -5,19 +5,22 @@ import BLOG from '@/blog.config'
 
 const NavBar = () => {
   const links = [
-    { id: 1, name: 'Blog', to: BLOG.path || '/' },
-    { id: 2, name: 'RSS', to: '/feed' },
-    { id: 3, name: 'Search', to: '/search' }
+    { id: 0, name: 'Blog', to: BLOG.path || '/', show: true },
+    { id: 1, name: 'About', to: '/about', show: BLOG.showAbout },
+    { id: 2, name: 'RSS', to: '/feed', show: true },
+    { id: 3, name: 'Search', to: '/search', show: true }
   ]
   return (
     <div>
       <ul className="flex flex-row font-sans">
         {links.map(link => (
-          <li key={link.id} className="block ml-4">
+          link.show && (
+            <li key={link.id} className="block ml-4">
             <Link href={link.to}>
               <a>{link.name}</a>
             </Link>
           </li>
+          )
         ))}
       </ul>
     </div>
