@@ -25,7 +25,7 @@ Nobelium 是一个使用 NextJS + Notion 第三方 API 实现的，部署在 Ver
 ## 部署流程
 
 - Fork 此项目
-- 将[此 Notion 模版](https://www.notion.so/68be9021bca34b8e89f0246f27e608df)在你的工作区制作副本，并确保此页面是公开分享的
+- 将 [此 Notion 模版](https://www.notion.so/68be9021bca34b8e89f0246f27e608df) 在你的工作区制作副本，并确保此页面是公开分享的
 - 修改 `blog.config.js` 文件，定义你的内容
 - 替换 `/public` 下的头像和 Logo
 - 使用 vercel 部署，并定义以下环境变量：
