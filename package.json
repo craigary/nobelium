@@ -12,6 +12,7 @@
     "gitalk": "^1.7.2",
     "next": "10.0.7",
     "notion-client": "^4.3.2",
+    "preact": "^8.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-notion": "^0.9.3",
