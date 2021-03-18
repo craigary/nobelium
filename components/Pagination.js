@@ -13,12 +13,12 @@ const Pagination = ({ totalPages, page }) => {
         }
       >
         <p className={currentPage === 1 ? 'invisible' : 'block'}>
-          <a rel="prev">← Prev</a>
+          <a rel="prev">← {BLOG.lang.slice(0, 2).toLowerCase() === 'en' ? 'Prev' : '上页'}</a>
         </p>
       </Link>
       <Link href={`/page/${currentPage + 1}`}>
         <p className={currentPage === totalPages ? 'invisible' : 'block'}>
-          <a rel="next">Next →</a>
+          <a rel="next">{BLOG.lang.slice(0, 2).toLowerCase() === 'en' ? 'Next' : '下页'} →</a>
         </p>
       </Link>
     </div>
