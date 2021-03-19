@@ -2,7 +2,7 @@
 
 Nobelium 是一个使用 NextJS + Notion 第三方 API 实现的，部署在 Vercel 上的静态博客系统。
 
-[English](README.md)
+简体中文 / [English](README.md)
 
 ---
 
