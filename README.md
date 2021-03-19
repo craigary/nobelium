@@ -2,7 +2,7 @@
 
 Nobelium is a static blog build on top of Notion API and NextJS, deployed on Vercel.
 
-[简体中文](README-CN.md)
+[简体中文](README-CN.md) / English
 
 DEMO：[https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
