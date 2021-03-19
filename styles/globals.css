@@ -9,6 +9,7 @@
   font-named-instance: 'Regular';
   src: url('/fonts/Inter-roman.var.woff2') format('woff2');
 }
+
 @font-face {
   font-family: 'Inter';
   font-weight: 100 900;
@@ -36,6 +37,7 @@
   transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
 }
 
+
 .sticky-nav-full {
   /* max-width: 100%; */
 }
@@ -53,6 +55,18 @@
   /* opacity: 0; */
   /* display: none */
 }
+
+
+nav {
+  flex-wrap: wrap;
+  line-height: 1.5em;
+}
+
+.tag {
+  margin-left: 0;
+  flex-wrap: wrap;
+}
+
 .notion {
   @apply text-gray-700 break-words;
 }
@@ -65,6 +79,16 @@
 .notion-block,
 .notion-toggle {
   padding: 12px 2px;
+}
+
+
+.tag-container ul::-webkit-scrollbar {
+  width: 0 !important
+}
+
+.tag-container ul{
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
 }
 
 .notion-viewport {

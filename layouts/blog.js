@@ -46,7 +46,7 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
             {formatDate(frontMatter.date, BLOG.lang)}
           </div>
           {frontMatter.tags && (
-            <div className="tag flex ml-2">
+            <div className="tag flex ml-2">&nbsp;
               {frontMatter.tags.map(tag => (
                 <p
                   key={tag}
