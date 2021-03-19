@@ -7,7 +7,7 @@ const BLOG = {
   lang: 'en-US',
   path: '', // leave this empty unless you want to deploy Nobelium in a folder
   since: 2021, // if leave this empty, current year will be used.
-  postsPerPage: 1,
+  postsPerPage: 2,
   showAbout: true, // WIP
   showArchive: true, // WIP
   socialLink: 'https://t.me/iceyaya',
