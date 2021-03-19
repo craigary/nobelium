@@ -37,6 +37,7 @@
   transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
 }
 
+
 .sticky-nav-full {
   /* max-width: 100%; */
 }
@@ -54,6 +55,18 @@
   /* opacity: 0; */
   /* display: none */
 }
+
+
+nav {
+  flex-wrap: wrap;
+  line-height: 1.5em;
+}
+
+.tag {
+  margin-left: 0;
+  flex-wrap: wrap;
+}
+
 .notion {
   @apply text-gray-700 break-words;
 }
