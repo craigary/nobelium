@@ -52,12 +52,11 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
           ></path>
         </svg>
       </div>
-      <div className="tag-container">
       <Tags
         tags={tags}
         handleTagClick={handleTagClick}
         selectedTag={selectedTag || currentTag}
-      /> </div>
+      />
       <div className="article-container my-8">
         {!filteredBlogPosts.length && (
           <p className="text-gray-500">No posts found.</p>

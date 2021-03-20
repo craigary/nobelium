@@ -62,11 +62,6 @@ nav {
   line-height: 1.5em;
 }
 
-.tag {
-  margin-left: 0;
-  flex-wrap: wrap;
-}
-
 .notion {
   @apply text-gray-700 break-words;
 }
@@ -90,13 +85,9 @@ nav {
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
   -moz-user-select:none;
-  /*火狐*/
   -webkit-user-select:none;
-  /*webkit浏览器*/
   -ms-user-select:none;
-  /*IE10*/
   -khtml-user-select:none;
-  /*早期浏览器*/
   user-select:none;
 }
 

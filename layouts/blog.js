@@ -42,11 +42,11 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
             </a>
             <span className="hidden md:inline">&nbsp;/&nbsp;</span>
           </div>
-          <div className="ml-2 md:ml-0">
+          <div className="mx-2 md:ml-0">
             {formatDate(frontMatter.date, BLOG.lang)}
           </div>
           {frontMatter.tags && (
-            <div className="tag flex ml-2">&nbsp;
+            <div className="flex flex-wrap">
               {frontMatter.tags.map(tag => (
                 <p
                   key={tag}
