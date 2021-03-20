@@ -7,7 +7,7 @@ const Pagination = ({ totalPages, page }) => {
   // console.log(locale)
   const currentPage = +page
   return (
-    <div className="flex justify-between font-medium">
+    <div className="flex justify-between font-medium text-black dark:text-gray-100">
       <Link
         href={
           currentPage - 1 === 1

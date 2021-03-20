@@ -27,8 +27,8 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
       type="article"
     >
       <article>
-        <h1 className="font-sans font-bold text-3xl">{frontMatter.title}</h1>
-        <nav className="flex mt-4 mb-2 items-center text-gray-600 font-medium">
+        <h1 className="font-sans font-bold text-3xl text-black dark:text-white">{frontMatter.title}</h1>
+        <nav className="flex mt-4 mb-2 items-center font-medium text-gray-600 dark:text-gray-400">
           <div className="flex">
             <a href={BLOG.socialLink || '#'} className="flex">
               <Image
@@ -42,11 +42,11 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
             </a>
             <span className="hidden md:inline">&nbsp;/&nbsp;</span>
           </div>
-          <div className="ml-2 md:ml-0">
+          <div className="mx-2 md:ml-0">
             {formatDate(frontMatter.date, BLOG.lang)}
           </div>
           {frontMatter.tags && (
-            <div className="tag flex ml-2">&nbsp;
+            <div className="flex flex-wrap">
               {frontMatter.tags.map(tag => (
                 <p
                   key={tag}
@@ -60,9 +60,13 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
           )}
         </nav>
         {children}
-        {blockMap && <NotionRenderer blockMap={blockMap} />}
+        {blockMap && (
+          <div className="text-gray-700 dark:text-white">
+          <NotionRenderer blockMap={blockMap} />
+          </div>
+        )}
       </article>
-      <div className="flex justify-between font-medium">
+      <div className="flex justify-between font-medium text-black dark:text-gray-100">
         <p onClick={() => router.back()} className="mt-2">
           ← {locale.POST.BACK}
         </p>

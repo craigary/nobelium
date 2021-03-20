@@ -13,8 +13,9 @@ const PageLayout = ({ children, blockMap, frontMatter, showAbout }) => {
       type="article"
     >
       <article>
-        <h1 className="font-sans font-bold text-3xl">{frontMatter.title}</h1>
+        <h1 className="font-sans font-bold text-3xl text-black dark:text-white">{frontMatter.title}</h1>
         {children}
+        <div className="text-gray-700 dark:text-white">
         {!showAbout && (
           <main className="notion">
             <p className="notion-text">Keep playing them songs, keep singing along</p>
@@ -31,8 +32,9 @@ const PageLayout = ({ children, blockMap, frontMatter, showAbout }) => {
           </main>
         )}
         {showAbout && blockMap && <NotionRenderer blockMap={blockMap} />}
+        </div>
       </article>
-      <div className="flex justify-between font-medium">
+      <div className="flex justify-between font-medium text-black dark:text-gray-100">
         <p onClick={() => router.back()} className="mt-2">
           ← Back
         </p>
