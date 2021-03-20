@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
     "feed": "^4.2.2",
@@ -28,5 +29,8 @@
     "eslint-plugin-react": "^7.22.0",
     "postcss": "^8.2.8",
     "tailwindcss": "^2.0.4"
+  },
+  "resolutions": {
+    "axios": ">=0.21.1"
   }
 }
