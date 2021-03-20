@@ -1,12 +1,11 @@
 <svg width="1460" height="1460" viewBox="0 0 1460 1460" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g clip-path="url(#clip0)">
-<rect width="1460" height="1460" fill="white"/>
-<rect x="-294" y="-261" width="2048" height="2048" fill="url(#pattern0)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M731 1458C1134.17 1458 1461 1131.17 1461 728C1461 324.832 1134.17 -2 731 -2C327.832 -2 1 324.832 1 728C1 1131.17 327.832 1458 731 1458Z" fill="url(#pattern0)"/>
 <ellipse cx="336" cy="246" rx="23" ry="19" fill="white"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0" transform="scale(0.000488281)"/>
+<use xlink:href="#image0" transform="translate(-0.202055 -0.177397) scale(0.000684932)"/>
 </pattern>
 <clipPath id="clip0">
 <rect width="1460" height="1460" fill="white"/>
