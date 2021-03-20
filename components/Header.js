@@ -17,7 +17,7 @@ const NavBar = () => {
       <ul className="flex flex-row font-sans">
         {links.map(link => (
           link.show && (
-            <li key={link.id} className="block ml-4">
+            <li key={link.id} className="block ml-4 text-black dark:text-gray-300">
             <Link href={link.to}>
               <a>{link.name}</a>
             </Link>
@@ -65,10 +65,10 @@ const Header = ({ navBarTitle }) => {
           </Link>
           {navBarTitle
             ? (
-            <p className="ml-2 header-name font-medium">{navBarTitle}</p>
+            <p className="ml-2 header-name font-medium text-black dark:text-gray-100">{navBarTitle}</p>
               )
             : (
-            <p className="ml-2 header-name font-medium">
+            <p className="ml-2 header-name font-medium text-black dark:text-gray-100">
               {BLOG.title},{' '}
               <span className="font-normal">{BLOG.description}</span>
             </p>

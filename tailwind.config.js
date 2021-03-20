@@ -1,12 +1,22 @@
+const BLOG = require('./blog.config')
 const { fontFamily } = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: BLOG.appearance === 'auto' ? 'media' : 'class', // or 'media' or 'class'
   theme: {
-    extend: {},
-    fontFamily: {
-      sans: ['Inter', ...fontFamily.sans],
-      noEmoji: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+    extend: {
+      colors: {
+        day: {
+          DEFAULT: BLOG.lightBackground
+        },
+        night: {
+          DEFAULT: BLOG.darkBackground
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', ...fontFamily.sans],
+        noEmoji: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+      }
     }
   },
   variants: {

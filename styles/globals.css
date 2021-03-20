@@ -32,7 +32,8 @@
   position: sticky;
   z-index: 10;
   top: -1px;
-  backdrop-filter: saturate(180%) blur(20px);
+  /* backdrop-filter: saturate(180%) blur(20px); */
+  backdrop-filter: blur(20px);
   /* transition: background-color 0.1 ease-in-out; */
   transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
 }
@@ -63,7 +64,8 @@ nav {
 }
 
 .notion {
-  @apply text-gray-700 break-words;
+  color: inherit;
+  overflow-wrap: break-word;
 }
 
 .notion-h1,

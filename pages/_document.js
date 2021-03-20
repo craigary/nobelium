@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render () {
     return (
-      <Html lang={BLOG.lang}>
+      <Html lang={BLOG.lang} className={BLOG.appearance === 'dark' && 'dark'}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
@@ -41,7 +41,7 @@ class MyDocument extends Document {
             </>
           )}
         </Head>
-        <body>
+        <body className="bg-day dark:bg-night">
           <Main />
           <NextScript />
         </body>
