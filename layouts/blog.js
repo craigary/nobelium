@@ -67,15 +67,15 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
         )}
       </article>
       <div className="flex justify-between font-medium text-black dark:text-gray-100">
-        <p onClick={() => router.back()} className="mt-2">
+        <a onClick={() => router.back()} className="mt-2 cursor-pointer">
           ← {locale.POST.BACK}
-        </p>
-        <p
+        </a>
+        <a
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="mt-2"
+          className="mt-2 cursor-pointer"
         >
           ↑ {locale.POST.TOP}
-        </p>
+        </a>
       </div>
       {BLOG.comment && BLOG.comment.provider === 'gitalk' && (
         <GitalkComponent options={{
