@@ -13,21 +13,23 @@ export async function getStaticProps (context) {
     .slice(BLOG.postsPerPage * (page - 1), BLOG.postsPerPage * page)
   const totalPosts = posts.length
   const totalPages = Math.ceil(totalPosts / BLOG.postsPerPage)
+  const showNext = page * BLOG.postsPerPage < totalPages
   return {
     props: {
       page, // Current Page
       totalPages,
-      postsToShow
+      postsToShow,
+      showNext
     },
     revalidate: 1
   }
 }
-const Page = ({ postsToShow, page, totalPages }) => {
+const Page = ({ postsToShow, page, totalPages, showNext }) => {
   return (
     <Container>
       {postsToShow &&
         postsToShow.map(post => <BlogPost key={post.id} post={post} />)}
-      <Pagination page={page} totalPages={totalPages} />
+      <Pagination page={page} totalPages={totalPages} showNext={showNext}/>
     </Container>
   )
 }

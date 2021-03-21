@@ -2,7 +2,7 @@ import Link from 'next/link'
 import BLOG from '@/blog.config'
 import { useLocale } from '@/lib/locale'
 
-const Pagination = ({ totalPages, page }) => {
+const Pagination = ({ totalPages, page, showNext }) => {
   const locale = useLocale()
   // console.log(locale)
   const currentPage = +page
@@ -20,7 +20,7 @@ const Pagination = ({ totalPages, page }) => {
         </p>
       </Link>
       <Link href={`/page/${currentPage + 1}`}>
-        <p className={currentPage === totalPages ? 'invisible' : 'block'}>
+        <p className={showNext ? 'block' : 'invisible'}>
           <a rel="next">{locale.PAGINATION.NEXT} →</a>
         </p>
       </Link>
