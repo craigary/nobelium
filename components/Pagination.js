@@ -20,7 +20,7 @@ const Pagination = ({ page, showNext }) => {
         </p>
       </Link>
       <Link href={`/page/${currentPage + 1}`}>
-        <p className={showNext ? 'block' : 'invisible' }>
+        <p className={+showNext ? 'block' : 'invisible' }>
           <a rel="next">{locale.PAGINATION.NEXT} →</a>
         </p>
       </Link>

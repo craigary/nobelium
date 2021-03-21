@@ -1,8 +1,10 @@
 import Container from '@/components/Container'
 import { useRouter } from 'next/router'
 import { NotionRenderer } from 'react-notion'
+import { useLocale } from '@/lib/locale'
 
 const PageLayout = ({ children, blockMap, frontMatter, showAbout }) => {
+  const locale = useLocale()
   const router = useRouter()
   return (
     <Container
@@ -36,13 +38,13 @@ const PageLayout = ({ children, blockMap, frontMatter, showAbout }) => {
       </article>
       <div className="flex justify-between font-medium text-black dark:text-gray-100">
         <p onClick={() => router.back()} className="mt-2">
-          ← Back
+          ← {locale.POST.BACK}
         </p>
         <p
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="mt-2"
         >
-          ↑ Top
+          ↑ {locale.POST.TOP}
         </p>
       </div>
     </Container>
