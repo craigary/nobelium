@@ -15,15 +15,19 @@ const NavBar = () => {
   return (
     <div className="flex-shrink-0">
       <ul className="flex flex-row font-sans">
-        {links.map(link => (
-          link.show && (
-            <li key={link.id} className="block ml-4 text-black dark:text-gray-300">
-            <Link href={link.to}>
-              <a>{link.name}</a>
-            </Link>
-          </li>
-          )
-        ))}
+        {links.map(
+          link =>
+            link.show && (
+              <li
+                key={link.id}
+                className="block ml-4 text-black dark:text-gray-300"
+              >
+                <Link href={link.to}>
+                  <a>{link.name}</a>
+                </Link>
+              </li>
+            )
+        )}
       </ul>
     </div>
   )
@@ -60,12 +64,27 @@ const Header = ({ navBarTitle }) => {
         <div className="flex">
           <Link href="/">
             <div className="h-6">
-              <Image src="/logo.svg" width={24} height={24} alt={BLOG.author} />
+              {/* <Image src="/logo.svg" width={24} height={24} alt={BLOG.author} /> */}
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-labelledby="logoTitle logoDesc"
+                role="img"
+              >
+                <title id="logoTitle">{BLOG.title}</title>
+                <desc id="logoDesc">{BLOG.author}</desc>
+                <rect width="24" height="24" className="fill-current text-black dark:text-white" />
+              </svg>
             </div>
           </Link>
           {navBarTitle
             ? (
-            <p className="ml-2 header-name font-medium text-black dark:text-gray-100">{navBarTitle}</p>
+            <p className="ml-2 header-name font-medium text-black dark:text-gray-100">
+              {navBarTitle}
+            </p>
               )
             : (
             <p className="ml-2 header-name font-medium text-black dark:text-gray-100">
