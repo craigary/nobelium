@@ -67,7 +67,7 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
         )}
       </article>
       <div className="flex justify-between font-medium text-black dark:text-gray-100">
-        <button onClick={() => router.back()} className="mt-2 cursor-pointer">
+        <button onClick={() => router.push(BLOG.path || '/')} className="mt-2 cursor-pointer">
           ← {locale.POST.BACK}
         </button>
         <button

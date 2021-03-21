@@ -2,6 +2,7 @@ import Container from '@/components/Container'
 import { useRouter } from 'next/router'
 import { NotionRenderer } from 'react-notion'
 import { useLocale } from '@/lib/locale'
+import BLOG from '@/blog.config'
 
 const PageLayout = ({ children, blockMap, frontMatter, showAbout }) => {
   const locale = useLocale()
@@ -45,7 +46,7 @@ const PageLayout = ({ children, blockMap, frontMatter, showAbout }) => {
         </div>
       </article>
       <div className="flex justify-between font-medium text-black dark:text-gray-100">
-        <button onClick={() => router.back()} className="mt-2 cursor-pointer">
+        <button onClick={() => router.push(BLOG.path || '/')} className="mt-2 cursor-pointer">
           ← {locale.POST.BACK}
         </button>
         <button
