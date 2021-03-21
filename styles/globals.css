@@ -32,15 +32,13 @@
   position: sticky;
   z-index: 10;
   top: -1px;
-  /* backdrop-filter: saturate(180%) blur(20px); */
-  backdrop-filter: blur(20px);
-  /* transition: background-color 0.1 ease-in-out; */
+  backdrop-filter: blur(5px);
   transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
+  border-bottom-color: transparent;
 }
 
-
 .sticky-nav-full {
-  /* max-width: 100%; */
+  @apply border-b border-gray-200 dark:border-gray-600
 }
 
 .header-name {
@@ -108,16 +106,14 @@ nav {
 
 @media (min-width: 768px) {
   .sticky-nav-full {
-    max-width: 100%;
+    @apply max-w-full border-b border-gray-200 dark:border-gray-600
   }
   .header-name {
     display: block;
     opacity: 0;
-    /* transform: translateY(-3rem); */
     transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
   }
   .sticky-nav-full .header-name {
-    /* transform: translateY(0); */
     opacity: 1;
   }
 }
