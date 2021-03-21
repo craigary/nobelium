@@ -28,7 +28,7 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
     >
       <article>
         <h1 className="font-sans font-bold text-3xl text-black dark:text-white">{frontMatter.title}</h1>
-        <nav className="flex mt-4 mb-2 items-center font-medium text-gray-600 dark:text-gray-400">
+        <nav className="flex mt-4 mb-1 items-center font-medium text-gray-600 dark:text-gray-400">
           <div className="flex">
             <a href={BLOG.socialLink || '#'} className="flex">
               <Image
@@ -61,7 +61,7 @@ const BlogLayout = ({ children, blockMap, frontMatter }) => {
         </nav>
         {children}
         {blockMap && (
-          <div className="text-gray-700 dark:text-white">
+          <div className="text-gray-700 dark:text-gray-300">
           <NotionRenderer blockMap={blockMap} />
           </div>
         )}
