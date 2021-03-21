@@ -106,7 +106,7 @@ nav {
 
 @media (min-width: 768px) {
   .sticky-nav-full {
-    @apply max-w-full border-b border-gray-200 dark:border-gray-600
+    @apply max-w-full border-b border-gray-200 dark:border-gray-600;
   }
   .header-name {
     display: block;
@@ -121,6 +121,6 @@ nav {
 @supports not (backdrop-filter: none) {
   .sticky-nav {
     backdrop-filter: none;
-    @apply bg-opacity-100;
+    @apply bg-day bg-opacity-90 dark:bg-night dark:bg-opacity-90
   }
 }
