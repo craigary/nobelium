@@ -27,9 +27,12 @@ const Container = ({ children, layout, ...customMeta }) => {
         )}
         <meta name="description" content={meta.description} />
 
-<meta property="og:title" content={meta.title} />
-<meta property="og:type" content={layout || 'Blog'} />
-<meta property="og:image" content={`https://og-image-craigary.vercel.app/${meta.title}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:type" content={layout || 'Blog'} />
+        <meta
+          property="og:image"
+          content={`https://og-image-craigary.vercel.app/${meta.title}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
+        />
       </Head>
       <div className="wrapper">
         <Header navBarTitle={layout === 'blog' ? meta.title : null} />

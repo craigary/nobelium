@@ -20,7 +20,7 @@ const PageLayout = ({ children, blockMap, frontMatter, showAbout }) => {
           {frontMatter.title}
         </h1>
         {children}
-        <div className="text-gray-700 dark:text-white">
+        <div className="text-gray-700 dark:text-gray-300">
           {!showAbout && (
             <main className="notion">
               <p className="notion-text">
