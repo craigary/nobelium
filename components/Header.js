@@ -33,7 +33,7 @@ const NavBar = () => {
   )
 }
 
-const Header = ({ navBarTitle }) => {
+const Header = ({ navBarTitle, fullWidth }) => {
   const navRef = useRef(null)
   const sentinalRef = useRef(null)
   const handler = ([entry]) => {
@@ -57,7 +57,7 @@ const Header = ({ navBarTitle }) => {
     <>
       <div className="observer-element h-4 md:h-12" ref={sentinalRef}></div>
       <div
-        className="sticky-nav m-auto max-w-3xl w-full h-6 flex flex-row justify-between items-center mb-1 md:mb-8 px-4 py-8 bg-opacity-60"
+        className={`sticky-nav m-auto w-full h-6 flex flex-row justify-between items-center mb-1 md:mb-8 px-4 py-8 bg-opacity-60 ${!fullWidth ? 'max-w-3xl' : ''}`}
         id="sticky-nav"
         ref={navRef}
       >

@@ -4,7 +4,7 @@ import BLOG from '@/blog.config'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
 
-const Container = ({ children, layout, ...customMeta }) => {
+const Container = ({ children, layout, fullWidth, ...customMeta }) => {
   const meta = {
     title: BLOG.title,
     type: 'website',
@@ -35,11 +35,11 @@ const Container = ({ children, layout, ...customMeta }) => {
         />
       </Head>
       <div className="wrapper">
-        <Header navBarTitle={layout === 'blog' ? meta.title : null} />
-        <main className="m-auto max-w-3xl px-4 font-sans flex-grow w-full">
+        <Header navBarTitle={layout === 'blog' ? meta.title : null} fullWidth={fullWidth}/>
+        <main className={`m-auto px-4 font-sans flex-grow w-full ${!fullWidth ? 'max-w-3xl' : ''}` }>
           {children}
         </main>
-        <Footer />
+        <Footer fullWidth={fullWidth} />
       </div>
     </div>
   )

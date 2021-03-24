@@ -25,6 +25,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
       description={frontMatter.summary}
       // date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
+      fullWidth={frontMatter.fullWidth}
     >
       <article>
         <h1 className="font-sans font-bold text-3xl text-black dark:text-white">
