@@ -20,10 +20,8 @@ export async function getStaticPaths () {
     // post => post.status === 'Published' && post.type === 'Post'
     post => post.status === 'Published'
   )
-  const paths = posts.map(row => `${BLOG.path}/${row.slug}`)
-  // console.log(paths)
   return {
-    paths,
+    paths: posts.map(row => `${BLOG.path}/${row.slug}`),
     fallback: true
   }
 }
