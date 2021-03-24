@@ -14,7 +14,7 @@ Official demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 ## Amazing points ✨
 - **🚀 Fast and responsive**
   - Fast page render and responsive design
-  - Static generation and quick building using a efficient compiler  
+  - Static generation and quick building using an efficient compiler  
 - **🤖 Serverless and automated**
   - Deploy on a free and fast platform, Vercel, in few minutes
   - Incremental rgeneration and the content is always up to date
@@ -40,7 +40,7 @@ Official demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
 ### Step 3: Deploy in few seconds
 - Deploy on Vercel, set following environment variables：
-    - `NOTION_PAGE_ID`: The ID of the Notion page you previously shared with the public, usually has 32 digits after your workspace address
+    - `NOTION_PAGE_ID`: The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
 - **That's it!** Easy-peasy?
 
 ## FAQ
