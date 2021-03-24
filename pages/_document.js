@@ -8,8 +8,25 @@ class MyDocument extends Document {
 
   render () {
     return (
-      <Html lang={BLOG.lang} className={BLOG.appearance === 'dark' ? 'dark' : undefined}>
+      <Html
+        lang={BLOG.lang}
+        className={BLOG.appearance === 'dark' ? 'dark' : undefined}
+      >
         <Head>
+          <link
+            rel="preload"
+            href="/fonts/inter-italic.var.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Inter-roman.var.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
           {BLOG.analytics && BLOG.analytics.provider === 'ackee' && (
