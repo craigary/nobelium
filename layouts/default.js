@@ -4,7 +4,8 @@ import { useRouter } from 'next/router'
 import {
   NotionRenderer,
   Equation,
-  Code
+  Code,
+  CollectionRow
 } from 'react-notion-x'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
@@ -76,7 +77,8 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
               recordMap={blockMap}
               components={{
                 equation: Equation,
-                code: Code
+                code: Code,
+                collectionRow: CollectionRow
               }}
             />
           </div>

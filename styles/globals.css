@@ -100,7 +100,6 @@ nav {
 .notion-asset-caption {
   @apply text-center;
 }
-
 .notion-full-width {
   @apply px-0;
 }
@@ -110,6 +109,9 @@ nav {
 }
 .notion-quote {
   padding: 0.2em 0.9em;
+}
+.notion-collection-row{
+  @apply hidden
 }
 
 @media (min-width: 768px) {
