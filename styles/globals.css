@@ -19,6 +19,28 @@
   src: url('/fonts/Inter-italic.var.woff2') format('woff2');
 }
 
+html {
+  --scrollbarBG: #ffffff00;
+  --thumbBG: #5f5f5f;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+}
+
+::selection {
+  background: rgba(45, 170, 219, 0.3);
+}
+
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -32,8 +54,8 @@
   position: sticky;
   z-index: 10;
   top: -1px;
-  backdrop-filter: blur(10px);
-  transition: all 0.15s cubic-bezier(0.4, 0, 0, 1);
+  backdrop-filter: blur(5px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
   border-bottom-color: transparent;
 }
 
