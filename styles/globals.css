@@ -21,7 +21,7 @@
 
 html {
   --scrollbarBG: #ffffff00;
-  --thumbBG: #5f5f5f;
+  --thumbBG: #b8b8b8;
 }
 body::-webkit-scrollbar {
   width: 5px;
@@ -60,7 +60,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sticky-nav-full {
-  @apply border-b border-gray-200 dark:border-gray-600;
+  @apply border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
 }
 
 .header-name {
@@ -138,7 +138,7 @@ nav {
 
 @media (min-width: 768px) {
   .sticky-nav-full {
-    @apply max-w-full border-b border-opacity-50 border-gray-200 dark:border-gray-600;
+    @apply max-w-full border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
   }
   .header-name {
     display: block;
