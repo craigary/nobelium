@@ -12,27 +12,27 @@ Official demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
 
 ## Amazing points ✨
-**🚀 Fast and responsive**
+**🚀 &nbsp;Fast and responsive**
 
   - Fast page render and responsive design
   - Static generation and quick building using an efficient compiler
 
-**🤖 Serverless and automated**
+**🤖 &nbsp;Serverless and automated**
 
   - Deploy on a free and fast platform, Vercel, in few minutes
   - Incremental rgeneration and the content is always up to date
 
-**🚙 Fully functional**
+**🚙 &nbsp;Fully functional**
 
   - Comments, quick search and tag filter
   - RSS, about page, analytics, SSL, and more!
 
-**🎨 Easy for customization**
+**🎨 &nbsp;Easy for customization**
 
   - Night mode
   - Nobelium is built using tailwindcss, easy for customization
 
-**🕸 Pretty URLs and SEO friendly** 
+**🕸 &nbsp;Pretty URLs and SEO friendly** 
 
 ## Getting started
 ### Step 0: Star this repo
