@@ -5,8 +5,7 @@ import {
   NotionRenderer,
   Equation,
   Code,
-  Collection,
-  CollectionRow
+  Collection
 } from 'react-notion-x'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
@@ -79,8 +78,7 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
               components={{
                 equation: Equation,
                 code: Code,
-                collection: Collection，
-                collectionRow: false
+                collection: Collection
               }}
             />
           </div>
