@@ -12,27 +12,27 @@ Official demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
 
 ## Amazing points ✨
-**🚀 Fast and responsive**
+**🚀 &nbsp;Fast and responsive**
 
   - Fast page render and responsive design
   - Static generation and quick building using an efficient compiler
 
-**🤖 Serverless and automated**
+**🤖 &nbsp;Serverless and automated**
 
   - Deploy on a free and fast platform, Vercel, in few minutes
   - Incremental rgeneration and the content is always up to date
 
-**🚙 Fully functional**
+**🚙 &nbsp;Fully functional**
 
   - Comments, quick search and tag filter
   - RSS, about page, analytics, SSL, and more!
 
-**🎨 Easy for customization**
+**🎨 &nbsp;Easy for customization**
 
   - Night mode
   - Nobelium is built using tailwindcss, easy for customization
 
-**🕸 Pretty URLs and SEO friendly** 
+**🕸 &nbsp;Pretty URLs and SEO friendly** 
 
 ## Getting started
 ### Step 0: Star this repo
@@ -98,7 +98,7 @@ Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4
 <tr align="left">
     <td align="center"><a href="https://github.com/craigary"><img src="https://avatars.githubusercontent.com/u/10571717?s=64&v=4" width="80px;" alt=""/><br /><sub><b>Craig Hart</b></sub></a><br /><a href="https://github.com/craigary/nobelium/commits?author=craigary" title="Owner">🎫 🔧 🎨 🐛</a></td>
     <td align="center"><a href="https://github.com/reycn"><img src="https://avatars.githubusercontent.com/u/11225092?s=64&v=4" width="80px;" alt=""/><br /><sub><b>Reynard</b></sub></a><br /><a href="https://github.com/craigary/nobelium/commits?author=reycn" title="Owner"> 🎨 🐛</a></td>
-    <td align="center"><a href="https://github.com/Niinjoy"><img src="https://avatars.githubusercontent.com/u/39721307?s=64&v=4" width="80px;" alt=""/><br /><sub><b>Niin</b></sub></a><br /><a href="https://github.com/craigary/nobelium/commits?author=craigary" title="Owner">🔧 🐛</a></td>
-    <td align="center"><a href="https://github.com/ruter"><img src="https://avatars.githubusercontent.com/u/8568876?s=64&v=4" width="80px;" alt=""/><br /><sub><b>Ruter</b></sub></a><br /><a href="https://github.com/craigary/nobelium/commits?author=craigary" title="Owner">🔧 🐛</a></td>
+    <td align="center"><a href="https://github.com/Niinjoy"><img src="https://avatars.githubusercontent.com/u/39721307?s=64&v=4" width="80px;" alt=""/><br /><sub><b>Niin</b></sub></a><br /><a href="https://github.com/craigary/nobelium/commits?author=Niinjoy" title="Owner">🔧 🐛</a></td>
+    <td align="center"><a href="https://github.com/ruter"><img src="https://avatars.githubusercontent.com/u/8568876?s=64&v=4" width="80px;" alt=""/><br /><sub><b>Ruter</b></sub></a><br /><a href="https://github.com/craigary/nobelium/commits?author=ruter" title="Owner">🔧 🐛</a></td>
   </tr>
 </table>
