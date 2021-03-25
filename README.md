@@ -12,19 +12,27 @@ Official demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
 
 ## Amazing points ✨
-- **🚀 Fast and responsive**
+**🚀 Fast and responsive**
+
   - Fast page render and responsive design
-  - Static generation and quick building using an efficient compiler  
-- **🤖 Serverless and automated**
+  - Static generation and quick building using an efficient compiler
+
+**🤖 Serverless and automated**
+
   - Deploy on a free and fast platform, Vercel, in few minutes
   - Incremental rgeneration and the content is always up to date
-- **🚙 Fully functional**
+
+**🚙 Fully functional**
+
   - Comments, quick search and tag filter
   - RSS, about page, analytics, SSL, and more!
-- **🎨 Easy for customization**
+
+**🎨 Easy for customization**
+
   - Night mode
   - Nobelium is built using tailwindcss, easy for customization
-- **🕸 Pretty URLs and SEO friendly**  
+
+**🕸 Pretty URLs and SEO friendly** 
 
 ## Getting started
 ### Step 0: Star this repo
@@ -39,7 +47,7 @@ Official demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 - *(Optional)* Replace `avatar.svg`, `logo.svg`, and `favicon.ico` in `/public` folder with your own
 
 ### Step 3: Deploy in few seconds
-- Deploy on Vercel, set following environment variables：
+- Deploy on [Vercel](https://vercel.com), set following environment variables：
     - `NOTION_PAGE_ID`: The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
 - **That's it!** Easy-peasy?
 
@@ -58,20 +66,19 @@ Official demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4d0f0ca642ef8f652673c37add22)
 
 - [x]  Better SEO
-- [ ]  Use preact when deploying in production
-- [ ]  Add more comment system
-- [ ]  Add more analytics system
-- [ ]  Dark mode
+- [x]  Dark mode
+- [x]  Open Graph support
 - [ ]  Sitemap
-- [ ]  Open Graph support
 - [ ]  Figma design file
 - [ ]  ...
 
 ## Technical details
+
 - **Generation**: Next.js SSG and Incremental Static Regeneration
 - **Page render**: [React-notion](https://github.com/splitbee/react-notion)
 - **Style**: Tailwindcss and `@tailwindcss/jit` compiler
 - **Comments**: Gitalk and more incoming  
+
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 
