@@ -1,7 +1,12 @@
 import Image from 'next/image'
 import Container from '@/components/Container'
 import { useRouter } from 'next/router'
-import { NotionRenderer } from 'react-notion'
+import {
+  NotionRenderer,
+  Equation,
+  Code,
+  Collection
+} from 'react-notion-x'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 import dynamic from 'next/dynamic'
@@ -68,7 +73,14 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
         {children}
         {blockMap && (
           <div className="text-gray-700 dark:text-gray-300">
-            <NotionRenderer blockMap={blockMap} />
+            <NotionRenderer
+              recordMap={blockMap}
+              components={{
+                equation: Equation,
+                code: Code,
+                collection: Collection
+              }}
+            />
           </div>
         )}
       </article>
