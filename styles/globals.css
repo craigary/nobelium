@@ -32,21 +32,19 @@
   position: sticky;
   z-index: 10;
   top: -1px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   transition: all 0.15s cubic-bezier(0.4, 0, 0, 1);
   border-bottom-color: transparent;
 }
 
 .sticky-nav-full {
-  @apply border-b border-gray-200 dark:border-gray-600
+  @apply border-b border-gray-200 dark:border-gray-600;
 }
 
 .header-name {
   display: none;
   opacity: 0;
   overflow: hidden;
-  /* transform: translateY(-3rem);
-  transition: all .2s cubic-bezier(.4,0,0,1) */
 }
 
 .sticky-nav-full .header-name {
@@ -54,7 +52,6 @@
   /* opacity: 0; */
   /* display: none */
 }
-
 
 nav {
   flex-wrap: wrap;
@@ -66,19 +63,18 @@ nav {
   overflow-wrap: break-word;
 }
 
-
 .tag-container ul::-webkit-scrollbar {
-  width: 0 !important
+  width: 0 !important;
 }
 
-.tag-container ul{
+.tag-container ul {
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
-  -moz-user-select:none;
-  -webkit-user-select:none;
-  -ms-user-select:none;
-  -khtml-user-select:none;
-  user-select:none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 }
 
 .notion,
@@ -89,7 +85,7 @@ nav {
   @apply leading-8;
   @apply font-sans;
   @apply p-0;
-  @apply my-3
+  @apply my-3;
 }
 .notion-bookmark {
   @apply border-2;
@@ -106,42 +102,19 @@ nav {
 }
 
 .notion-full-width {
-  @apply px-0
+  @apply px-0;
 }
 .notion-page {
   @apply w-auto;
-  @apply px-0
+  @apply px-0;
 }
 .notion-quote {
   padding: 0.2em 0.9em;
 }
-/* 
-.notion-h1,
-.notion-h2,
-.notion-h3,
-.notion-blank,
-.notion-text,
-.notion-block,
-.notion-toggle {
-  padding: 12px 2px;
-}
-
-.notion-viewport {
-}
-
-.notion-text,
-.notion p {
-  @apply leading-8;
-}
-
-.notion-page {
-  @apply px-0 mx-0;
-}
-*/
 
 @media (min-width: 768px) {
   .sticky-nav-full {
-    @apply max-w-full border-b border-gray-200 dark:border-gray-600;
+    @apply max-w-full border-b border-opacity-50 border-gray-200 dark:border-gray-600;
   }
   .header-name {
     display: block;
@@ -156,6 +129,6 @@ nav {
 @supports not (backdrop-filter: none) {
   .sticky-nav {
     backdrop-filter: none;
-    @apply bg-day bg-opacity-90 dark:bg-night dark:bg-opacity-90
+    @apply bg-day bg-opacity-90 dark:bg-night dark:bg-opacity-90;
   }
 }
