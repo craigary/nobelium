@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "preinstall": "npx npm-force-resolutions"
+    "start": "next start"
   },
   "dependencies": {
     "feed": "^4.2.2",
