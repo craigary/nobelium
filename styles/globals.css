@@ -109,9 +109,12 @@ nav {
   @apply px-0
 }
 .notion-page {
-  @apply w-auto px-0
+  @apply w-auto;
+  @apply px-0
 }
-
+.notion-quote {
+  padding: 0.2em 0.9em;
+}
 /* 
 .notion-h1,
 .notion-h2,
