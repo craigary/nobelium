@@ -35,8 +35,15 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         />
       </Head>
       <div className="wrapper">
-        <Header navBarTitle={layout === 'blog' ? meta.title : null} fullWidth={fullWidth}/>
-        <main className={`m-auto font-sans flex-grow w-full transition-all ${!fullWidth ? 'max-w-3xl px-4' : 'px-4 md:px-24'}` }>
+        <Header
+          navBarTitle={layout === 'blog' ? meta.title : null}
+          fullWidth={fullWidth}
+        />
+        <main
+          className={`m-auto font-sans flex-grow w-full transition-all ${
+            !fullWidth ? 'max-w-3xl px-4' : 'px-4 md:px-24'
+          }`}
+        >
           {children}
         </main>
         <Footer fullWidth={fullWidth} />
