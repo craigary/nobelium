@@ -17,7 +17,6 @@ const BlogPost = ({ post, blockMap }) => {
 export async function getStaticPaths () {
   let posts = await getAllPosts()
   posts = posts.filter(
-    // post => post.status === 'Published' && post.type === 'Post'
     post => post.status === 'Published'
   )
   return {
@@ -29,7 +28,6 @@ export async function getStaticPaths () {
 export async function getStaticProps ({ params: { slug } }) {
   let posts = await getAllPosts()
   posts = posts.filter(
-    // post => post.status === 'Published' && post.type === 'Post'
     post => post.status === 'Published'
   )
   const post = posts.find(t => t.slug === slug)

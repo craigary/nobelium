@@ -6,8 +6,9 @@ export default function search ({ tags, posts }) {
 }
 export async function getStaticProps () {
   let posts = await getAllPosts()
-  posts = posts
-    .filter(post => post.status === 'Published' && post.type === 'Post')
+  posts = posts.filter(
+    post => post.status === 'Published' && post.type === 'Post'
+  )
   const tags = await getAllTags()
   return {
     props: {

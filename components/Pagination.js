@@ -4,7 +4,6 @@ import { useLocale } from '@/lib/locale'
 
 const Pagination = ({ page, showNext }) => {
   const locale = useLocale()
-  // console.log(locale)
   const currentPage = +page
   return (
     <div className="flex justify-between font-medium text-black dark:text-gray-100">
