@@ -2,6 +2,7 @@ import BLOG from '@/blog.config'
 const Footer = ({ fullWidth }) => {
   const d = new Date()
   const y = d.getFullYear()
+  const from = +BLOG.since
   return (
     <div
       className={`mt-6 flex-shrink-0 m-auto font-noEmoji w-full text-gray-600 dark:text-gray-400 transition-all ${
@@ -22,7 +23,7 @@ const Footer = ({ fullWidth }) => {
         </p>
         <p>
           © {BLOG.author}{' '}
-          {BLOG.since === y || !BLOG.since ? y : `${BLOG.since} - ${y}`}
+          {from === y || !from ? y : `${from} - ${y}`}
         </p>
       </div>
     </div>
