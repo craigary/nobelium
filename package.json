@@ -27,6 +27,7 @@
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react": "^7.22.0",
     "postcss": "^8.2.8",
+    "styled-jsx-plugin-postcss": "^4.0.1",
     "tailwindcss": "^2.0.4"
   },
   "resolutions": {
