@@ -7,10 +7,10 @@ assignees: craigary
 
 ---
 
-<!-- 中文用户请注意：请仔细阅读以下模版，如果不遵循模版，issue 将会被直接关闭。 -->
+<!-- 中文用户请注意：请仔细阅读以下模版，如果不遵循模版，issue 将会被关闭。 -->
 <!--
   !!! IMPORTANT !!!
-  Please do not ignore this template. If you do, your issue will be closed immediately.
+  Please do not ignore this template. If you do, your issue will be closed.
 -->
 
 **Is your feature request related to a problem? Please describe.**
