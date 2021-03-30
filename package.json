@@ -10,7 +10,7 @@
   "dependencies": {
     "feed": "^4.2.2",
     "gitalk": "^1.7.2",
-    "next": "10.0.7",
+    "next": "10.1.2",
     "notion-client": "^4.3.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
