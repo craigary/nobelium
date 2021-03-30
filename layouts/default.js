@@ -15,6 +15,10 @@ const GitalkComponent = dynamic(
   { ssr: false }
 )
 
+const mapPageUrl = (id) => {
+  return 'https://www.notion.so/' + id.replace(/-/g, '')
+}
+
 const DefaultLayout = ({ children, blockMap, frontMatter }) => {
   const locale = useLocale()
   const router = useRouter()
@@ -75,6 +79,7 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
                 code: Code,
                 collectionRow: CollectionRow
               }}
+              mapPageUrl={mapPageUrl}
             />
           </div>
         )}
