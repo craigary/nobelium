@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Container from '@/components/Container'
 import { useRouter } from 'next/router'
-import { NotionRenderer, Equation, Code, CollectionRow } from 'react-notion-x'
+import { NotionRenderer, Equation, Code, Collection, CollectionRow } from 'react-notion-x'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 import dynamic from 'next/dynamic'
@@ -77,6 +77,7 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
               components={{
                 equation: Equation,
                 code: Code,
+                collection: Collection,
                 collectionRow: CollectionRow
               }}
               mapPageUrl={mapPageUrl}
