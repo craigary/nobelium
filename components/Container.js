@@ -17,6 +17,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
+        <meta charset={BLOG.lang} />
         {BLOG.seo.googleSiteVerification && (
           <meta
             name="google-site-verification"
@@ -40,11 +41,11 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
             meta.title
           )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
         />
-        <meta property="og:type" content="article" />
+        <meta property="og:type" content={meta.type} />
 
         <meta name="twitter:card" content={meta.description} />
         <meta name="twitter:title" content={meta.title} />
-        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:description" content="summary_large_image" />
         <meta
           name="twitter:image"
           content={`https://og-image-craigary.vercel.app/${meta.title}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
