@@ -53,7 +53,6 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
           <>
             <meta property="article:published_time" content={meta.date} />
             <meta property="article:author" content={BLOG.author} />
-            <meta property="article:tag" content={meta.tags.join(', ') || ''} />
           </>
         )}
       </Head>
