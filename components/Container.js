@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import BlogPost from './BlogPost'
 
 const Container = ({ children, layout, fullWidth, ...customMeta }) => {
+  const url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
   const meta = {
     title: BLOG.title,
     type: 'website',
@@ -31,15 +32,13 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         <meta property="og:description" content={meta.description} />
         <meta
           property="og:url"
-          content={
-            BLOG.path
-              ? `${BLOG.link}/${meta.slug}/${meta.slug}`
-              : `${BLOG.link}/${meta.slug}`
-          }
+          content={meta.slug ? `${url}/${meta.slug}` : url}
         />
         <meta
           property="og:image"
-          content={`https://og-image-craigary.vercel.app/${meta.title}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
+          content={`https://og-image-craigary.vercel.app/${encodeURIComponent(
+            meta.title
+          )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
         />
 
         <meta name="twitter:card" content={meta.description} />
