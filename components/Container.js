@@ -26,7 +26,6 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
           <meta name="keywords" content={BLOG.seo.keywords.join(', ')} />
         )}
         <meta name="description" content={meta.description} />
-
         <meta property="og:title" content={meta.title} />
         <meta property="og:type" content={layout || 'Blog'} />
         <meta
@@ -41,7 +40,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         />
         <main
           className={`m-auto font-sans flex-grow w-full transition-all ${
-            !fullWidth ? 'max-w-3xl px-4' : 'px-4 md:px-24'
+            !fullWidth ? 'max-w-2xl px-4' : 'px-4 md:px-24'
           }`}
         >
           {children}
