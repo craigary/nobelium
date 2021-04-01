@@ -27,6 +27,7 @@ class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
+          <link rel="preload" href="avatar.svg" as="image" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
           {BLOG.analytics && BLOG.analytics.provider === 'ackee' && (
