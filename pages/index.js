@@ -4,7 +4,7 @@ import Pagination from '@/components/Pagination'
 import { getAllPosts } from '@/lib/notion'
 import BLOG from '@/blog.config'
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   let posts = await getAllPosts()
   posts = posts.filter(
     post => post.status === 'Published' && post.type === 'Post'

@@ -22,8 +22,7 @@ const Footer = ({ fullWidth }) => {
           is built with ♥ and ⚛ Next.js. Proudly deployed on ▲Vercel.
         </p>
         <p>
-          © {BLOG.author}{' '}
-          {from === y || !from ? y : `${from} - ${y}`}
+          © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
         </p>
       </div>
     </div>

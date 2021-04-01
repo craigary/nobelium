@@ -34,7 +34,7 @@ body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG) ;
+  background-color: var(--thumbBG);
 }
 
 ::selection {
@@ -70,7 +70,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sticky-nav-full .nav {
-  @apply text-gray-500 dark:text-gray-400
+  @apply text-gray-500 dark:text-gray-400;
 }
 
 nav {

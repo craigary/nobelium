@@ -50,21 +50,19 @@ const BlogPost = ({ post, blockMap }) => {
           @apply hidden;
         }
       `}</style>
-      {post.fullWidth
-        ? (
+      {post.fullWidth ? (
         <FullWidthLayout
           blockMap={blockMap}
           frontMatter={post}
         ></FullWidthLayout>
-          )
-        : (
+      ) : (
         <DefaultLayout blockMap={blockMap} frontMatter={post}></DefaultLayout>
-          )}
+      )}
     </>
   )
 }
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   let posts = await getAllPosts()
   posts = posts.filter(post => post.status === 'Published')
   return {
@@ -73,7 +71,7 @@ export async function getStaticPaths () {
   }
 }
 
-export async function getStaticProps ({ params: { slug } }) {
+export async function getStaticProps({ params: { slug } }) {
   let posts = await getAllPosts()
   posts = posts.filter(post => post.status === 'Published')
   const post = posts.find(t => t.slug === slug)
