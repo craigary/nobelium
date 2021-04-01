@@ -4,9 +4,17 @@
 
 一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为 Notion 和所有创作者设计。
 
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/craigary/nobelium?style=for-the-badge)](https://github.com/craigary/nobelium/commits/main)
-[![GitHub contributors](https://img.shields.io/github/contributors/craigary/nobelium?color=orange&style=for-the-badge)](https://github.com/craigary/nobelium/graphs/contributors)
-![Build](https://img.shields.io/github/deployments/craigary/nobelium/Preview?logo=Vercel&style=for-the-badge)
+<p>
+  <a aria-label="GitHub commit activity" href="https://github.com/craigary/nobelium/commits/main" title="GitHub commit activity">
+    <img src="https://img.shields.io/github/commit-activity/m/craigary/nobelium?style=for-the-badge">
+  </a>
+  <a aria-label="GitHub contributors" href="https://github.com/craigary/nobelium/graphs/contributors" title="GitHub contributors">
+    <img src="https://img.shields.io/github/contributors/craigary/nobelium?color=orange&style=for-the-badge">
+  </a>
+  <a aria-label="Build status" href="#" title="Build status">
+    <img src="https://img.shields.io/github/deployments/craigary/nobelium/Preview?logo=Vercel&style=for-the-badge">
+  </a>
+</p>
 
 [中文说明 / [English](README.md)]
 
