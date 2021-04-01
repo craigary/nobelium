@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Container from '@/components/Container'
 import { useRouter } from 'next/router'
-import { NotionRenderer, Equation, Code, Collection, CollectionRow } from 'react-notion-x'
+import { NotionRenderer, Equation, Code, CollectionRow } from 'react-notion-x'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 import dynamic from 'next/dynamic'
@@ -35,7 +35,7 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
           {frontMatter.title}
         </h1>
         {frontMatter.type !== 'Page' && (
-          <nav className="flex mt-4 mb-1 items-center font-medium text-gray-600 dark:text-gray-400">
+          <nav className="flex mt-7 mb-2 items-center text-gray-500 dark:text-gray-400">
             <div className="flex">
               <a href={BLOG.socialLink || '#'} className="flex">
                 <Image
@@ -71,13 +71,12 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
         )}
         {children}
         {blockMap && (
-          <div className="text-gray-700 dark:text-gray-300">
+          <div className="text-gray-600 dark:text-gray-300">
             <NotionRenderer
               recordMap={blockMap}
               components={{
                 equation: Equation,
                 code: Code,
-                collection: Collection,
                 collectionRow: CollectionRow
               }}
               mapPageUrl={mapPageUrl}

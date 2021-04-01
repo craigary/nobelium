@@ -69,10 +69,8 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-.sticky-nav-full .header-name {
-  /* transform: translateY(0); */
-  /* opacity: 0; */
-  /* display: none */
+.sticky-nav-full .nav {
+  @apply text-gray-500 dark:text-gray-400
 }
 
 nav {

@@ -15,6 +15,10 @@ const GitalkComponent = dynamic(
   { ssr: false }
 )
 
+const mapPageUrl = (id) => {
+  return 'https://www.notion.so/' + id.replace(/-/g, '')
+}
+
 const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
   const locale = useLocale()
   const router = useRouter()
@@ -32,7 +36,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
           {frontMatter.title}
         </h1>
         {frontMatter.type !== 'Page' && (
-          <nav className="flex mt-4 mb-1 items-center font-medium text-gray-600 dark:text-gray-400">
+          <nav className="flex mt-7 mb-2 items-center text-gray-500 dark:text-gray-400">
             <div className="flex">
               <a href={BLOG.socialLink || '#'} className="flex">
                 <Image
@@ -68,7 +72,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
         )}
         {children}
         {blockMap && (
-          <div className="text-gray-700 dark:text-gray-300">
+          <div className="text-gray-600 dark:text-gray-300">
             <NotionRenderer
               recordMap={blockMap}
               components={{
@@ -76,6 +80,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
                 code: Code,
                 collectionRow: CollectionRow
               }}
+              mapPageUrl={mapPageUrl}
             />
           </div>
         )}

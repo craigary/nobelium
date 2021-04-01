@@ -1,19 +1,9 @@
 <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
-.background { fill: black}
-.letter { fill: white}
+rect { fill: black}
 @media (prefers-color-scheme: dark) {
-.background { fill: white}
-.letter { fill: black}
+rect { fill: white}
 }
 </style>
-<g clip-path="url(#clip0)">
-<rect width="200" height="200" class="background"/>
-<path d="M200.563 83.7392H169V144.594H168.092L126.765 83.7392H99.9706V200H131.534V138.918H132.215L174.223 200H200.563V83.7392Z" class="letter"/>
-</g>
-<defs>
-<clipPath id="clip0">
-<rect width="200" height="200" />
-</clipPath>
-</defs>
+<rect width="200" height="200" rx="60"/>
 </svg>
