@@ -40,6 +40,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
             meta.title
           )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
         />
+        <meta property="og:type" content="article" />
 
         <meta name="twitter:card" content={meta.description} />
         <meta name="twitter:title" content={meta.title} />
