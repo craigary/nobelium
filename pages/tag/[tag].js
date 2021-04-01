@@ -1,11 +1,11 @@
 import { getAllPosts, getAllTags } from '@/lib/notion'
 import SearchLayout from '@/layouts/search'
 
-export default function Tag ({ tags, posts, currentTag }) {
+export default function Tag({ tags, posts, currentTag }) {
   return <SearchLayout tags={tags} posts={posts} currentTag={currentTag} />
 }
 
-export async function getStaticProps ({ params }) {
+export async function getStaticProps({ params }) {
   const currentTag = params.tag
   let posts = await getAllPosts()
   posts = posts.filter(
@@ -25,7 +25,7 @@ export async function getStaticProps ({ params }) {
   }
 }
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   const tags = await getAllTags()
   return {
     paths: Object.keys(tags).map(tag => ({ params: { tag } })),

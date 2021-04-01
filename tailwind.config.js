@@ -16,12 +16,19 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
-        noEmoji: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+        noEmoji: [
+          'Inter',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'sans-serif'
+        ]
       }
     }
   },
   variants: {
     extend: {}
   },
-  plugins: [require('@tailwindcss/typography')]
+  plugins: []
 }

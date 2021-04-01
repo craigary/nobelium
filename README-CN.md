@@ -1,12 +1,15 @@
 # Nobelium
-一个免费、快速的博客系统，为 Notion 和所有创作者设计。
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为 Notion 和所有创作者设计。
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/craigary/nobelium?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/craigary/nobelium?style=flat-square)
+![Build](https://img.shields.io/github/deployments/craigary/nobelium/Preview?logo=Vercel&style=flat-square)
 
 [中文说明 / [English](README.md)]
 
 演示地址：[https://nobelium.vercel.app/](https://nobelium.vercel.app/)
-  
+
 <details><summary>截图</summary>
 <img src="https://github.com/craigary/nobelium/blob/main/desktop.png?raw=true">
 </details>
@@ -15,23 +18,23 @@
 
 **🚀 &nbsp;秒开，设备全适配**
 
-  - 快速的页面渲染和响应式设计
-  - 高效编译器的快速静态页面生成
+- 快速的页面渲染和响应式设计
+- 高效编译器的快速静态页面生成
 
 **🤖 &nbsp;自动，无需重新部署**
 
-  - 部署在免费、高速的 Vercel 平台
-  - 支持增量式更新，更新文章后无需重复部署
+- 部署在免费、高速的 Vercel 平台
+- 支持增量式更新，更新文章后无需重复部署
 
 **🚙 &nbsp;全功能，完全不操心**
 
-  - 评论、宽页面、搜索和标签
-  - 订阅、网站统计、Web Vital 分析…… 还有更多功能待你发现
+- 评论、宽页面、搜索和标签
+- 订阅、网站统计、Web Vital 分析…… 还有更多功能待你发现
 
 **🎨 &nbsp;美观，轻松自定义**
 
-  - 丰富的配置项，更支持多语言
-  - 使用 Tailwind CSS，轻松实现二次开发
+- 丰富的配置项，更支持多语言
+- 使用 Tailwind CSS，轻松实现二次开发
 
 **🕸 &nbsp;网址美观、搜索引擎优化**
 
@@ -41,22 +44,22 @@
 - 将 [这个 Notion 模板](https://www.notion.so/68be9021bca34b8e89f0246f27e608df) 制作副本，并分享这个页面给所有人
 - [Fork](https://github.com/craigary/nobelium/fork) 这个项目
 - 在 `blog.config.js` 配置相关选项
-- *(可选)* 用自己的图片替换 `/public` 文件夹里的 `avatar.svg`、`favicon.svg` 和 `favicon.ico`
+- _(可选)_ 用自己的图片替换 `/public` 文件夹里的 `avatar.svg`、`favicon.svg` 和 `favicon.ico`
 - 在 [Vercel](https://vercel.com) 上部署这个项目, 设定一个环境变量：
   - `NOTION_PAGE_ID`: 你刚刚分享出去的 Notion 页面网址中的页面 ID，通常是网址中工作区地址后的 32 位字符串
-- **稍微等等就可以访问了！** 简单吗? 
+- **稍微等等就可以访问了！** 简单吗?
 
 ## Roadmap
 
 在这里看看我们的 [Roadmap](https://www.notion.so/craigary/Public-Roadmap-3cfc4d0f0ca642ef8f652673c37add22)
 
-- [x]  搜索引擎优化
-- [x]  深色模式
-- [x]  Open Graph 支持
-- [x]  切换到 react-notion-x
-- [ ]  站点地图
-- [ ]  Figma 设计文件
-- [ ]  ...
+- [x] 搜索引擎优化
+- [x] 深色模式
+- [x] Open Graph 支持
+- [x] 切换到 react-notion-x
+- [ ] 站点地图
+- [ ] Figma 设计文件
+- [ ] ...
 
 ## 技术细节
 
@@ -77,6 +80,7 @@
 </table>
 
 ## 贡献者
+
 <table>
 <tr align="left">
     <td align="center"><a href="https://github.com/craigary"><img src="https://avatars.githubusercontent.com/u/10571717?s=64&v=4" width="80px;" alt=""/><br /><sub><b>Craig Hart</b></sub></a><br /><a href="https://github.com/craigary/nobelium/commits?author=craigary" title="Owner">🎫 🔧 🎨 🐛</a></td>
@@ -87,4 +91,5 @@
 </table>
 
 ## License
+
 The MIT License.

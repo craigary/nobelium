@@ -1,9 +1,18 @@
-# Nobelium   
+<div style="display:flex; flex-direction: row-reverse; justify-content: space-between; align-items: center">
+
+![Logo](Nobelium-Logo.svg | width=100)
+
+# Nobelium
+
+</div>
+
 A static blog build on top of Notion and Nextjs, deployed on Vercel.
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/craigary/nobelium?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/craigary/nobelium?style=flat-square)
+![Build](https://img.shields.io/github/deployments/craigary/nobelium/Preview?logo=Vercel&style=flat-square)
 
-[[中文说明](README-CN.md) | English] 
+[[中文说明](README-CN.md) | English]
 
 Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
@@ -15,33 +24,33 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
 **🚀 &nbsp;Fast and responsive**
 
-  - Fast page render and responsive design
-  - Fast static generation with efficient compiler
+- Fast page render and responsive design
+- Fast static generation with efficient compiler
 
 **🤖 &nbsp;Deploy instantly**
 
-  - Deploy on Vercel in minutes
-  - Incremental regeneration and no need to redeploy after update the content in notion
+- Deploy on Vercel in minutes
+- Incremental regeneration and no need to redeploy after update the content in notion
 
 **🚙 &nbsp;Fully functional**
 
-  - Comments, full width page, quick search and tag filter
-  - RSS, analytics, web vital... and much more
+- Comments, full width page, quick search and tag filter
+- RSS, analytics, web vital... and much more
 
 **🎨 &nbsp;Easy for customization**
 
-  - Rich config options, support English & Chinese interface
-  - Built with Tailwind CSS, easy for customization
+- Rich config options, support English & Chinese interface
+- Built with Tailwind CSS, easy for customization
 
-**🕸 &nbsp;Pretty URLs and SEO friendly** 
+**🕸 &nbsp;Pretty URLs and SEO friendly**
 
 ## Quick Start
 
 - Star this repo 😉
 - Duplicate [this Notion template](https://www.notion.so/68be9021bca34b8e89f0246f27e608df), and share it to the public
 - [Fork](https://github.com/craigary/nobelium/fork) this project
-- Customize `blog.config.js` 
-- *(Optional)* Replace `avatar.svg`, `favicon.svg`, and `favicon.ico` in `/public` folder with your own
+- Customize `blog.config.js`
+- _(Optional)_ Replace `avatar.svg`, `favicon.svg`, and `favicon.ico` in `/public` folder with your own
 - Deploy on [Vercel](https://vercel.com), set following environment variables：
   - `NOTION_PAGE_ID`: The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
 - **That's it!** Easy-peasy?
@@ -50,13 +59,13 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
 Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4d0f0ca642ef8f652673c37add22)
 
-- [x]  Better SEO
-- [x]  Dark mode
-- [x]  Open Graph support
-- [x]  Switch to react-notion-x
-- [ ]  Sitemap
-- [ ]  Figma design file
-- [ ]  ...
+- [x] Better SEO
+- [x] Dark mode
+- [x] Open Graph support
+- [x] Switch to react-notion-x
+- [ ] Sitemap
+- [ ] Figma design file
+- [ ] ...
 
 ## Technical details
 
@@ -77,6 +86,7 @@ Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4
 </table>
 
 ## Contributors
+
 <table>
 <tr align="left">
     <td align="center"><a href="https://github.com/craigary"><img src="https://avatars.githubusercontent.com/u/10571717?s=64&v=4" width="80px;" alt=""/><br /><sub><b>Craig Hart</b></sub></a><br /><a href="https://github.com/craigary/nobelium/commits?author=craigary" title="Owner">🎫 🔧 🎨 🐛</a></td>
@@ -87,4 +97,5 @@ Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4
 </table>
 
 ## License
+
 The MIT License.

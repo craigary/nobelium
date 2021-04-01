@@ -10,7 +10,7 @@ import { LocaleProvider } from '@/lib/locale'
 const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
 
-function MyApp ({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <LocaleProvider>
       <>

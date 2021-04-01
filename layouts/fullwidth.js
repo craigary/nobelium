@@ -15,7 +15,7 @@ const GitalkComponent = dynamic(
   { ssr: false }
 )
 
-const mapPageUrl = (id) => {
+const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
 

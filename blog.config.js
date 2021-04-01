@@ -30,7 +30,8 @@ const BLOG = {
       measurementId: '' // e.g: G-XXXXXXXXXX
     }
   },
-  comment: { // support provider: gitalk
+  comment: {
+    // support provider: gitalk
     provider: '', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
       repo: '', // The repository of store comments

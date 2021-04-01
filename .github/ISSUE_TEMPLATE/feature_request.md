@@ -4,7 +4,6 @@ about: Suggest an idea for Nobelium.
 title: ''
 labels: enhancement
 assignees: craigary
-
 ---
 
 <!-- 中文用户请注意：请仔细阅读以下模版，如果不遵循模版，issue 将会被关闭。 -->

@@ -1,12 +1,12 @@
 module.exports = {
   presets: [
     [
-      "next/babel",
+      'next/babel',
       {
-        "styled-jsx": {
-          plugins: ["styled-jsx-plugin-postcss"],
-        },
-      },
-    ],
-  ],
-};
+        'styled-jsx': {
+          plugins: ['styled-jsx-plugin-postcss']
+        }
+      }
+    ]
+  ]
+}

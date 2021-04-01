@@ -14,7 +14,7 @@ const Page = ({ postsToShow, page, showNext }) => {
   )
 }
 
-export async function getStaticProps (context) {
+export async function getStaticProps(context) {
   const { page } = context.params // Get Current Page No.
   let posts = await getAllPosts()
   posts = posts.filter(
@@ -36,7 +36,7 @@ export async function getStaticProps (context) {
   }
 }
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   let posts = await getAllPosts()
   posts = posts.filter(
     post => post.status === 'Published' && post.type === 'Post'

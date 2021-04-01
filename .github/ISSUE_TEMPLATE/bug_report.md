@@ -4,7 +4,6 @@ about: Create a report to help Nobelium get better.
 title: ''
 labels: bug
 assignees: craigary
-
 ---
 
 <!-- 中文用户请注意：请仔细阅读以下模版，如果不遵循模版，issue 将会被关闭。 -->
@@ -26,9 +25,10 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Platform:**
- - OS: [e.g. iOS, Android, macOS]
- - Browser [e.g. chrome, safari, firefox]
- - Version [e.g. 22]
+
+- OS: [e.g. iOS, Android, macOS]
+- Browser [e.g. chrome, safari, firefox]
+- Version [e.g. 22]
 
 **Additional context**
 Add any other context about the problem here.
