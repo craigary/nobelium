@@ -1,6 +1,6 @@
 <div style="display:flex; flex-direction: row-reverse; justify-content: space-between; align-items: center">
 
-![Logo](Nobelium-Logo.svg | width=100)
+![Logo](https://raw.githubusercontent.com/craigary/nobelium/main/Nobelium-Logo.svg | width=100)
 
 # Nobelium
 
