@@ -5,8 +5,8 @@ const Footer = ({ fullWidth }) => {
   const from = +BLOG.since
   return (
     <div
-      className={`mt-6 flex-shrink-0 m-auto font-noEmoji w-full text-gray-600 dark:text-gray-400 transition-all ${
-        !fullWidth ? 'max-w-3xl px-4' : 'px-4 md:px-24'
+      className={`mt-6 flex-shrink-0 m-auto font-noEmoji w-full text-gray-400 dark:text-gray-500 transition-all ${
+        !fullWidth ? 'max-w-2xl px-4' : 'px-4 md:px-24'
       }`}
     >
       <hr className="border-gray-200 dark:border-gray-600" />

@@ -5,20 +5,68 @@ import BLOG from '@/blog.config'
 
 const BlogPost = ({ post, blockMap }) => {
   if (!post) return null
-  return post.fullWidth
-    ? (
-    <FullWidthLayout blockMap={blockMap} frontMatter={post}></FullWidthLayout>
-      )
-    : (
-    <DefaultLayout blockMap={blockMap} frontMatter={post}></DefaultLayout>
-      )
+  return (
+    <>
+      <style jsx>{`
+        :global(.notion) {
+          color: inherit;
+          overflow-wrap: break-word;
+        }
+
+        :global(.notion),
+        :global(.notion-text),
+        :global(.notion-quote),
+        :global(.notion-list),
+        :global(.notion-h-title) {
+          @apply leading-8;
+          @apply font-sans;
+          @apply p-0;
+          @apply my-3;
+        }
+        :global(.notion-bookmark) {
+          @apply border-2;
+          @apply border-gray-100;
+        }
+        :global(.notion-bookmark:hover) {
+          @apply border-blue-400;
+        }
+        :global(.notion-viewport) {
+          z-index: -10;
+        }
+        :global(.notion-asset-caption) {
+          @apply text-center;
+        }
+        :global(.notion-full-width) {
+          @apply px-0;
+        }
+        :global(.notion-page) {
+          @apply w-auto;
+          @apply px-0;
+        }
+        :global(.notion-quote) {
+          padding: 0.2em 0.9em;
+        }
+        :global(.notion-collection-row) {
+          @apply hidden;
+        }
+      `}</style>
+      {post.fullWidth
+        ? (
+        <FullWidthLayout
+          blockMap={blockMap}
+          frontMatter={post}
+        ></FullWidthLayout>
+          )
+        : (
+        <DefaultLayout blockMap={blockMap} frontMatter={post}></DefaultLayout>
+          )}
+    </>
+  )
 }
 
 export async function getStaticPaths () {
   let posts = await getAllPosts()
-  posts = posts.filter(
-    post => post.status === 'Published'
-  )
+  posts = posts.filter(post => post.status === 'Published')
   return {
     paths: posts.map(row => `${BLOG.path}/${row.slug}`),
     fallback: true
@@ -27,9 +75,7 @@ export async function getStaticPaths () {
 
 export async function getStaticProps ({ params: { slug } }) {
   let posts = await getAllPosts()
-  posts = posts.filter(
-    post => post.status === 'Published'
-  )
+  posts = posts.filter(post => post.status === 'Published')
   const post = posts.find(t => t.slug === slug)
   const blockMap = await getPostBlocks(post.id)
   return {
