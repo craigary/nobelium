@@ -1,25 +1,12 @@
-<style>
-.title {
-  display:flex;
-  flex-direction:row-reverse;
-  justify-content: space-between;
-  align-items: center
-}
-</style>
-
-<div class="title">
-
-<img src="https://raw.githubusercontent.com/craigary/nobelium/main/Nobelium-Logo.svg" width="50" height="50" style="display: block">
+<img src="Nobelium-Logo.svg" width="50" height="50">
 
 # Nobelium
 
-</div>
-
 一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为 Notion 和所有创作者设计。
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/craigary/nobelium?style=flat-square)
-![GitHub contributors](https://img.shields.io/github/contributors/craigary/nobelium?style=flat-square)
-![Build](https://img.shields.io/github/deployments/craigary/nobelium/Preview?logo=Vercel&style=flat-square)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/craigary/nobelium?style=for-the-badge)](https://github.com/craigary/nobelium/commits/main)
+[![GitHub contributors](https://img.shields.io/github/contributors/craigary/nobelium?color=orange&style=for-the-badge)](https://github.com/craigary/nobelium/graphs/contributors)
+![Build](https://img.shields.io/github/deployments/craigary/nobelium/Preview?logo=Vercel&style=for-the-badge)
 
 [中文说明 / [English](README.md)]
 
