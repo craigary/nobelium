@@ -1,4 +1,4 @@
-<img src="Nobelium-Logo.svg" width="50" height="50">
+<img src="https://raw.githubusercontent.com/craigary/nobelium/main/Nobelium-Logo.svg" width="50" height="50">
 
 # Nobelium
 
