@@ -1,4 +1,10 @@
+<div style="display:flex; flex-direction: row-reverse; justify-content: space-between; align-items: center">
+
+<img src="https://raw.githubusercontent.com/craigary/nobelium/main/Nobelium-Logo.svg" width="50" height="50" style="display: block">
+
 # Nobelium
+
+</div>
 
 一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为 Notion 和所有创作者设计。
 
