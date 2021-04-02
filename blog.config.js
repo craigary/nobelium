@@ -13,7 +13,7 @@ const BLOG = {
   postsPerPage: 7,
   showAbout: true, // WIP
   showArchive: true, // WIP
-  socialLink: 'https://besthope.ml',
+  socialLink: 'https://t.me/im2333',
   seo: {
     keywords: ['Blog', 'Website', 'besthope'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
