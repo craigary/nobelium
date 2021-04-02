@@ -4,35 +4,39 @@ import Pagination from '@/components/Pagination'
 import { getAllPosts } from '@/lib/notion'
 import BLOG from '@/blog.config'
 
-export async function getStaticProps (context) {
-  const { page } = context.params // Get Current Page No.
-  // fetch page data
-  const posts = await getAllPosts()
-  const postsToShow = posts
-    .filter(post => post.status === 'Published' && post.type === 'Post')
-    .slice(BLOG.postsPerPage * (page - 1), BLOG.postsPerPage * page)
-  const totalPosts = posts.length
-  const totalPages = Math.ceil(totalPosts / BLOG.postsPerPage)
-  return {
-    props: {
-      page, // Current Page
-      totalPages,
-      postsToShow
-    },
-    revalidate: 1
-  }
-}
-const Page = ({ postsToShow, page, totalPages }) => {
+const Page = ({ postsToShow, page, showNext }) => {
   return (
     <Container>
       {postsToShow &&
         postsToShow.map(post => <BlogPost key={post.id} post={post} />)}
-      <Pagination page={page} totalPages={totalPages} />
+      <Pagination page={page} showNext={showNext} />
     </Container>
   )
 }
 
-export async function getStaticPaths () {
+export async function getStaticProps(context) {
+  const { page } = context.params // Get Current Page No.
+  let posts = await getAllPosts()
+  posts = posts.filter(
+    post => post.status === 'Published' && post.type === 'Post'
+  )
+  const postsToShow = posts.slice(
+    BLOG.postsPerPage * (page - 1),
+    BLOG.postsPerPage * page
+  )
+  const totalPosts = posts.length
+  const showNext = page * BLOG.postsPerPage < totalPosts
+  return {
+    props: {
+      page, // Current Page
+      postsToShow,
+      showNext
+    },
+    revalidate: 1
+  }
+}
+
+export async function getStaticPaths() {
   let posts = await getAllPosts()
   posts = posts.filter(
     post => post.status === 'Published' && post.type === 'Post'

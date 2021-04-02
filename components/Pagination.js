@@ -2,12 +2,11 @@ import Link from 'next/link'
 import BLOG from '@/blog.config'
 import { useLocale } from '@/lib/locale'
 
-const Pagination = ({ totalPages, page }) => {
+const Pagination = ({ page, showNext }) => {
   const locale = useLocale()
-  // console.log(locale)
   const currentPage = +page
   return (
-    <div className="flex justify-between font-medium">
+    <div className="flex justify-between font-medium text-black dark:text-gray-100">
       <Link
         href={
           currentPage - 1 === 1
@@ -15,14 +14,22 @@ const Pagination = ({ totalPages, page }) => {
             : `/page/${currentPage - 1}`
         }
       >
-        <p className={currentPage === 1 ? 'invisible' : 'block'}>
-          <a rel="prev">← {locale.PAGINATION.PREV}</a>
-        </p>
+        <button
+          rel="prev"
+          className={`${
+            currentPage === 1 ? 'invisible' : 'block'
+          } cursor-pointer`}
+        >
+          ← {locale.PAGINATION.PREV}
+        </button>
       </Link>
       <Link href={`/page/${currentPage + 1}`}>
-        <p className={currentPage === totalPages ? 'invisible' : 'block'}>
-          <a rel="next">{locale.PAGINATION.NEXT} →</a>
-        </p>
+        <button
+          rel="next"
+          className={`${+showNext ? 'block' : 'invisible'} cursor-pointer`}
+        >
+          {locale.PAGINATION.NEXT} →
+        </button>
       </Link>
     </div>
   )

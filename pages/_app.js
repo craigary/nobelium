@@ -1,5 +1,7 @@
-import 'react-notion/src/styles.css'
-import 'prismjs/themes/prism-tomorrow.css'
+import 'react-notion-x/src/styles.css'
+import 'prismjs/themes/prism.css'
+import 'rc-dropdown/assets/index.css'
+import 'katex/dist/katex.min.css'
 import '@/styles/globals.css'
 import BLOG from '@/blog.config'
 import dynamic from 'next/dynamic'
@@ -8,9 +10,9 @@ import { LocaleProvider } from '@/lib/locale'
 const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
 
-function MyApp ({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
-  <LocaleProvider>
+    <LocaleProvider>
       <>
         {BLOG.analytics && BLOG.analytics === 'ackee' && (
           <Ackee
@@ -21,7 +23,7 @@ function MyApp ({ Component, pageProps }) {
         {BLOG.analytics && BLOG.analytics === 'ga' && <Gtag />}
         <Component {...pageProps} />
       </>
-  </LocaleProvider>
+    </LocaleProvider>
   )
 }
 

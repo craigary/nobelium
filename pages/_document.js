@@ -1,15 +1,33 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import BLOG from '@/blog.config'
 class MyDocument extends Document {
-  static async getInitialProps (ctx) {
+  static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
   }
 
-  render () {
+  render() {
     return (
-      <Html lang={BLOG.lang}>
+      <Html
+        lang={BLOG.lang}
+        className={BLOG.appearance === 'dark' ? 'dark' : undefined}
+      >
         <Head>
+          <link
+            rel="preload"
+            href="/fonts/Inter-italic.var.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Inter-roman.var.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link rel="preload" href="avatar.svg" as="image" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
           {BLOG.analytics && BLOG.analytics.provider === 'ackee' && (
@@ -41,7 +59,7 @@ class MyDocument extends Document {
             </>
           )}
         </Head>
-        <body>
+        <body className="bg-day dark:bg-night">
           <Main />
           <NextScript />
         </body>
