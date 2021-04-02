@@ -12,20 +12,28 @@ const BlogPost = ({ post, blockMap }) => {
           color: inherit;
           overflow-wrap: break-word;
         }
-
         :global(.notion),
         :global(.notion-text),
         :global(.notion-quote),
-        :global(.notion-list),
         :global(.notion-h-title) {
           @apply leading-8;
           @apply font-sans;
           @apply p-0;
           @apply my-3;
         }
+        :global(.notion-page-link) {
+          color: inherit;
+        }
         :global(.notion-bookmark) {
           @apply border-2;
           @apply border-gray-100;
+          color: inherit;
+        }
+        :global(.notion-bookmark > div:first-child) {
+          color: inherit;
+        }
+        :global(.notion-bookmark-link > div) {
+          color: inherit;
         }
         :global(.notion-bookmark:hover) {
           @apply border-blue-400;
