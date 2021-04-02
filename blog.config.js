@@ -1,5 +1,5 @@
 const BLOG = {
-  title: 'M的bolog',
+  title: 'M的blog',
   author: 'M',
   email: 'besthop3@gmail.com',
   link: 'https://besthope.ml',
