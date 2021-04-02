@@ -33,6 +33,10 @@ const BlogPost = ({ post, blockMap }) => {
           color: unset;
         }
 
+        :global(pre[class*='language-']) {
+          line-height: inherit;
+        }
+
         :global(.notion-bookmark:hover) {
           @apply border-blue-400;
         }
