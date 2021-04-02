@@ -1,9 +1,9 @@
 const BLOG = {
-  title: 'BIEB13',
-  author: 'Bieb13',
-  email: 'im@bieb13.ml',
+  title: 'M的bolog',
+  author: 'M',
+  email: 'besthop3@gmail.com',
   link: 'https://besthope.ml',
-  description: 'This gonna be an awesome website.',
+  description: 'M的不完全指北',
   lang: 'zh-CN',
   appearance: 'auto', // ['light', 'dark', 'auto'],
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
@@ -15,7 +15,7 @@ const BLOG = {
   showArchive: true, // WIP
   socialLink: 'https://besthope.ml',
   seo: {
-    keywords: ['Blog', 'Website', 'Notion'],
+    keywords: ['Blog', 'Website', 'besthope'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
