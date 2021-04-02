@@ -34,7 +34,7 @@ const NavBar = () => {
 
 const Header = ({ navBarTitle, fullWidth }) => {
   const navRef = useRef(null)
-  const sentinalRef = useRef(null)
+  const sentinalRef = useRef([])
   const handler = ([entry]) => {
     if (navRef && navRef.current) {
       if (!entry.isIntersecting && entry !== undefined) {
