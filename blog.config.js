@@ -32,13 +32,13 @@ const BLOG = {
   },
   comment: {
     // support provider: gitalk
-    provider: 'gitalk', // leave it empty if you don't need any comment plugin
+    provider: '', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
-      repo: 'bieb13.github.io/gittalkinbieb13', // The repository of store comments
-      owner: 'bieb13',
-      admin: [bieb13],
-      clientID: 'fd4221176b3388f09f03',
-      clientSecret: 'b47972efd5b2bf64a8d618ad5d355f495088a4de',
+      repo: '', // The repository of store comments
+      owner: '',
+      admin: [],
+      clientID: '',
+      clientSecret: '',
       distractionFreeMode: false
     }
   }
