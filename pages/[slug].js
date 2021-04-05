@@ -9,7 +9,7 @@ const BlogPost = ({ post, blockMap }) => {
     <>
       <style jsx>{`
         :global(.notion) {
-          color: inherit;
+          @apply text-gray-600 dark:text-gray-300;
           overflow-wrap: break-word;
         }
         :global(.notion),
@@ -29,12 +29,14 @@ const BlogPost = ({ post, blockMap }) => {
           @apply border-gray-100;
           color: inherit;
         }
-        :global(.notion-bookmark > div:first-child) {
-          color: inherit;
+        :global(.notion-code > code) {
+          color: unset;
         }
-        :global(.notion-bookmark-link > div) {
-          color: inherit;
+
+        :global(pre[class*='language-']) {
+          line-height: inherit;
         }
+
         :global(.notion-bookmark:hover) {
           @apply border-blue-400;
         }
