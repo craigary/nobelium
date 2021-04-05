@@ -13,11 +13,11 @@ const Footer = ({ fullWidth }) => {
       <div className="my-4 text-sm leading-6 font-medium">
         <p>
           <a
-            href="https://github.com/Boycottangent/nobelium"
+            href="https://github.com/craigary/nobelium"
             target="_blank"
             rel="noreferrer"
           >
-            Seiteki
+            Nobelium
           </a>{' '}
           is built with ♥ and ⚛ Next.js. Proudly deployed on ▲Vercel.
         </p>
