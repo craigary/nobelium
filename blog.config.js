@@ -34,7 +34,7 @@ const BLOG = {
     // support provider: gitalk
    provider: 'gitalk', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
-      repo: 'https://bieb13.github.io/gittalkinbieb13/', // The repository of store comments
+      repo: 'bieb13.github.io/gittalkinbieb13', // The repository of store comments
       owner: 'bieb13',
       admin: [bieb13],
       clientID: 'fd4221176b3388f09f03',
