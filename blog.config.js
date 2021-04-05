@@ -1,8 +1,8 @@
 const BLOG = {
   title: 'SEITEKI',
-  author: 'Lsatecease',
+  author: 'Late Cease',
   email: 'haikuzu@outlook.com',
-  link: 'https://nobelium.vercel.app',
+  link: 'https://seiteki.vercel.app',
   description: 'Refuse to express a passion and it dies.',
   lang: 'en-US',
   appearance: 'auto', // ['light', 'dark', 'auto'],
