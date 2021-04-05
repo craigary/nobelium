@@ -71,7 +71,7 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
         )}
         {children}
         {blockMap && (
-          <div className="text-gray-600 dark:text-gray-300">
+          <div className="">
             <NotionRenderer
               recordMap={blockMap}
               components={{
