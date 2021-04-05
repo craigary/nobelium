@@ -13,7 +13,7 @@ const Footer = ({ fullWidth }) => {
       <div className="my-4 text-sm leading-6 font-medium">
         <p>
           <a
-            href="https://github.com/craigary/nobelium"
+            href="https://github.com/Boycottangent/nobelium"
             target="_blank"
             rel="noreferrer"
           >

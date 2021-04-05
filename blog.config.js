@@ -4,7 +4,7 @@ const BLOG = {
   email: 'haikuzu@outlook.com',
   link: 'https://seiteki.vercel.app',
   description: 'Refuse to express a passion and it dies.',
-  lang: 'en-US',
+  lang: 'zh-CN',
   appearance: 'auto', // ['light', 'dark', 'auto'],
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#111827', // use hex value, don't forget '#'
