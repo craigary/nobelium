@@ -17,7 +17,7 @@ const Footer = ({ fullWidth }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Nobelium
+            Seiteki
           </a>{' '}
           is built with ♥ and ⚛ Next.js. Proudly deployed on ▲Vercel.
         </p>
