@@ -6,6 +6,7 @@ import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 import dynamic from 'next/dynamic'
 import 'gitalk/dist/gitalk.css'
+import Gitalk from 'gitalk'
 import { useLocale } from '@/lib/locale'
 
 const GitalkComponent = dynamic(
@@ -103,12 +104,12 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
           options={{
             id: frontMatter.id,
             title: frontMatter.title,
-            clientID: BLOG.comment.gitalkConfig.clientID,
-            clientSecret: BLOG.comment.gitalkConfig.clientSecret,
-            repo: BLOG.comment.gitalkConfig.repo,
-            owner: BLOG.comment.gitalkConfig.owner,
-            admin: BLOG.comment.gitalkConfig.admin,
-            distractionFreeMode: BLOG.comment.gitalkConfig.distractionFreeMode
+            clientID: 'fd4221176b3388f09f03',
+            clientSecret: 'b47972efd5b2bf64a8d618ad5d355f495088a4de',
+            repo: 'bieb13.github.io/gitalk',
+            owner: 'bieb13',
+            admin: 'bieb13',
+            distractionFreeMode: true
           }}
         />
       )}
