@@ -1,8 +1,8 @@
 const BLOG = {
-  title: 'M的blog',
+  title: 'BIE哔哔',
   author: 'M',
   email: 'besthop3@gmail.com',
-  link: 'https://besthope.ml',
+  link: 'https://bieb13.com',
   description: 'M的不完全指北',
   lang: 'zh-CN',
   appearance: 'auto', // ['light', 'dark', 'auto'],
@@ -13,7 +13,7 @@ const BLOG = {
   postsPerPage: 7,
   showAbout: true, // WIP
   showArchive: true, // WIP
-  socialLink: 'https://t.me/im2333',
+  socialLink: 'https://t.me/bieb13',
   seo: {
     keywords: ['Blog', 'notion', '别bb','bieb13'],
     googleSiteVerification: 'PD5goUx8q7i025ABYsr6b0I3mer21fXRkbFF_Ov7djw' // Remove the value or replace it with your own google site verification code
