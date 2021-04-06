@@ -15,8 +15,8 @@ const BLOG = {
   showArchive: true, // WIP
   socialLink: 'https://t.me/im2333',
   seo: {
-    keywords: ['Blog', 'Website', 'besthope'],
-    googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
+    keywords: ['Blog', 'notion', '别bb','bieb13'],
+    googleSiteVerification: 'PD5goUx8q7i025ABYsr6b0I3mer21fXRkbFF_Ov7djw' // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
   analytics: {
