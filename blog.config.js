@@ -1,6 +1,6 @@
 const BLOG = {
   title: 'BIE哔哔',
-  author: 'M',
+  author: 'BIE哔哔',
   email: 'besthop3@gmail.com',
   link: 'https://bieb13.com',
   description: 'M的不完全指北',
