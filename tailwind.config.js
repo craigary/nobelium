@@ -1,6 +1,7 @@
 const BLOG = require('./blog.config')
 const { fontFamily } = require('tailwindcss/defaultTheme')
 module.exports = {
+  mode: 'jit',
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
   darkMode: BLOG.appearance === 'auto' ? 'media' : 'class', // or 'media' or 'class'
   theme: {
