@@ -39,7 +39,7 @@ const BLOG = {
       admin: 'bieb13',
       clientID: 'fd4221176b3388f09f03',
       clientSecret: 'b47972efd5b2bf64a8d618ad5d355f495088a4de',
-      distractionFreeMode: 'ture'
+      distractionFreeMode: 'false'
     }
   }
 }
