@@ -15,10 +15,6 @@ const GitalkComponent = dynamic(
   { ssr: false }
 )
 
-const mapPageUrl = id => {
-  return 'https://www.notion.so/' + id.replace(/-/g, '')
-}
-
 const DefaultLayout = ({ children, blockMap, frontMatter }) => {
   const locale = useLocale()
   const router = useRouter()
@@ -49,9 +45,16 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
               </a>
               <span className="hidden md:inline">&nbsp;/&nbsp;</span>
             </div>
-            <div className="mx-2 md:ml-0">
-              {formatDate(frontMatter.date, BLOG.lang)}
-            </div>
+            {frontMatter.parent && (
+                <div className="mx-2 md:ml-0" >
+                  <a href={frontMatter.parent.slug}>{'Included in ' + frontMatter.parent.title}</a>
+                </div>
+            )}
+            {frontMatter.date && (
+              <div className="mx-2 md:ml-0">
+                {formatDate(frontMatter.date, BLOG.lang)}
+              </div>
+            )}
             {frontMatter.tags && (
               <div className="flex flex-wrap">
                 {frontMatter.tags.map(tag => (
@@ -79,7 +82,6 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
                 code: Code,
                 collectionRow: CollectionRow
               }}
-              mapPageUrl={mapPageUrl}
             />
           </div>
         )}
