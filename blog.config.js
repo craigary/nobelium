@@ -15,7 +15,7 @@ const BLOG = {
   showArchive: true, // WIP
   socialLink: 'https://t.me/bieb13',
   seo: {
-    keywords: ['Blog', 'notion', '别bb','bieb13','bie哔哔','BIE哔哔'],
+    keywords: ['Blog', 'notion', '别bb','bieb13','bie哔哔','BIE哔哔','BIEB13'],
     googleSiteVerification: 'PD5goUx8q7i025ABYsr6b0I3mer21fXRkbFF_Ov7djw' // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
