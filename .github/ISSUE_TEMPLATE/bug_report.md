@@ -6,7 +6,7 @@ labels: bug
 assignees: craigary
 ---
 
-<!-- 中文用户请注意：请仔细阅读以下模版，如果不遵循模版，issue 将会被关闭。 -->
+<!-- 中文用户请注意：请仔细阅读以下模版，并使用英文描述问题。如果不遵循，issue 将会被关闭。 -->
 <!--
   !!! IMPORTANT !!!
   Please do not ignore this template. If you do, your issue will be closed.

@@ -24,6 +24,15 @@ const BlogPost = ({ post, blockMap }) => {
         :global(.notion-page-link) {
           color: inherit;
         }
+
+        :global(svg.notion-page-icon) {
+          @apply hidden;
+        }
+
+        :global(svg + .notion-page-title-text) {
+          @apply border-b-0;
+        }
+
         :global(.notion-bookmark) {
           @apply border-2;
           @apply border-gray-100;
