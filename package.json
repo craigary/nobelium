@@ -1,7 +1,17 @@
 {
   "name": "nobelium",
-  "version": "1.0.5",
-  "private": true,
+  "version": "1.0.7",
+  "homepage": "https://nobelium.js.org",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigary/nobelium.git"
+  },
+  "author": {
+    "name": "Craig Hart",
+    "email": "i@craigary.net",
+    "url": "http://craigary.net"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -35,5 +45,9 @@
   },
   "resolutions": {
     "axios": ">=0.21.1"
+  },
+  "bugs": {
+    "url": "https://github.com/craigary/nobelium/issues",
+    "email": "i@craigary.net"
   }
 }
