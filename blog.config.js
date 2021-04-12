@@ -5,7 +5,7 @@ const BLOG = {
   link: 'https://nobelium.vercel.app',
   description: '分享一些奇怪的想法以及教程，不吵不闹不抬杠。',
   lang: 'en-US',
-  appearance: 'auto', // ['light', 'dark', 'auto'],
+  appearance: 'dark', // ['light', 'dark', 'auto'],
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#111827', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy Nobelium in a folder
