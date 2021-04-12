@@ -21,14 +21,14 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
-    "eslint": "^7.21.0",
+    "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "postcss": "^8.2.9",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.23.2",
+    "postcss": "^8.2.10",
     "prettier": "^2.2.1",
     "styled-jsx-plugin-postcss": "^4.0.1",
     "tailwindcss": "^2.1.1"
