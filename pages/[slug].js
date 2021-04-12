@@ -2,11 +2,15 @@ import DefaultLayout from '@/layouts/default'
 import FullWidthLayout from '@/layouts/fullwidth'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import BLOG from '@/blog.config'
+import Head from 'next/head'
 
 const BlogPost = ({ post, blockMap }) => {
   if (!post) return null
   return (
     <>
+      <Head>
+        <link rel="preload" href="avatar.svg" as="image" />
+      </Head>
       <style jsx>{`
         :global(.notion) {
           @apply text-gray-600 dark:text-gray-300;
