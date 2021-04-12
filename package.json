@@ -1,7 +1,17 @@
 {
   "name": "nobelium",
-  "version": "1.0.5",
-  "private": true,
+  "version": "1.0.7",
+  "homepage": "https://nobelium.js.org",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigary/nobelium.git"
+  },
+  "author": {
+    "name": "Craig Hart",
+    "email": "i@craigary.net",
+    "url": "http://craigary.net"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -21,19 +31,23 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
-    "eslint": "^7.21.0",
+    "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "postcss": "^8.2.9",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.23.2",
+    "postcss": "^8.2.10",
     "prettier": "^2.2.1",
     "styled-jsx-plugin-postcss": "^4.0.1",
     "tailwindcss": "^2.1.1"
   },
   "resolutions": {
     "axios": ">=0.21.1"
+  },
+  "bugs": {
+    "url": "https://github.com/craigary/nobelium/issues",
+    "email": "i@craigary.net"
   }
 }
