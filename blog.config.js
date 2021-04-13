@@ -3,7 +3,7 @@ const BLOG = {
   author: 'Copshop',
   email: '',
   link: 'https://nobelium.vercel.app',
-  description: '🍊',
+  description: '',
   lang: 'en-US',
   appearance: 'auto', // ['light', 'dark', 'auto'],
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
