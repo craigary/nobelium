@@ -43,7 +43,6 @@ module.exports = {
         ],
         serif: [
           'Merriweather',
-          'ui-serif',
           'Georgia',
           'Cambria',
           '"Times New Roman"',
