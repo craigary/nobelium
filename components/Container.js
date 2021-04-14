@@ -18,7 +18,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         <title>{meta.title}</title>
         <meta content={BLOG.darkBackground} name="theme-color" />
         <meta name="robots" content="follow, index" />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         {BLOG.seo.googleSiteVerification && (
           <meta
             name="google-site-verification"
@@ -57,13 +57,13 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
           </>
         )}
       </Head>
-      <div className="wrapper">
+      <div className="wrapper font-serif">
         <Header
           navBarTitle={layout === 'blog' ? meta.title : null}
           fullWidth={fullWidth}
         />
         <main
-          className={`m-auto font-sans flex-grow w-full transition-all ${
+          className={`m-auto flex-grow w-full transition-all ${
             !fullWidth ? 'max-w-2xl px-4' : 'px-4 md:px-24'
           }`}
         >

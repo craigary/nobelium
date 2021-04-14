@@ -7,7 +7,7 @@
   font-display: optional;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url('/fonts/Inter-roman.var.woff2') format('woff2');
+  src: url('/fonts/Inter.var.woff2') format('woff2');
 }
 
 @font-face {
@@ -16,7 +16,25 @@
   font-display: optional;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url('/fonts/Inter-italic.var.woff2') format('woff2');
+  src: url('/fonts/Inter-Italic.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-weight: 100 900;
+  font-display: optional;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Merriweather.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-weight: 100 900;
+  font-display: optional;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/Merriweather-Italic.var.woff2') format('woff2');
 }
 
 html {
