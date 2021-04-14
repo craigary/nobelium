@@ -24,7 +24,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans, ...fontSansCJK],
-        serif: ['Merriweather', ...fontFamily.serif, ...fontSerifCJK],
+        serif: ['Merriweather', ...fontSerifCJK, ...fontFamily.serif],
         noEmoji: [
           'Inter',
           'ui-sans-serif',
