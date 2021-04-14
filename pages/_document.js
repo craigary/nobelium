@@ -67,19 +67,11 @@ class MyDocument extends Document {
                 }+${CJK()}:wght@400;500;700&display=swap`}
               />
               <link
-                rel="stylesheet"
                 href={`https://fonts.loli.net/css2?family=Noto+${
                   BLOG.font === 'serif' ? 'Serif' : 'Sans'
-                }+${CJK()}:wght@400;500;700&display=swap`}
+                }+${CJK()}:wght@400;500;700&display=optional`}
+                rel="stylesheet"
               />
-              <noscript>
-                <link
-                  rel="stylesheet"
-                  href={`https://fonts.loli.net/css2?family=Noto+${
-                    BLOG.font === 'serif' ? 'Serif' : 'Sans'
-                  }+${CJK()}:wght@400;500;700&display=swap`}
-                />
-              </noscript>
             </>
           )}
 
