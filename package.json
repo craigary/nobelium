@@ -1,6 +1,6 @@
 {
   "name": "nobelium",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "homepage": "https://nobelium.js.org",
   "license": "MIT",
   "repository": {
@@ -40,7 +40,6 @@
     "eslint-plugin-react": "^7.23.2",
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
-    "styled-jsx-plugin-postcss": "^4.0.1",
     "tailwindcss": "^2.1.1"
   },
   "resolutions": {

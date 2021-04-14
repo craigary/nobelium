@@ -13,7 +13,7 @@ const NavBar = () => {
   ]
   return (
     <div className="flex-shrink-0">
-      <ul className="flex flex-row font-sans">
+      <ul className="flex flex-row">
         {links.map(
           link =>
             link.show && (
