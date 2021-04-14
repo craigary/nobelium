@@ -56,7 +56,7 @@ class MyDocument extends Document {
             <>
               <link
                 rel="preconnect"
-                href="https://fonts.loli.net"
+                href="https://gstatic.loli.net"
                 crossOrigin="anonymous"
               />
               <link
