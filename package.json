@@ -40,7 +40,6 @@
     "eslint-plugin-react": "^7.23.2",
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
-    "styled-jsx-plugin-postcss": "^4.0.1",
     "tailwindcss": "^2.1.1"
   },
   "resolutions": {
