@@ -13,13 +13,13 @@ const Footer = ({ fullWidth }) => {
       <div className="my-4 text-sm leading-6 font-medium">
         <p>
           <a
-            href="https://github.com/craigary/nobelium"
+            href=""
             target="_blank"
             rel="noreferrer"
           >
-            Nobelium
+            {/* Nobelium */}
           </a>{' '}
-          is built with ♥ and ⚛ Next.js. Proudly deployed on ▲Vercel.
+          {/* is built with ♥ and ⚛ Next.js. Proudly deployed on ▲Vercel. */}
         </p>
         <p>
           © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
