@@ -1,5 +1,5 @@
 const BLOG = require('./blog.config')
-const { fontFamily } = require('tailwindcss/defaultTheme')
+// const { fontFamily } = require('tailwindcss/defaultTheme')
 const CJK = require('./lib/cjk')
 const fontSansCJK = !CJK()
   ? []
@@ -23,8 +23,34 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans, ...fontSansCJK],
-        serif: ['Merriweather', ...fontFamily.serif, ...fontSerifCJK],
+        sans: [
+          'Inter',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          ...fontSansCJK,
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"'
+        ],
+        serif: [
+          'Merriweather',
+          'ui-serif',
+          'Georgia',
+          'Cambria',
+          '"Times New Roman"',
+          'Times',
+          ...fontSerifCJK,
+          'serif'
+        ],
         noEmoji: [
           'Inter',
           'ui-sans-serif',
