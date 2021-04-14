@@ -11,68 +11,6 @@ const BlogPost = ({ post, blockMap }) => {
       <Head>
         <link rel="preload" href="avatar.svg" as="image" />
       </Head>
-      <style jsx>{`
-        :global(.notion) {
-          @apply text-gray-600 dark:text-gray-300;
-          overflow-wrap: break-word;
-        }
-        :global(.notion),
-        :global(.notion-text),
-        :global(.notion-quote),
-        :global(.notion-h-title) {
-          @apply leading-8;
-          @apply font-sans;
-          @apply p-0;
-          @apply my-3;
-        }
-        :global(.notion-page-link) {
-          color: inherit;
-        }
-
-        :global(svg.notion-page-icon) {
-          @apply hidden;
-        }
-
-        :global(svg + .notion-page-title-text) {
-          @apply border-b-0;
-        }
-
-        :global(.notion-bookmark) {
-          @apply border-2;
-          @apply border-gray-100;
-          color: inherit;
-        }
-        :global(.notion-code > code) {
-          color: unset;
-        }
-
-        :global(pre[class*='language-']) {
-          line-height: inherit;
-        }
-
-        :global(.notion-bookmark:hover) {
-          @apply border-blue-400;
-        }
-        :global(.notion-viewport) {
-          z-index: -10;
-        }
-        :global(.notion-asset-caption) {
-          @apply text-center;
-        }
-        :global(.notion-full-width) {
-          @apply px-0;
-        }
-        :global(.notion-page) {
-          @apply w-auto;
-          @apply px-0;
-        }
-        :global(.notion-quote) {
-          padding: 0.2em 0.9em;
-        }
-        :global(.notion-collection-row) {
-          @apply hidden;
-        }
-      `}</style>
       {post.fullWidth ? (
         <FullWidthLayout
           blockMap={blockMap}
