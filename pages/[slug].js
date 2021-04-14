@@ -8,9 +8,6 @@ const BlogPost = ({ post, blockMap }) => {
   if (!post) return null
   return (
     <>
-      <Head>
-        <link rel="preload" href="avatar.svg" as="image" />
-      </Head>
       {post.fullWidth ? (
         <FullWidthLayout
           blockMap={blockMap}

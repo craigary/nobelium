@@ -1,5 +1,6 @@
 import '@/styles/notion.css'
 import 'prismjs/themes/prism.css'
+// import 'rc-dropdown/assets/index.css'
 import 'katex/dist/katex.min.css'
 import '@/styles/globals.css'
 import BLOG from '@/blog.config'
