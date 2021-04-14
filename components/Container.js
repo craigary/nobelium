@@ -3,7 +3,7 @@ import Footer from '@/components/Footer'
 import BLOG from '@/blog.config'
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import BlogPost from './BlogPost'
+// import BlogPost from './BlogPost'
 
 const Container = ({ children, layout, fullWidth, ...customMeta }) => {
   const url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
@@ -57,7 +57,11 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
           </>
         )}
       </Head>
-      <div className="wrapper font-serif">
+      <div
+        className={`wrapper ${
+          BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
+        }`}
+      >
         <Header
           navBarTitle={layout === 'blog' ? meta.title : null}
           fullWidth={fullWidth}

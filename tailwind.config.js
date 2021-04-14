@@ -2,10 +2,10 @@ const BLOG = require('./blog.config')
 const { fontFamily } = require('tailwindcss/defaultTheme')
 const CJK = require('./lib/cjk')
 const fontSansCJK = !CJK()
-  ? null
+  ? []
   : [`"Noto Sans CJK ${CJK()}"`, `"Noto Sans ${CJK()}"`]
 const fontSerifCJK = !CJK()
-  ? null
+  ? []
   : [`"Noto Serif CJK ${CJK()}"`, `"Noto Serif ${CJK()}"`]
 
 module.exports = {
