@@ -1589,6 +1589,16 @@ svg + .notion-page-title-text {
   @apply border-gray-100;
   color: inherit;
 }
+
+.notion-bookmark .notion-bookmark-title,
+.notion-bookmark .notion-bookmark-link div {
+  @apply text-gray-900 dark:text-gray-200;
+}
+
+.notion-bookmark .notion-bookmark-description {
+  @apply text-gray-600 dark:text-gray-300;
+}
+
 .notion-code > code {
   color: unset;
 }
