@@ -51,7 +51,10 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
               <span className="hidden md:inline">&nbsp;/&nbsp;</span>
             </div>
             <div className="mx-2 md:ml-0">
-              {formatDate(frontMatter.date, BLOG.lang)}
+              {formatDate(
+                frontMatter.date || frontMatter.createdTime,
+                BLOG.lang
+              )}
             </div>
             {frontMatter.tags && (
               <div className="flex flex-wrap">

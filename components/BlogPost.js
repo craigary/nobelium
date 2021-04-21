@@ -14,7 +14,7 @@ const BlogPost = ({ post }) => {
           </a>
         </Link>
         <time className="flex-shrink-0 text-gray-600 dark:text-gray-400">
-          {formatDate(post.date, BLOG.lang)}
+          {formatDate(post.date || post.createdTime, BLOG.lang)}
         </time>
       </header>
       <main>
