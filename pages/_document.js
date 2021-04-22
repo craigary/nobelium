@@ -18,14 +18,14 @@ class MyDocument extends Document {
             <>
               <link
                 rel="preload"
-                href="/fonts/Merriweather.var.woff2"
+                href="/fonts/SourceSerif.var.woff2"
                 as="font"
                 type="font/woff2"
                 crossOrigin="anonymous"
               />
               <link
                 rel="preload"
-                href="/fonts/Merriweather-Italic.var.woff2"
+                href="/fonts/SourceSerif-Italic.var.woff2"
                 as="font"
                 type="font/woff2"
                 crossOrigin="anonymous"
