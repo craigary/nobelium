@@ -20,21 +20,21 @@
 }
 
 @font-face {
-  font-family: 'Merriweather';
+  font-family: 'Source Serif';
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url('/fonts/Merriweather.var.woff2') format('woff2');
+  src: url('/fonts/SourceSerif.var.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Merriweather';
+  font-family: 'Source Serif';
   font-weight: 100 900;
   font-display: swap;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url('/fonts/Merriweather-Italic.var.woff2') format('woff2');
+  src: url('/fonts/SourceSerif-Italic.var.woff2') format('woff2');
 }
 
 html {
