@@ -68,7 +68,6 @@ Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4
 - [x] Open Graph support
 - [x] Switch to react-notion-x
 - [ ] Sitemap
-- [ ] Figma design file
 - [ ] ...
 
 ## Technical details

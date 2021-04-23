@@ -68,7 +68,6 @@
 - [x] Open Graph 支持
 - [x] 切换到 react-notion-x
 - [ ] 站点地图
-- [ ] Figma 设计文件
 - [ ] ...
 
 ## 技术细节
