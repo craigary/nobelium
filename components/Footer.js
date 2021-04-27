@@ -1,4 +1,5 @@
 import BLOG from '@/blog.config'
+import Vercel from '@/components/Vercel'
 const Footer = ({ fullWidth }) => {
   const d = new Date()
   const y = d.getFullYear()
@@ -11,7 +12,7 @@ const Footer = ({ fullWidth }) => {
     >
       <hr className="border-gray-200 dark:border-gray-600" />
       <div className="my-4 text-sm leading-6 font-medium">
-        <p>
+        <p className="block mr-2">
           <a
             href="https://github.com/craigary/nobelium"
             target="_blank"
@@ -19,7 +20,10 @@ const Footer = ({ fullWidth }) => {
           >
             Nobelium
           </a>{' '}
-          is built with ♥ and ⚛ Next.js. Proudly deployed on ▲Vercel.
+          is built with ♥ and ⚛ Next.js. Powered by{' '}
+          <a href="https://vercel.com/" target="_blank" rel="noreferrer">
+            <Vercel />
+          </a>
         </p>
         <p>
           © {BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
