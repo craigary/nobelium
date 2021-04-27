@@ -18,7 +18,7 @@ export async function getStaticProps(context) {
   const { page } = context.params // Get Current Page No.
   let posts = await getAllPosts()
   posts = posts.filter(
-    post => post.status === 'Published' && post.type === 'Post'
+    post => post.status[0] === 'Published' && post.type[0] === 'Post'
   )
   const postsToShow = posts.slice(
     BLOG.postsPerPage * (page - 1),
@@ -39,7 +39,7 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   let posts = await getAllPosts()
   posts = posts.filter(
-    post => post.status === 'Published' && post.type === 'Post'
+    post => post.status[0] === 'Published' && post.type[0] === 'Post'
   )
   const totalPosts = posts.length
   const totalPages = Math.ceil(totalPosts / BLOG.postsPerPage)
