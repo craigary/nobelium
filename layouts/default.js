@@ -51,7 +51,7 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
             </div>
             <div className="mx-2 md:ml-0">
               {formatDate(
-                frontMatter.date || frontMatter.createdTime,
+                frontMatter.start_date || frontMatter.createdTime,
                 BLOG.lang
               )}
             </div>
