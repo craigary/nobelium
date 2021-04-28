@@ -2,7 +2,7 @@
 
 # Nobelium
 
-A static blog build on top of Notion and Nextjs, deployed on Vercel.
+A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://vercel.com/).
 
 <p>
   <a aria-label="GitHub commit activity" href="https://github.com/craigary/nobelium/commits/main" title="GitHub commit activity">
@@ -13,6 +13,9 @@ A static blog build on top of Notion and Nextjs, deployed on Vercel.
   </a>
   <a aria-label="Build status" href="#" title="Build status">
     <img src="https://img.shields.io/github/deployments/craigary/nobelium/Preview?logo=Vercel&style=for-the-badge">
+  </a>
+  <a aria-label="Powered by Vercel" href="https://vercel.com/" title="Powered by Vercel">
+    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" height="28">
   </a>
 </p>
 
@@ -56,7 +59,9 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 - Customize `blog.config.js`
 - _(Optional)_ Replace `avatar.svg`, `favicon.svg`, and `favicon.ico` in `/public` folder with your own
 - Deploy on [Vercel](https://vercel.com), set following environment variables：
-  - `NOTION_PAGE_ID`: The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
+  - `NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
+  - `NOTION_ACCESS_TOKEN` (Optional): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`.
+    - Keep in mind notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future.
 - **That's it!** Easy-peasy?
 
 ## Roadmap
@@ -68,7 +73,6 @@ Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4
 - [x] Open Graph support
 - [x] Switch to react-notion-x
 - [ ] Sitemap
-- [ ] Figma design file
 - [ ] ...
 
 ## Technical details
