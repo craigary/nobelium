@@ -14,6 +14,12 @@ const GitalkComponent = dynamic(
   },
   { ssr: false }
 )
+const UtterancesComponent = dynamic(
+  () => {
+    return import('../components/Utterances')
+  },
+  { ssr: false }
+)
 
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
@@ -114,6 +120,10 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
             distractionFreeMode: BLOG.comment.gitalkConfig.distractionFreeMode
           }}
         />
+      )}
+
+      {BLOG.comment && BLOG.comment.provider === 'utterances' && (
+        <UtterancesComponent issueTerm={frontMatter.id} />
       )}
     </Container>
   )
