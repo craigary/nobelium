@@ -2,7 +2,7 @@
 
 # Nobelium
 
-A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://vercel.com/).
+A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://vercel.com?utm_source=Craigary&utm_campaign=oss).
 
 <p>
   <a aria-label="GitHub commit activity" href="https://github.com/craigary/nobelium/commits/main" title="GitHub commit activity">
@@ -15,7 +15,7 @@ A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://ve
     <img src="https://img.shields.io/github/deployments/craigary/nobelium/Preview?logo=Vercel&style=for-the-badge">
   </a>
   <a aria-label="Powered by Vercel" href="https://vercel.com/" title="Powered by Vercel">
-    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" height="28">
+    <img src="https://vercel.com?utm_source=Craigary&utm_campaign=oss" height="28">
   </a>
 </p>
 
