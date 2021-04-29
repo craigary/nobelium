@@ -17,6 +17,9 @@ const Utterances = ({ issueTerm, layout }) => {
     script.setAttribute('issue-term', issueTerm)
     script.setAttribute('theme', theme)
     anchor.appendChild(script)
+    return () => {
+      anchor.innerHTML = ''
+    }
   })
   return (
     <>
