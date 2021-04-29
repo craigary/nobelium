@@ -47,7 +47,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
         <h1 className="font-bold text-3xl text-black dark:text-white">
           {frontMatter.title}
         </h1>
-        {frontMatter.type !== 'Page' && (
+        {frontMatter.type[0] !== 'Page' && (
           <nav className="flex mt-7 mb-2 items-center text-gray-500 dark:text-gray-400">
             <div className="flex">
               <a href={BLOG.socialLink || '#'} className="flex">
