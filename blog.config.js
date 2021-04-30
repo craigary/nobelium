@@ -4,7 +4,7 @@ const BLOG = {
   email: 'wtser@qq.com',
   link: 'https://blog.wtser.com',
   description: 'Find a faster way to fail, recover and try again.',
-  lang: 'en-US',
+  lang: 'cn-ZH',
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
@@ -15,9 +15,9 @@ const BLOG = {
   sortByDate: false,
   showAbout: true, // WIP
   showArchive: true, // WIP
-  socialLink: 'https://twitter.com/craigaryhart',
+  socialLink: 'https://twitter.com/wtser',
   seo: {
-    keywords: ['Blog', 'Website', 'Notion'],
+    keywords: ['Blog', 'wtser'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
