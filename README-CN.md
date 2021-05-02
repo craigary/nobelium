@@ -58,7 +58,7 @@
 - 在 [Vercel](https://vercel.com) 上部署这个项目, 设定一下环境变量：
   - `NOTION_PAGE_ID`: 你刚刚分享出去的 Notion 页面网址中的页面 ID，通常是网址中工作区地址后的 32 位字符串
   - `NOTION_ACCESS_TOKEN`（可选）: 如果你决定不分享你的数据库，你可以使用 token 来让 Nobelium 从 Notion 数据库中抓取数据。你可以在你的浏览器 cookies 中找到它，名称是 `token_v2'。
-    - Notion token 的有效期只有 180 天，请确保在 Vercel Dashboard 上手动更新，我们可能会在未来切换到官方 API 来解决这个问题。
+    - Notion token 的有效期只有 180 天，请确保在 Vercel Dashboard 上手动更新，我们可能会在未来切换到官方 API 来解决这个问题。此外，如果数据库是非公开到，Notion 中的图片可能无法正常显示到网页上。
 - **稍微等等就可以访问了！** 简单吗?
 
 ## Roadmap
