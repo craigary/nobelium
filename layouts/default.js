@@ -22,7 +22,7 @@ const UtterancesComponent = dynamic(
 )
 const CusdisComponent = dynamic(
   () => {
-    return import('@/components/Cusdis')
+    return import('react-cusdis').then(m => m.ReactCusdis)
   },
   { ssr: false }
 )
@@ -34,6 +34,7 @@ const mapPageUrl = id => {
 const DefaultLayout = ({ children, blockMap, frontMatter }) => {
   const locale = useLocale()
   const router = useRouter()
+  const cusdisI18n = ['zh-cn', 'es', 'tr', 'pt-BR', 'oc']
   return (
     <Container
       layout="blog"
@@ -132,9 +133,17 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
       )}
       {BLOG.comment && BLOG.comment.provider === 'cusdis' && (
         <CusdisComponent
-          id={frontMatter.id}
-          url={BLOG.link + router.asPath}
-          title={frontMatter.title}
+          attrs={{
+            host: BLOG.comment.cusdisConfig.host,
+            appId: BLOG.comment.cusdisConfig.appId,
+            pageId: frontMatter.id,
+            pageTitle: frontMatter.title,
+            pageUrl: BLOG.link + router.asPath,
+            theme: BLOG.appearance
+          }}
+          lang={cusdisI18n.find(
+            i => i.toLowerCase() === BLOG.lang.toLowerCase()
+          )}
         />
       )}
     </Container>

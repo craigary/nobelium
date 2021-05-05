@@ -64,6 +64,10 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
     - Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered.
 - **That's it!** Easy-peasy?
 
+<details><summary>Wait for a sec, what is Page ID？</summary>
+  <img src="https://github.com/craigary/nobelium/blob/main/pageid.png?raw=true">
+</details>
+
 ## Roadmap
 
 Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4d0f0ca642ef8f652673c37add22)
