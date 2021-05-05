@@ -61,6 +61,10 @@
     - Notion token 的有效期只有 180 天，请确保在 Vercel Dashboard 上手动更新，我们可能会在未来切换到官方 API 来解决这个问题。此外，如果数据库是非公开到，Notion 中的图片可能无法正常显示到网页上。
 - **稍微等等就可以访问了！** 简单吗?
 
+<details><summary>等等，什么是 Page ID？</summary>
+  <img src="https://github.com/craigary/nobelium/blob/main/pageid.png?raw=true">
+</details>
+
 ## Roadmap
 
 在这里看看我们的 [Roadmap](https://www.notion.so/craigary/Public-Roadmap-3cfc4d0f0ca642ef8f652673c37add22)
