@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const TagItem = ({ tag }) => (
-  <Link key={tag} href={`/tag/${encodeURIComponent(tag)}`}>
+  <Link href={`/tag/${encodeURIComponent(tag)}`}>
     <a>
       <p className="mr-1">
         #{tag}
@@ -10,4 +10,4 @@ const TagItem = ({ tag }) => (
   </Link>
 );
 
-export default TagItem;
+export default TagItem
