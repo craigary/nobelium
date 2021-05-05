@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Container from '@/components/Container'
 import { useRouter } from 'next/router'
 import { NotionRenderer, Equation, Code, CollectionRow } from 'react-notion-x'
@@ -72,15 +73,15 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
             {frontMatter.tags && (
               <div className="flex flex-wrap">
                 {frontMatter.tags.map(tag => (
-                  <p
-                    key={tag}
-                    className="mr-1 cursor-pointer"
-                    onClick={() =>
-                      router.push(`/tag/${encodeURIComponent(tag)}`)
-                    }
-                  >
-                    #{tag}
-                  </p>
+                  <Link key={tag} href={`/tag/${encodeURIComponent(tag)}`}>
+                    <a>
+                      <p
+                        className="mr-1"
+                      >
+                        #{tag}
+                      </p>
+                    </a>
+                  </Link>
                 ))}
               </div>
             )}
