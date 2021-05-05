@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import Container from '@/components/Container'
+import TagItem from '@/components/TagItem'
 import { useRouter } from 'next/router'
 import { NotionRenderer, Equation, Code, CollectionRow } from 'react-notion-x'
 import BLOG from '@/blog.config'
@@ -72,15 +72,7 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
             {frontMatter.tags && (
               <div className="flex flex-wrap">
                 {frontMatter.tags.map(tag => (
-                  <Link key={tag} href={`/tag/${encodeURIComponent(tag)}`}>
-                    <a>
-                      <p
-                        className="mr-1"
-                      >
-                        #{tag}
-                      </p>
-                    </a>
-                  </Link>
+                  <TagItem key={tag} tag={tag}/>
                 ))}
               </div>
             )}
