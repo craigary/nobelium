@@ -22,7 +22,7 @@ const UtterancesComponent = dynamic(
 )
 const CusdisComponent = dynamic(
   () => {
-    return import('react-cusdis').then(m => m.ReactCusdis)
+    return import('@/components/Cusdis')
   },
   { ssr: false }
 )
@@ -132,14 +132,9 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
       )}
       {BLOG.comment && BLOG.comment.provider === 'cusdis' && (
         <CusdisComponent
-          attrs={{
-            host: BLOG.comment.cusdisConfig.host,
-            appId: BLOG.comment.cusdisConfig.appId,
-            pageId: frontMatter.id,
-            pageTitle: frontMatter.title,
-            pageUrl: BLOG.link + router.asPath,
-            theme: BLOG.appearance
-          }}
+          id={frontMatter.id}
+          url={BLOG.link + router.asPath}
+          title={frontMatter.title}
         />
       )}
     </Container>
