@@ -75,6 +75,7 @@ const DefaultLayout = ({ children, blockMap, frontMatter }) => {
                   <Link key={tag} href={`/tag/${encodeURIComponent(tag)}`}>
                     <a>
                       <p
+                        key={tag}
                         className="mr-1"
                       >
                         #{tag}
