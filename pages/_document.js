@@ -35,14 +35,14 @@ class MyDocument extends Document {
             <>
               <link
                 rel="preload"
-                href="/fonts/IBMPlexSansVar-Roman.woff2"
+                href="/fonts/Inter.var.woff2"
                 as="font"
                 type="font/woff2"
                 crossOrigin="anonymous"
               />
               <link
                 rel="preload"
-                href="/fonts/IBMPlexSansVar-Italic.woff2"
+                href="/fonts/Inter-Italic.var.woff2"
                 as="font"
                 type="font/woff2"
                 crossOrigin="anonymous"
@@ -94,8 +94,9 @@ class MyDocument extends Document {
             ></script>
           )}
           {BLOG.autoCollapsedNavBar === true && (
-            <script
-              dangerouslySetInnerHTML={{
+            
+              <script
+                dangerouslySetInnerHTML={{
                 __html: `
               var windowTop=0;
               function scrollTrigger(){
@@ -111,8 +112,8 @@ class MyDocument extends Document {
               };
               window.addEventListener('scroll',scrollTrigger);
           `
-              }}
-            />
+                }}
+              />
           )}
           {BLOG.analytics && BLOG.analytics.provider === 'ga' && (
             <>

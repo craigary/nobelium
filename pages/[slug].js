@@ -2,9 +2,8 @@ import DefaultLayout from '@/layouts/default'
 import FullWidthLayout from '@/layouts/fullwidth'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import BLOG from '@/blog.config'
-import { createHash } from 'crypto'
 
-const BlogPost = ({ post, blockMap, emailHash }) => {
+const BlogPost = ({ post, blockMap }) => {
   if (!post) return null
   return (
     <>
@@ -12,14 +11,9 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
         <FullWidthLayout
           blockMap={blockMap}
           frontMatter={post}
-          emailHash={emailHash}
         ></FullWidthLayout>
       ) : (
-        <DefaultLayout
-          blockMap={blockMap}
-          frontMatter={post}
-          emailHash={emailHash}
-        ></DefaultLayout>
+        <DefaultLayout blockMap={blockMap} frontMatter={post}></DefaultLayout>
       )}
     </>
   )
@@ -39,10 +33,8 @@ export async function getStaticProps({ params: { slug } }) {
   posts = posts.filter(post => post.status[0] === 'Published')
   const post = posts.find(t => t.slug === slug)
   const blockMap = await getPostBlocks(post.id)
-  const emailHash = createHash('md5').update(BLOG.email).digest('hex')
-
   return {
-    props: { post, blockMap, emailHash },
+    props: { post, blockMap },
     revalidate: 1
   }
 }
