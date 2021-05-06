@@ -22,10 +22,10 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Inter', ...fontSansCJK, ...fontFamily.sans],
+        sans: ['"IBM Plex Sans"', ...fontSansCJK, ...fontFamily.sans],
         serif: ['"Source Serif"', ...fontSerifCJK, ...fontFamily.serif],
         noEmoji: [
-          'Inter',
+          '"IBM Plex Sans"',
           'ui-sans-serif',
           'system-ui',
           '-apple-system',
