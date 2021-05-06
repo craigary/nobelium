@@ -34,7 +34,6 @@ const mapPageUrl = id => {
 const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
   const locale = useLocale()
   const router = useRouter()
-  const cusdisI18n = ['zh-cn', 'es', 'tr', 'pt-BR', 'oc']
   return (
     <Container
       layout="blog"
@@ -142,9 +141,6 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
             pageUrl: BLOG.link + router.asPath,
             theme: BLOG.appearance
           }}
-          lang={cusdisI18n.find(
-            i => i.toLowerCase() === BLOG.lang.toLowerCase()
-          )}
         />
       )}
     </Container>
