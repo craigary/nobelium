@@ -12,9 +12,6 @@ const Cusdis = ({ id, url, title }) => {
     script.setAttribute('async', true)
     script.setAttribute('defer', true)
     anchor.appendChild(script)
-    return () => {
-      anchor.innerHTML = ''
-    }
   })
   return (
     <div id="comments">
