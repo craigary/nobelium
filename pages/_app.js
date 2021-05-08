@@ -14,13 +14,13 @@ function MyApp({ Component, pageProps }) {
   return (
     <LocaleProvider>
       <>
-        {BLOG.analytics && BLOG.analytics === 'ackee' && (
+        {BLOG?.analytics?.provider === 'ackee' && (
           <Ackee
             ackeeServerUrl={BLOG.analytics.ackeeConfig.dataAckeeServer}
             ackeeDomainId={BLOG.analytics.ackeeConfig.domainId}
           />
         )}
-        {BLOG.analytics && BLOG.analytics === 'ga' && <Gtag />}
+        {BLOG?.analytics?.provider === 'ga' && <Gtag />}
         <Component {...pageProps} />
       </>
     </LocaleProvider>
