@@ -35,12 +35,12 @@
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.23.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.23.2",
-    "postcss": "^8.2.14",
-    "prettier": "^2.2.1",
+    "postcss": "^8.2.15",
+    "prettier": "^2.3.0",
     "tailwindcss": "^2.1.2"
   },
   "resolutions": {
