@@ -1,6 +1,6 @@
 const BLOG = {
   title: '蓝色海洋',
-  author: 'Masako Jun',
+  author: 'admin',
   email: 'test@qq.com',
   link: 'https://i.1990day.com',
   description: '记录生活与照片分享',
