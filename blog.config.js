@@ -1,10 +1,10 @@
 const BLOG = {
   title: '蓝色海洋',
-  author: 'admin',
+  author: 'Masako Jun',
   email: 'test@qq.com',
   link: 'https://i.1990day.com',
   description: '记录生活与照片分享',
-  lang: 'en-ZH',
+  lang: 'en-US',
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
