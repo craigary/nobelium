@@ -1,5 +1,5 @@
 const BLOG = {
-  title: '蓝色海洋',
+  title: 'llBlue',
   author: 'Masako Jun',
   email: 'test@qq.com',
   link: 'https://i.1990day.com',
