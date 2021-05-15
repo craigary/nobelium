@@ -1,6 +1,6 @@
 const BLOG = {
   title: 'SEITEKI',
-  author: 'Late Cease',
+  author: 'Latecease',
   email: 'haikuzu@outlook.com',
   link: 'https://seiteki.vercel.app',
   description: 'Refuse to express a passion and it dies.',
