@@ -71,8 +71,8 @@ const Header = ({ navBarTitle, fullWidth }) => {
                   height="24"
                   viewBox="0 0 24 24"
                   fill="none"
-                  xmlns="https://pic.stackoverflow.wiki/uploadImages/182/136/29/72/2021/05/18/19/30/aa18f986-7183-4379-bb44-7267c2d41ea6.svg"
-                  //http://www.w3.org/2000/svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  //https://pic.stackoverflow.wiki/uploadImages/182/136/29/72/2021/05/18/19/30/aa18f986-7183-4379-bb44-7267c2d41ea6.svg
                 >
                   <rect
                     width="24"
