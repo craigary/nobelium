@@ -11,11 +11,11 @@ const BLOG = {
   darkBackground: '#111827', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy Nobelium in a folder
   since: 2021, // if leave this empty, current year will be used.
-  postsPerPage: 7,
-  sortByDate: false,
+  postsPerPage: 10,
+  sortByDate: true,
   showAbout: true, // WIP
   showArchive: true, // WIP
-  autoCollapsedNavBar: false, // the automatically collapsed navigation bar
+  autoCollapsedNavBar: true, // the automatically collapsed navigation bar
   socialLink: 'https://t.me/Aiiibolo',
   seo: {
     keywords: ['Blog', 'Website', 'Notion'],
