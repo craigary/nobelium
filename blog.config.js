@@ -2,7 +2,7 @@ const BLOG = {
   title: 'Aiiibolo-Blog',
   author: 'Aiiibolo',
   email: 'Aiiiboluo@gmail.com',
-  link: 'https://nobelium.vercel.app',
+  link: 'https://www.aiiibolo.tech',
   description: 'This gonna be an awesome website.',
   lang: 'en-US',
   appearance: 'auto', // ['light', 'dark', 'auto'],
