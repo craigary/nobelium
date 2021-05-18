@@ -15,7 +15,7 @@ const BLOG = {
   sortByDate: true,
   showAbout: true, // WIP
   showArchive: true, // WIP
-  autoCollapsedNavBar: flase, // the automatically collapsed navigation bar
+  autoCollapsedNavBar: false, // the automatically collapsed navigation bar
   socialLink: 'https://t.me/Aiiibolo',
   seo: {
     keywords: ['Blog', 'Website', 'Notion'],
