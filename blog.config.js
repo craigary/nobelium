@@ -49,11 +49,11 @@ const BLOG = {
       repo: ''
     },
     cusdisConfig: {
-      appId: '6db53f58-b165-47be-9238-c2d7498280c8', // data-app-id
-      host: 'https://cusdis-mqj6kknd1-aiiibolo.vercel.app', // data-host, change this if you're using self-hosted version
+      appId: 'b4eff0b5-ffdb-4f97-84b4-ba79f76724f7', // data-app-id
+      host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
       //https://cusdis-mqj6kknd1-aiiibolo.vercel.app
       //https://cusdis.com
-      scriptSrc: 'https://cusdis-mqj6kknd1-aiiibolo.vercel.app/js/cusdis.es.js' // change this if you're using self-hosted version
+      scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // change this if you're using self-hosted version
       //https://cusdis-mqj6kknd1-aiiibolo.vercel.app/js/cusdis.es.js
       //https://cusdis.com/js/cusdis.es.js
     }
