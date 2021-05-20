@@ -2,7 +2,7 @@ const BLOG = {
   title: 'llBlue',
   author: 'Masako Jun',
   email: 'test@qq.com',
-  link: 'https://i.1990day.com',
+  link: 'https://1990day.com',
   description: '记录生活与照片分享',
   lang: 'zh-CN',
   appearance: 'auto', // ['light', 'dark', 'auto'],
