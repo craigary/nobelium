@@ -57,11 +57,11 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 - Duplicate [this Notion template](https://www.notion.so/68be9021bca34b8e89f0246f27e608df), and share it to the public
 - [Fork](https://github.com/craigary/nobelium/fork) this project
 - Customize `blog.config.js`
-- _(Optional)_ Replace `avatar.svg`, `favicon.svg`, and `favicon.ico` in `/public` folder with your own
+- _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
 - Deploy on [Vercel](https://vercel.com), set following environment variables：
   - `NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
-  - `NOTION_ACCESS_TOKEN` (Optional): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`.
-    - Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered.
+  - `NOTION_ACCESS_TOKEN` (Optional): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`
+    - Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered
 - **That's it!** Easy-peasy?
 
 <details><summary>Wait for a sec, what is Page ID？</summary>
@@ -84,7 +84,7 @@ Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4
 - **Generation**: Next.js and Incremental Static Regeneration
 - **Page render**: [react-notion-x](https://github.com/NotionX/react-notion-x)
 - **Style**: Tailwind CSS and `@tailwindcss/jit` compiler
-- **Comments**: Gitalk and more incoming
+- **Comments**: Gitalk, Cusdis and more
 
 ## Special Thanks
 
