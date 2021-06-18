@@ -20,7 +20,12 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    "react/prop-types": "off"
+    'react/prop-types': 'off',
+    'import/no-anonymous-default-export': [2,
+      {
+        "allowArrowFunction": true
+      }
+    ]
   },
   globals: {
     React: true
