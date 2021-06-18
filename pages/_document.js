@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 import BLOG from '@/blog.config'
 import CJK from '@/lib/cjk'
 class MyDocument extends Document {
@@ -86,15 +87,14 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
           {BLOG.analytics && BLOG.analytics.provider === 'ackee' && (
-            <script
-              async
+            <Script
               src={BLOG.analytics.ackeeConfig.tracker}
               data-ackee-server={BLOG.analytics.ackeeConfig.dataAckeeServer}
               data-ackee-domain-id={BLOG.analytics.ackeeConfig.domainId}
-            ></script>
+            />
           )}
           {BLOG.autoCollapsedNavBar === true && (
-            <script
+            <Script
               dangerouslySetInnerHTML={{
                 __html: `
               var windowTop=0;
@@ -116,11 +116,10 @@ class MyDocument extends Document {
           )}
           {BLOG.analytics && BLOG.analytics.provider === 'ga' && (
             <>
-              <script
-                async
+              <Script
                 src={`https://www.googletagmanager.com/gtag/js?id=${BLOG.analytics.gaConfig.measurementId}`}
               />
-              <script
+              <Script
                 dangerouslySetInnerHTML={{
                   __html: `
             window.dataLayer = window.dataLayer || [];
