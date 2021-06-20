@@ -1,11 +1,11 @@
 import Container from '@/components/Container'
 import BlogPost from '@/components/BlogPost'
 import Pagination from '@/components/Pagination'
-import { getPosts } from '@/lib/notion'
+import { getAllPosts } from '@/lib/notion'
 import BLOG from '@/blog.config'
 
 export async function getStaticProps() {
-  const posts = await getPosts({ includePages: false })
+  const posts = await getAllPosts({ includePages: false })
   const postsToShow = posts.slice(0, BLOG.postsPerPage)
   const totalPosts = posts.length
   const showNext = totalPosts > BLOG.postsPerPage
