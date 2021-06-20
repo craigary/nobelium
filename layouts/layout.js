@@ -32,7 +32,7 @@ const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
 
-const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
+const Layout = ({ children, blockMap, frontMatter, emailHash, fullWidth = false }) => {
   const locale = useLocale()
   const router = useRouter()
   const cusdisI18n = ['zh-cn', 'es', 'tr', 'pt-BR', 'oc']
@@ -43,7 +43,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
       description={frontMatter.summary}
       // date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
-      fullWidth={frontMatter.fullWidth}
+      fullWidth={fullWidth}
     >
       <article>
         <h1 className="font-bold text-3xl text-black dark:text-white">
@@ -124,7 +124,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
         />
       )}
       {BLOG.comment && BLOG.comment.provider === 'utterances' && (
-        <UtterancesComponent issueTerm={frontMatter.id} layout="fullWidth" />
+        <UtterancesComponent issueTerm={frontMatter.id} />
       )}
       {BLOG.comment && BLOG.comment.provider === 'cusdis' && (
         <CusdisComponent
@@ -145,4 +145,4 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
   )
 }
 
-export default FullWidthLayout
+export default Layout
