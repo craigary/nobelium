@@ -19,6 +19,11 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react'],
+  settings: {
+    react: {
+      version: 'detect' // React version. "detect" automatically picks the version you have installed.
+    }
+  },
   rules: {
     'react/prop-types': 'off',
     'import/no-anonymous-default-export': [2,
