@@ -56,8 +56,9 @@ const DefaultLayout = ({ children, blockMap, frontMatter, emailHash }) => {
                   alt={BLOG.author}
                   width={24}
                   height={24}
-                  // placeholder="blur"
-                  src="/avatar.svg"
+                  placeholder="blur"
+                  blurDataURL={blur}
+                  src={`https://gravatar.com/avatar/${emailHash}`}
                   className="rounded-full"
                 />
                 <p className="ml-2 md:block">{BLOG.author}</p>
