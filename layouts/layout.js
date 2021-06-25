@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { NotionRenderer, Equation, Code, CollectionRow } from 'react-notion-x'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
+import { fetchCusdisLang } from '@/lib/cusdisLang'
 import dynamic from 'next/dynamic'
 import 'gitalk/dist/gitalk.css'
 import { useLocale } from '@/lib/locale'
@@ -32,10 +33,9 @@ const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
 
-const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
+const Layout = ({ children, blockMap, frontMatter, emailHash, fullWidth = false }) => {
   const locale = useLocale()
   const router = useRouter()
-  const cusdisI18n = ['zh-cn', 'es', 'tr', 'pt-BR', 'oc']
   return (
     <Container
       layout="blog"
@@ -43,7 +43,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
       description={frontMatter.summary}
       // date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
-      fullWidth={frontMatter.fullWidth}
+      fullWidth={fullWidth}
     >
       <article>
         <h1 className="font-bold text-3xl text-black dark:text-white">
@@ -57,6 +57,8 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
                   alt={BLOG.author}
                   width={24}
                   height={24}
+                  placeholder="blur"
+                  blurDataURL={blur}
                   src={`https://gravatar.com/avatar/${emailHash}`}
                   className="rounded-full"
                 />
@@ -123,7 +125,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
         />
       )}
       {BLOG.comment && BLOG.comment.provider === 'utterances' && (
-        <UtterancesComponent issueTerm={frontMatter.id} layout="fullWidth" />
+        <UtterancesComponent issueTerm={frontMatter.id} />
       )}
       {BLOG.comment && BLOG.comment.provider === 'cusdis' && (
         <CusdisComponent
@@ -135,13 +137,11 @@ const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
             pageUrl: BLOG.link + router.asPath,
             theme: BLOG.appearance
           }}
-          lang={cusdisI18n.find(
-            i => i.toLowerCase() === BLOG.lang.toLowerCase()
-          )}
+          lang={fetchCusdisLang()}
         />
       )}
     </Container>
   )
 }
 
-export default FullWidthLayout
+export default Layout
