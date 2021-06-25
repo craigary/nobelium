@@ -11,7 +11,7 @@ module.exports = {
       'pages'
     ]
   },
-  async headers() {
+  async headers () {
     return [
       {
         source: '/:path*{/}?',

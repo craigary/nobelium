@@ -2,19 +2,20 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import BLOG from '@/blog.config'
 import CJK from '@/lib/cjk'
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps (ctx) {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
   }
 
-  render() {
+  render () {
     return (
       <Html
         lang={BLOG.lang}
         className={BLOG.appearance === 'dark' ? 'dark' : undefined}
       >
         <Head>
-          {BLOG.font && BLOG.font === 'serif' ? (
+          {BLOG.font && BLOG.font === 'serif'
+            ? (
             <>
               <link
                 rel="preload"
@@ -31,7 +32,8 @@ class MyDocument extends Document {
                 crossOrigin="anonymous"
               />
             </>
-          ) : (
+              )
+            : (
             <>
               <link
                 rel="preload"
@@ -48,7 +50,7 @@ class MyDocument extends Document {
                 crossOrigin="anonymous"
               />
             </>
-          )}
+              )}
 
           {['zh', 'ja', 'ko'].includes(
             BLOG.lang.slice(0, 2).toLocaleLowerCase()
