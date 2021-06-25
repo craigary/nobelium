@@ -23,13 +23,7 @@ module.exports = {
     }
   },
   rules: {
-    'react/prop-types': 'off',
-    'import/no-anonymous-default-export': [
-      2,
-      {
-        allowArrowFunction: true
-      }
-    ]
+    'react/prop-types': 'off'
   },
   globals: {
     React: true
