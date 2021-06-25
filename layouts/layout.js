@@ -33,7 +33,13 @@ const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
 
-const Layout = ({ children, blockMap, frontMatter, emailHash, fullWidth = false }) => {
+const Layout = ({
+  children,
+  blockMap,
+  frontMatter,
+  emailHash,
+  fullWidth = false
+}) => {
   const locale = useLocale()
   const router = useRouter()
   return (
@@ -57,8 +63,6 @@ const Layout = ({ children, blockMap, frontMatter, emailHash, fullWidth = false 
                   alt={BLOG.author}
                   width={24}
                   height={24}
-                  placeholder="blur"
-                  blurDataURL={blur}
                   src={`https://gravatar.com/avatar/${emailHash}`}
                   className="rounded-full"
                 />
