@@ -19,8 +19,6 @@ A static blog build on top of Notion and Nextjs, deployed on [Vercel](https://ve
   </a>
 </p>
 
-[[中文说明](README-CN.md) | English]
-
 Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 
 <details><summary>Screenshot</summary>
