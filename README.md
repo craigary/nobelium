@@ -58,7 +58,7 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 - _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
 - Deploy on [Vercel](https://vercel.com), set following environment variables：
   - `NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
-  - `NOTION_ACCESS_TOKEN` (Optional): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`
+  - `NOTION_ACCESS_TOKEN` (Optional, not recommended): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`
     - Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered
 - **That's it!** Easy-peasy?
 
