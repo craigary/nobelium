@@ -1,15 +1,12 @@
-import { getAllPosts, getAllTags } from '@/lib/notion'
+import { getAllPosts, getAllTagsFromPosts } from '@/lib/notion'
 import SearchLayout from '@/layouts/search'
 
-export default function search({ tags, posts }) {
+export default function search ({ tags, posts }) {
   return <SearchLayout tags={tags} posts={posts} />
 }
-export async function getStaticProps() {
-  let posts = await getAllPosts()
-  posts = posts.filter(
-    post => post.status[0] === 'Published' && post.type[0] === 'Post'
-  )
-  const tags = await getAllTags()
+export async function getStaticProps () {
+  const posts = await getAllPosts({ includePages: false })
+  const tags = getAllTagsFromPosts(posts)
   return {
     props: {
       tags,

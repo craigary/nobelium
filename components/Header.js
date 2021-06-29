@@ -33,15 +33,18 @@ const NavBar = () => {
 }
 
 const Header = ({ navBarTitle, fullWidth }) => {
+  const useSticky = !BLOG.autoCollapsedNavBar
   const navRef = useRef(null)
   const sentinalRef = useRef([])
   const handler = ([entry]) => {
-    if (navRef && navRef.current) {
+    if (navRef && navRef.current && useSticky) {
       if (!entry.isIntersecting && entry !== undefined) {
         navRef.current.classList.add('sticky-nav-full')
       } else {
         navRef.current.classList.remove('sticky-nav-full')
       }
+    } else {
+      navRef.current.classList.add('remove-sticky')
     }
   }
   useEffect(() => {
@@ -96,16 +99,18 @@ const Header = ({ navBarTitle, fullWidth }) => {
               </div>
             </a>
           </Link>
-          {navBarTitle ? (
+          {navBarTitle
+            ? (
             <p className="ml-2 font-medium text-day dark:text-night header-name">
               {navBarTitle}
             </p>
-          ) : (
+              )
+            : (
             <p className="ml-2 font-medium text-day dark:text-night header-name">
               {BLOG.title},{' '}
               <span className="font-normal">{BLOG.description}</span>
             </p>
-          )}
+              )}
         </div>
         <NavBar />
       </div>

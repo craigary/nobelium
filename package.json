@@ -15,32 +15,34 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
     "feed": "^4.2.2",
     "gitalk": "^1.7.2",
-    "next": "10.2.2",
+    "next": "^11.0.0",
     "notion-client": "^4.6.0",
     "notion-utils": "^4.6.0",
     "preact": "^10.5.13",
-    "react": "17.0.2",
+    "react": "^17.0.2",
     "react-cusdis": "^2.0.1",
-    "react-dom": "17.0.2",
+    "react-dom": "^17.0.2",
     "react-notion-x": "^4.6.0",
     "use-ackee": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "eslint": "^7.26.0",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-next": "^11.0.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.23.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.23.2",
+    "next-sitemap": "^1.6.102",
     "postcss": "^8.2.15",
-    "prettier": "^2.3.0",
     "tailwindcss": "^2.1.2"
   },
   "resolutions": {
