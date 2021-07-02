@@ -1,13 +1,13 @@
 import Layout from '@/layouts/layout'
-import { getAllPosts, getPostBlocks } from '@/lib/notion'
+import { getAllPosts, getRecordMap } from '@/lib/notion'
 import BLOG from '@/blog.config'
 import { createHash } from 'crypto'
 
-const BlogPost = ({ post, blockMap, emailHash }) => {
+const BlogPost = ({ post, recordMap, emailHash }) => {
   if (!post) return null
   return (
     <Layout
-      blockMap={blockMap}
+      recordMap={recordMap}
       frontMatter={post}
       emailHash={emailHash}
       fullWidth={post.fullWidth}
@@ -26,7 +26,7 @@ export async function getStaticPaths () {
 export async function getStaticProps ({ params: { slug } }) {
   const posts = await getAllPosts({ includePages: true })
   const post = posts.find(t => t.slug === slug)
-  const blockMap = await getPostBlocks(post.id)
+  const recordMap = await getRecordMap(post.id)
   const emailHash = createHash('md5')
     .update(BLOG.email)
     .digest('hex')
@@ -34,7 +34,7 @@ export async function getStaticProps ({ params: { slug } }) {
     .toLowerCase()
 
   return {
-    props: { post, blockMap, emailHash },
+    props: { post, recordMap, emailHash },
     revalidate: 1
   }
 }

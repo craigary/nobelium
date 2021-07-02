@@ -14,7 +14,7 @@ const mapPageUrl = id => {
 
 const Layout = ({
   children,
-  blockMap,
+  recordMap,
   frontMatter,
   emailHash,
   fullWidth = false
@@ -65,10 +65,10 @@ const Layout = ({
           </nav>
         )}
         {children}
-        {blockMap && (
+        {recordMap && (
           <div className="-mt-4">
             <NotionRenderer
-              recordMap={blockMap}
+              recordMap={recordMap}
               components={{
                 equation: Equation,
                 code: Code,
