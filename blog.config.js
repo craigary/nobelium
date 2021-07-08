@@ -1,9 +1,9 @@
 const BLOG = {
-  title: '阿喆',
-  author: 'YINLINZHE.CN',
-  email: 'yinlinzhe.cn@gmail.com',
-  link: 'https://zhe.vercel.app',
-  description: '阿喆加油！',
+  title: '阿牛电商',
+  author: 'BULLBULL.CN',
+  email: 'bullbull.cn@gmail.com',
+  link: 'https://bullbull.vercel.app',
+  description: '阿牛助手！',
   lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP']
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
