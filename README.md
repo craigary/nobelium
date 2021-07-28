@@ -66,6 +66,22 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
   <img src="https://github.com/craigary/nobelium/blob/main/pageid.png?raw=true">
 </details>
 
+## Play With Docker
+
+```
+# set env
+export NOTION_PAGE_ID=xxx # your NOTION_PAGE_ID
+export IMAGE=nobelium:latest
+
+# build with docker
+docker build -t ${IMAGE} --build-arg NOTION_PAGE_ID .
+
+# run with docker
+docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} nobelium:latest
+```
+
+
+
 ## Roadmap
 
 Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4d0f0ca642ef8f652673c37add22)
