@@ -2,7 +2,7 @@ const BLOG = {
   title: 'TIME',
   author: 'TIME',
   email: 'czk66337@gmail.com',
-  link: 'https://akuntime.cool',
+  link: 'https://00000520.xyz',
   description: 'This gonna be an awesome website.',
   lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'light', // ['light', 'dark', 'auto'],
