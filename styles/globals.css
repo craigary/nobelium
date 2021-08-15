@@ -97,7 +97,7 @@ body::-webkit-scrollbar-thumb {
 
 nav {
   flex-wrap: wrap;
-  line-height: 1.5em;
+  line-height: 1.1em;
 }
 
 .article-tags::-webkit-scrollbar {
