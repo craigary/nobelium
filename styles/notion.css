@@ -55,7 +55,7 @@ pre[class*='language-'] {
 }
 .notion-asset-caption {
   @apply text-center;
-  @apply text-gray-600 dark:text-gray-300;
+  @apply text-gray-500 dark:text-gray-400;
 }
 .notion-full-width {
   @apply px-0;
