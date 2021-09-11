@@ -8,19 +8,23 @@ const Tags = ({ tags, currentTag }) => {
         {Object.keys(tags).map(key => {
           const selected = key === currentTag
           return (
-            <Link key={key} href={selected ? '/search' : `/tag/${encodeURIComponent(key)}`}>
-              <a>
-                <li
-                  className={`mr-3 py-2 font-medium border px-4 whitespace-nowrap dark:text-gray-300 ${
-                    selected
-                      ? 'text-white bg-black border-black dark:bg-gray-600 dark:border-gray-600'
-                      : 'bg-gray-100 border-gray-100 text-gray-400 dark:bg-night dark:border-gray-800'
-                  }`}
-                >
+            <li
+              key={key}
+              className={`mr-3 font-medium border whitespace-nowrap dark:text-gray-300 ${
+                selected
+                  ? 'text-white bg-black border-black dark:bg-gray-600 dark:border-gray-600'
+                  : 'bg-gray-100 border-gray-100 text-gray-400 dark:bg-night dark:border-gray-800'
+              }`}
+            >
+              <Link
+                key={key}
+                href={selected ? '/search' : `/tag/${encodeURIComponent(key)}`}
+              >
+                <a className="px-4 py-2 block">
                   {`${key} (${tags[key]})`}
-                </li>
-              </a>
-            </Link>
+                </a>
+              </Link>
+            </li>
           )
         })}
       </ul>
