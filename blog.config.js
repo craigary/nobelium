@@ -1,22 +1,23 @@
 const BLOG = {
-  title: 'CRAIGARY',
-  author: 'Craig Hart',
-  email: 'i@craigary.net',
-  link: 'https://nobelium.vercel.app',
-  description: 'This gonna be an awesome website.',
-  lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP']
+  title: '1V1.Design',
+  author: 'F11',
+  email: '1v1@1v1.design',
+  link: 'https://vvwwvv.vercel.app',
+  description: 'Design 1V1.',
+  lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#18181B', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy Nobelium in a folder
-  since: 2021, // if leave this empty, current year will be used.
-  postsPerPage: 7,
-  sortByDate: true,
-  showAbout: true, // WIP
-  showArchive: true, // WIP
-  autoCollapsedNavBar: false, // the automatically collapsed navigation bar
-  socialLink: 'https://twitter.com/craigaryhart',
+  since: 2021, // If leave this empty, current year will be used.
+  postsPerPage: 8,
+  sortByDate: false,
+  showAbout: true,
+  showArchive: true,
+  autoCollapsedNavBar: false, // The automatically collapsed navigation bar
+  ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
+  socialLink: 'https://twitter.com/fengyiyi',
   seo: {
     keywords: ['Blog', 'Website', 'Notion'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
@@ -24,11 +25,11 @@ const BLOG = {
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN, // Useful if you prefer not to make your database public
   analytics: {
-    provider: 'ackee', // Currently we support Google Analytics and Ackee, please fill with 'ga' or 'ackee', leave it empty to disable it.
+    provider: '', // Currently we support Google Analytics and Ackee, please fill with 'ga' or 'ackee', leave it empty to disable it.
     ackeeConfig: {
-      tracker: 'https://ackee.craigary.net/tracker.js', // e.g 'https://ackee.craigary.net/tracker.js'
-      dataAckeeServer: 'https://ackee.craigary.net', // e.g https://ackee.craigary.net , don't end with a slash
-      domainId: '0e2257a8-54d4-4847-91a1-0311ea48cc7b' // e.g '0e2257a8-54d4-4847-91a1-0311ea48cc7b'
+      tracker: '', // e.g 'https://ackee.craigary.net/tracker.js'
+      dataAckeeServer: '', // e.g https://ackee.craigary.net , don't end with a slash
+      domainId: '' // e.g '0e2257a8-54d4-4847-91a1-0311ea48cc7b'
     },
     gaConfig: {
       measurementId: '' // e.g: G-XXXXXXXXXX
@@ -36,7 +37,7 @@ const BLOG = {
   },
   comment: {
     // support provider: gitalk, utterances, cusdis
-    provider: '', // leave it empty if you don't need any comment plugin
+    provider: 'cusdis', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
       repo: '', // The repository of store comments
       owner: '',
@@ -49,7 +50,7 @@ const BLOG = {
       repo: ''
     },
     cusdisConfig: {
-      appId: '', // data-app-id
+      appId: 'd9ebbd0c-7354-42d0-a79f-c36123db04a4', // data-app-id
       host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
       scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // change this if you're using self-hosted version
     }
