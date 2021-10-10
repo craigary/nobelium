@@ -24,7 +24,7 @@
     "feed": "^4.2.2",
     "gitalk": "^1.7.2",
     "next": "^11.1.2",
-    "notion-client": "^4.8.6",
+    "notion-client": "^4.9.3",
     "notion-utils": "^4.8.6",
     "preact": "^10.5.14",
     "react": "^17.0.2",
