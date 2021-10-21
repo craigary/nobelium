@@ -79,6 +79,9 @@ pre[class*='language-'] {
 .notion-collection > .notion-table > .notion-table-view {
   @apply px-0 !important;
 }
+.notion-collection-view-type {
+  @apply hidden;
+}
 .notion-collection-row {
   @apply hidden;
 }
