@@ -44,7 +44,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
         navRef.current.classList.remove('sticky-nav-full')
       }
     } else {
-      navRef.current.classList.add('remove-sticky')
+      navRef?.current?.classList.add('remove-sticky')
     }
   }
   useEffect(() => {
