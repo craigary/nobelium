@@ -10,7 +10,7 @@ const Scripts = () => (
         data-ackee-domain-id={BLOG.analytics.ackeeConfig.domainId}
       />
     )}
-    {BLOG.autoCollapsedNavBar === true && (
+    {/* {BLOG.autoCollapsedNavBar === true && (
       <Script strategy="lazyOnload">
         {`var windowTop=0;
           function scrollTrigger(){
@@ -26,13 +26,13 @@ const Scripts = () => (
           };
           window.addEventListener('scroll',scrollTrigger);`}
       </Script>
-    )}
+    )} */}
     {BLOG.analytics && BLOG.analytics.provider === 'ga' && (
       <>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${BLOG.analytics.gaConfig.measurementId}`}
         />
-        <Script strategy="lazyOnload">
+        <Script strategy="lazyOnload" id="ga">
           {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
