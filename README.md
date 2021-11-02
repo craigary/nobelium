@@ -52,7 +52,7 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 ## Quick Start
 
 - Star this repo 😉
-- Duplicate [this Notion template](https://www.notion.so/68be9021bca34b8e89f0246f27e608df), and share it to the public
+- Duplicate [this Notion template](https://craigary.notion.site/adc3552cfc73442ab5048d4b1eb0079a), and share it to the public
 - [Fork](https://github.com/craigary/nobelium/fork) this project
 - Customize `blog.config.js`
 - _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
@@ -108,7 +108,6 @@ Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4
   <td align="center"><a href="https://leerob.io/" title="Lee Robinson"><img src="https://avatars.githubusercontent.com/u/9113740" width="64px;" alt="Reynard"/></a><br/><a href="https://leerob.io" title="Lee Robinson">Lee Robinson</a></td>
   <td align="center"><a href="https://spencerwoo.com/" title="Spencer Woo"><img src="https://avatars.githubusercontent.com/u/32114380" width="64px;" alt="Niin"/></a><br/><a href="https://spencerwoo.com" title="Spencer Woo">Spencer Woo</a></td>
 </tr></table>
-
 
 ## Contributors
 
