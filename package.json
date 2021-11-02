@@ -20,31 +20,31 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
-    "axios": ">=0.22.0",
+    "axios": ">=0.24.0",
     "feed": "^4.2.2",
     "gitalk": "^1.7.2",
-    "next": "^11.1.2",
-    "notion-client": "^4.9.7",
-    "notion-utils": "^4.8.6",
+    "next": "^12.0.2",
+    "notion-client": "^4.10.0",
+    "notion-utils": "^4.10.0",
     "preact": "^10.5.15",
     "react": "^17.0.2",
     "react-cusdis": "^2.0.1",
     "react-dom": "^17.0.2",
-    "react-notion-x": "^4.9.8",
+    "react-notion-x": "^4.11.0",
     "use-ackee": "^3.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.3.7",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^11.1.2",
+    "autoprefixer": "^10.4.0",
+    "eslint": "<8.0.0",
+    "eslint-config-next": "^12.0.2",
     "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.25.1",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-react": "^7.26.1",
-    "next-sitemap": "^1.6.179",
-    "postcss": "^8.3.9",
-    "tailwindcss": "^2.2.16"
+    "next-sitemap": "^1.6.199",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
   },
   "resolutions": {
     "axios": ">=0.21.1"
