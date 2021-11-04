@@ -1,5 +1,5 @@
 const BLOG = {
-  title: '联合会员 | BULLBULL.CN | Beta',
+  title: '电商联盟 | BULLBULL.CN | Beta',
   author: 'BULLBULL.CN',
   email: 'bullbull.cn@gmail.com',
   link: 'https://bullbull.vercel.app',
