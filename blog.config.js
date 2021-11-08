@@ -1,10 +1,10 @@
 const BLOG = {
-  title: 'CRAIGARY',
-  author: 'Craig Hart',
-  email: 'i@craigary.net',
-  link: 'https://nobelium.vercel.app',
-  description: 'This gonna be an awesome website.',
-  lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
+  title: 'Dexter Repository',
+  author: 'Dexter',
+  email: ' snowflyonline@gmail.com',
+  link: 'https://dexterstung.top',
+  description: 'A repository of e-book and manga website.',
+  lang: 'zh-CN', // ['zh-CN','en-US']
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
