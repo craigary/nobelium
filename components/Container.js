@@ -16,7 +16,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
     <div>
       <Head>
         <title>{meta.title}</title>
-        <meta content={BLOG.darkBackground} name="theme-color" />
+        {/* <meta content={BLOG.darkBackground} name="theme-color" /> */}
         <meta name="robots" content="follow, index" />
         <meta charSet="UTF-8" />
         {BLOG.seo.googleSiteVerification && (
@@ -38,7 +38,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         />
         <meta
           property="og:image"
-          content={`https://og-image-craigary.vercel.app/${encodeURIComponent(
+          content={`${BLOG.ogImageGenerateURL}/${encodeURIComponent(
             meta.title
           )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
         />
@@ -48,7 +48,9 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         <meta name="twitter:title" content={meta.title} />
         <meta
           name="twitter:image"
-          content={`https://og-image-craigary.vercel.app/${meta.title}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
+          content={`${BLOG.ogImageGenerateURL}/${encodeURIComponent(
+            meta.title
+          )}.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fnobelium.vercel.app%2Flogo-for-dark-bg.svg`}
         />
         {meta.type === 'article' && (
           <>
