@@ -39,12 +39,12 @@ const Header = ({ navBarTitle, fullWidth }) => {
   const handler = ([entry]) => {
     if (navRef && navRef.current && useSticky) {
       if (!entry.isIntersecting && entry !== undefined) {
-        navRef.current.classList.add('sticky-nav-full')
+        navRef.current?.classList.add('sticky-nav-full')
       } else {
-        navRef.current.classList.remove('sticky-nav-full')
+        navRef.current?.classList.remove('sticky-nav-full')
       }
     } else {
-      navRef.current.classList.add('remove-sticky')
+      navRef.current?.classList.add('remove-sticky')
     }
   }
   useEffect(() => {
@@ -54,6 +54,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
     // return () => {
     //   if (sentinalRef.current) obvserver.unobserve(sentinalRef.current)
     // }
+    /* eslint-disable-line */
   }, [sentinalRef])
   return (
     <>
