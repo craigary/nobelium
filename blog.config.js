@@ -1,5 +1,5 @@
 const BLOG = {
-  title: 'hannah writes',
+  title: 'Hannah Writes',
   author: 'Hannah Zeng',
   email: 'tz2486@barnard.edu',
   link: 'https://hannahz.me',
