@@ -1,9 +1,9 @@
 const BLOG = {
-  title: 'Code Like a Feather',
-  author: 'Seongbin Yoon',
-  email: 'binibini1995@gmail.com',
+  title: 'A B L O G',
+  author: 'Aiden Yoon',
+  email: '11nux@kakao.com',
   link: 'https://yansigit.vercel.app',
-  description: 'A technical blog for myself',
+  description: 'A B L O G',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'light', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
