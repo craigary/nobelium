@@ -85,3 +85,7 @@ pre[class*='language-'] {
 .notion-collection-row {
   @apply hidden;
 }
+
+.notion-list li {
+  padding: 0;
+}
