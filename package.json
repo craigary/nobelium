@@ -20,10 +20,10 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
-    "axios": ">=0.24.0",
+    "axios": ">=0.21.1",
     "feed": "^4.2.2",
     "gitalk": "^1.7.2",
-    "next": "^12.0.2",
+    "next": "^12.1.0",
     "notion-client": "^4.10.0",
     "notion-utils": "^4.10.0",
     "preact": "^10.5.15",
@@ -36,18 +36,15 @@
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "eslint": "<8.0.0",
-    "eslint-config-next": "^12.0.2",
+    "eslint-config-next": "^12.0.3",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-react": "^7.26.1",
-    "next-sitemap": "^1.6.199",
+    "next-sitemap": "^1.6.203",
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.19"
-  },
-  "resolutions": {
-    "axios": ">=0.21.1"
   },
   "bugs": {
     "url": "https://github.com/craigary/nobelium/issues",
