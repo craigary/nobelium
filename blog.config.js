@@ -36,7 +36,7 @@ const BLOG = {
     gitalkConfig: {
       repo: 'git', // The repository of store comments
       owner: 'bieb13',
-      admin:[bieb13],
+      admin:bieb13,
       clientID: 'fd4221176b3388f09f03',
       clientSecret: 'b47972efd5b2bf64a8d618ad5d355f495088a4de',
       distractionFreeMode: 'false'
