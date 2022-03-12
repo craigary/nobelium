@@ -2,7 +2,7 @@ const BLOG = {
   title: 'BIE哔哔',
   author: 'BIE哔哔',
   email: 'besthop3@gmail.com',
-  link: 'https://bieb13.com',
+  link: 'https://bietalk.com',
   description: 'M的不完全指北',
   lang: 'zh-CN',
   appearance: 'auto', // ['light', 'dark', 'auto'],
