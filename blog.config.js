@@ -36,12 +36,21 @@ const BLOG = {
     gitalkConfig: {
       repo: 'git', // The repository of store comments
       owner: 'bieb13',
-      admin:bieb13,
+      admin:'bieb13',
       clientID: 'fd4221176b3388f09f03',
       clientSecret: 'b47972efd5b2bf64a8d618ad5d355f495088a4de',
       distractionFreeMode: 'false'
+      },
+    utterancesConfig: {
+      repo: ''
+    },
+    cusdisConfig: {
+      appId: '', // data-app-id
+      host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
+      scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // change this if you're using self-hosted version
     }
-  }
+  },
+  isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
 }
 // export default BLOG
 module.exports = BLOG
