@@ -41,7 +41,7 @@ const BLOG = {
     gitalkConfig: {
       repo: '', // The repository of store comments
       owner: '',
-      admin: [],
+      admin: [''],
       clientID: '',
       clientSecret: '',
       distractionFreeMode: false
