@@ -85,3 +85,6 @@ pre[class*='language-'] {
 .notion-collection-row {
   @apply hidden;
 }
+.notion-list {
+  width: 100%;
+}
