@@ -47,7 +47,7 @@ const BLOG = {
       distractionFreeMode: false
     },
     utterancesConfig: {
-      repo: 'hetao/blog-comment'
+      repo: 'hetaozdh/blog-comment'
     },
     cusdisConfig: {
       appId: '', // data-app-id
