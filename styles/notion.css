@@ -3,6 +3,7 @@
 .notion {
   @apply text-gray-600 dark:text-gray-300;
   overflow-wrap: break-word;
+  word-break: break-word;
 }
 .notion,
 .notion-text,
