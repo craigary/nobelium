@@ -1,5 +1,5 @@
 const BLOG = {
-  title: '小牛助手 | BULLBULL.CN | Beta',
+  title: '小助手 | BULLBULL.CN | Beta',
   author: 'BULLBULL.CN',
   email: 'bullbull.cn@gmail.com',
   link: 'https://bullbull.vercel.app',
