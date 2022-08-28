@@ -2,7 +2,7 @@ const BLOG = {
   title: 'MoMaDa Note',
   author: 'JimYan',
   email: 'nefu.yzj@gmail.com',
-  link: 'https://momada.52shuzhai.com',
+  link: 'https://dajun.info',
   description: '学习笔记记录',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'auto', // ['light', 'dark', 'auto'],
