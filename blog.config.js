@@ -1,6 +1,6 @@
 const BLOG = {
   title: 'Mindflip',
-  author: 'Park Neungum',
+  author: 'Park Neungeom',
   email: 'hmu1212@hotmail.com',
   link: 'https://nobelium.vercel.app',
   description: 'Software Engineer',
