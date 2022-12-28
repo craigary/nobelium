@@ -1,10 +1,10 @@
 const BLOG = {
-  title: 'CRAIGARY',
-  author: 'Craig Hart',
-  email: 'i@craigary.net',
-  link: 'https://nobelium.vercel.app',
-  description: 'This gonna be an awesome website.',
-  lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
+  title: 'leesin blog',
+  author: 'leesin',
+  email: 'lihao7364@gmail.com',
+  link: 'https://leesin.cloud',
+  description: '随便写写',
+  lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
@@ -16,7 +16,7 @@ const BLOG = {
   showAbout: true,
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
-  ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL: 'https://leesin.cloud', // The link to generate OG image, don't end with a slash
   socialLink: 'https://twitter.com/craigaryhart',
   seo: {
     keywords: ['Blog', 'Website', 'Notion'],
@@ -51,7 +51,7 @@ const BLOG = {
     },
     cusdisConfig: {
       appId: '', // data-app-id
-      host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
+      host: 'https://leesin.cloud', // data-host, change this if you're using self-hosted version
       scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // change this if you're using self-hosted version
     }
   },
