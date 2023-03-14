@@ -24,13 +24,13 @@
     "feed": "^4.2.2",
     "gitalk": "^1.7.2",
     "next": "^12.1.0",
-    "notion-client": "^4.10.0",
-    "notion-utils": "^4.10.0",
+    "notion-client": "^6.16.0",
+    "notion-utils": "^6.16.0",
     "preact": "^10.5.15",
     "react": "^17.0.2",
     "react-cusdis": "^2.0.1",
     "react-dom": "^17.0.2",
-    "react-notion-x": "^4.11.0",
+    "react-notion-x": "^6.16.0",
     "use-ackee": "^3.0.0"
   },
   "devDependencies": {
