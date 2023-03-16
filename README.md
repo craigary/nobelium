@@ -110,6 +110,13 @@ Check out our roadmap [here](https://craigary.notion.site/Public-Roadmap-89d184e
 - **Style**: Tailwind CSS and `@tailwindcss/jit` compiler
 - **Comments**: Gitalk, Cusdis and more
 
+## FAQ
+
+<details>
+  <summary>How can I change my avatar?</summary>
+  Nobelium fetches avatars from <a href="https://gravatar.com">Gravatar</a>. You need to set your avatar there with <strong>the same email address</strong> that you defined in <code>blog.config.js</code>.
+</details>
+
 ## Special Thanks
 
 <table><tr align="left">
