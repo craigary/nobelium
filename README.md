@@ -52,7 +52,7 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 ## Quick Start
 
 - Star this repo 😉
-- Duplicate [this Notion template](https://craigary.notion.site/adc3552cfc73442ab5048d4b1eb0079a), and share it to the public
+- Duplicate [this Notion template](https://craigary.notion.site/866916e3b939468b9b6f1d47dce99f9c), and share it to the public
 - [Fork](https://github.com/craigary/nobelium/fork) this project
 - Customize `blog.config.js`
 - _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
@@ -94,7 +94,7 @@ docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} g
 
 ## Roadmap
 
-Check out our roadmap [here](https://www.notion.so/craigary/Public-Roadmap-3cfc4d0f0ca642ef8f652673c37add22)
+Check out our roadmap [here](https://craigary.notion.site/Public-Roadmap-89d184e51653445ab5b347e4efac079e)
 
 - [x] Better SEO
 - [x] Dark mode
