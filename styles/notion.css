@@ -24,6 +24,10 @@ svg + .notion-page-title-text {
   @apply border-b-0;
 }
 
+.notion-callout-text {
+  @apply min-w-0;
+}
+
 .notion-bookmark {
   @apply border;
   @apply border-gray-100;
