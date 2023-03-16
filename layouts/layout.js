@@ -85,6 +85,7 @@ const Layout = ({
       layout="blog"
       title={frontMatter.title}
       description={frontMatter.summary}
+      slug={frontMatter.slug}
       // date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
       fullWidth={fullWidth}
