@@ -9,10 +9,7 @@ class MyDocument extends Document {
 
   render () {
     return (
-      <Html
-        lang={BLOG.lang}
-        className={BLOG.appearance === 'dark' ? 'dark' : undefined}
-      >
+      <Html lang={BLOG.lang}>
         <Head>
           {BLOG.font && BLOG.font === 'serif'
             ? (

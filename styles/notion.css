@@ -74,10 +74,8 @@ pre[class*='language-'] {
   border-top-width: 1px;
   border-top-style: solid;
 }
-@media (prefers-color-scheme: dark) {
-  .notion-hr {
-    border-top-color: rgba(255, 255, 255, 0.13);
-  }
+.dark .notion-hr {
+  border-top-color: rgba(255, 255, 255, 0.13);
 }
 .notion-list {
   width: 100%;

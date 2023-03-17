@@ -6,6 +6,7 @@ import { NotionRenderer } from 'react-notion-x'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 import { useLocale } from '@/lib/locale'
+import useTheme from '@/lib/theme'
 import { useRouter } from 'next/router'
 import Comments from '@/components/Comments'
 
@@ -86,6 +87,8 @@ const Layout = ({
 }) => {
   const locale = useLocale()
   const router = useRouter()
+  const { dark } = useTheme()
+
   return (
     <Container
       layout="blog"
@@ -143,6 +146,7 @@ const Layout = ({
                 Tweet
               }}
               mapPageUrl={mapPageUrl}
+              darkMode={dark}
             />
           </div>
         )}
