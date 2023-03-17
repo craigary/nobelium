@@ -17,6 +17,7 @@ specifiers:
   react-cusdis: ^2.1.3
   react-dom: ^18.2.0
   react-notion-x: ^6.16.0
+  react-tweet-embed: ^2.0.0
   tailwindcss: ^3.2.7
   use-ackee: ^3.0.1
 
@@ -32,6 +33,7 @@ dependencies:
   react-cusdis: 2.1.3_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
   react-notion-x: 6.16.0_biqbaboplfbrettd7655fr4n2y
+  react-tweet-embed: 2.0.0_react@18.2.0
   use-ackee: 3.0.1_react@18.2.0
 
 devDependencies:
@@ -2813,6 +2815,14 @@ packages:
     transitivePeerDependencies:
       - webpack
       - worker-loader
+    dev: false
+
+  /react-tweet-embed/2.0.0_react@18.2.0:
+    resolution: {integrity: sha512-g2kfPjSRTOKeJtaQF5EMuSTmp/q8I0qdDs/pZ2qLXZjCWExDT/JgjxSlyM65NyNzsz8072PDpvlO/sIXwwVpdQ==}
+    peerDependencies:
+      react: '>=17'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-universal-interface/0.6.2_react@18.2.0+tslib@2.5.0:

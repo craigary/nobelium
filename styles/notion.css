@@ -57,6 +57,9 @@ pre[class*='language-'] {
   @apply text-center;
   @apply text-gray-500 dark:text-gray-400;
 }
+.notion-asset-wrapper-tweet iframe {
+  @apply bg-day dark:bg-night;
+}
 .notion-full-width {
   @apply px-0;
 }

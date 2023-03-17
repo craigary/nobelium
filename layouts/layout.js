@@ -66,6 +66,12 @@ const Pdf = dynamic(
     ssr: false
   }
 )
+const Tweet = dynamic(() =>
+  import('react-tweet-embed').then(({ default: TweetEmbed }) => {
+    const Tweet = ({ id }) => <TweetEmbed tweetId={id} options={{ theme: 'dark' }} />
+    return Tweet
+  })
+)
 
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
@@ -133,7 +139,8 @@ const Layout = ({
                 Code,
                 Collection,
                 Equation,
-                Pdf
+                Pdf,
+                Tweet
               }}
               mapPageUrl={mapPageUrl}
             />
