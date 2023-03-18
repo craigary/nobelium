@@ -1,5 +1,9 @@
 /* NOTION CSS OVERRIDE */
 
+:root {
+  --no-leading: 2rem;
+}
+
 .notion {
   @apply text-gray-600 dark:text-gray-300;
   overflow-wrap: break-word;
@@ -8,9 +12,9 @@
 .notion-text,
 .notion-quote,
 .notion-h-title {
-  @apply leading-8;
   @apply p-0;
   @apply my-3;
+  line-height: var(--no-leading);
 }
 .notion-page-link {
   color: inherit;
@@ -24,8 +28,21 @@ svg + .notion-page-title-text {
   @apply border-b-0;
 }
 
+.notion-callout > .notion-page-icon-inline {
+  max-width: unset;
+  max-height: unset;
+  height: var(--no-leading);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.05em;
+}
+
 .notion-callout-text {
   @apply min-w-0;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .notion-bookmark {
