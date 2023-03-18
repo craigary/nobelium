@@ -98,3 +98,40 @@ pre[class*='language-'] {
 .notion-collection-row {
   @apply hidden;
 }
+
+.notion-property-checkbox {
+  width: 24px;
+  margin-right: 2px !important;
+  display: flex;
+  justify-content: center;
+}
+
+.notion-to-do-body {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.notion-list {
+  padding-inline-start: 28px;
+}
+
+.notion-list > li {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.notion-toggle {
+  padding-left: 28px;
+}
+
+.notion-toggle > summary {
+  list-style-position: outside;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.notion-toggle > summary + div {
+  margin-left: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+}
