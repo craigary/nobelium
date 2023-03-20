@@ -7,7 +7,9 @@ import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 import { useLocale } from '@/lib/locale'
 import useTheme from '@/lib/theme'
+import { BlockMapProvider } from '@/lib/blockMap'
 import { useRouter } from 'next/router'
+import TableOfContents from '@/components/TableOfContents'
 import Comments from '@/components/Comments'
 
 // -----------------------------------------------------------------------------
@@ -135,20 +137,27 @@ const Layout = ({
         )}
         {children}
         {blockMap && (
-          <div className="-mt-4">
-            <NotionRenderer
-              recordMap={blockMap}
-              components={{
-                Code,
-                Collection,
-                Equation,
-                Pdf,
-                Tweet
-              }}
-              mapPageUrl={mapPageUrl}
-              darkMode={dark}
-            />
-          </div>
+          <BlockMapProvider blockMap={blockMap}>
+            <div className="-mt-4 relative">
+              <NotionRenderer
+                recordMap={blockMap}
+                components={{
+                  Code,
+                  Collection,
+                  Equation,
+                  Pdf,
+                  Tweet
+                }}
+                mapPageUrl={mapPageUrl}
+                darkMode={dark}
+              />
+              <div className="absolute left-full inset-y-0">
+                {/* `65px` is the height of expanded nav */}
+                {/* TODO: Remove the magic number */}
+                <TableOfContents className="sticky" style={{ top: '65px' }} />
+              </div>
+            </div>
+          </BlockMapProvider>
         )}
       </article>
       <div className="flex justify-between font-medium text-gray-500 dark:text-gray-400 my-5">
