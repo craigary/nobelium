@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import cn from 'classnames'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import { useLocale } from '@/lib/locale'
 import BLOG from '@/blog.config'
@@ -18,6 +19,8 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
   // If no post data found, render 404
   if (!post) return Page404({ locale })
 
+  const fullWidth = post.fullWidth ?? false
+
   return (
     <Container
       layout="blog"
@@ -26,16 +29,20 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
       slug={post.slug}
       // date={new Date(post.publishedAt).toISOString()}
       type="article"
-      fullWidth={post.fullWidth ?? false}
+      fullWidth={fullWidth}
     >
       <Post
         post={post}
         blockMap={blockMap}
         emailHash={emailHash}
+        fullWidth={fullWidth}
       />
 
       {/* Back and Top */}
-      <div className="flex justify-between font-medium text-gray-500 dark:text-gray-400 my-5">
+      <div className={cn(
+        'px-4 flex justify-between font-medium text-gray-500 dark:text-gray-400 my-5',
+        fullWidth ? 'md:px-24' : 'mx-auto max-w-2xl',
+      )}>
         <a>
           <button
             onClick={() => router.push(BLOG.path || '/')}
