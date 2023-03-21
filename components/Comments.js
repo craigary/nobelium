@@ -1,9 +1,9 @@
-import BLOG from '@/blog.config'
-import cn from 'classnames'
-import dynamic from 'next/dynamic'
-import { fetchCusdisLang } from '@/lib/cusdisLang'
-import { useRouter } from 'next/router'
 import 'gitalk/dist/gitalk.css'
+import { useRouter } from 'next/router'
+import dynamic from 'next/dynamic'
+import cn from 'classnames'
+import { fetchCusdisLang } from '@/lib/cusdisLang'
+import BLOG from '@/blog.config'
 
 const GitalkComponent = dynamic(
   () => {
