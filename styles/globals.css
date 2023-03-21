@@ -82,7 +82,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .sticky-nav-full {
-  @apply border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
+  @apply border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50 cursor-pointer;
+}
+
+.sticky-nav:not(.sticky-nav-full) .caret {
+  opacity: 0 !important;
 }
 
 .header-name {

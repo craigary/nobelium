@@ -52,16 +52,31 @@ const Header = ({ navBarTitle, fullWidth }) => {
     }
   }, [handler, sentinelRef])
 
+  const titleRef = useRef(/** @type {HTMLParagraphElement} */ undefined)
+
+  function handleClickHeader (/** @type {MouseEvent} */ ev) {
+    if (![navRef.current, titleRef.current].includes(ev.target)) return
+
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <>
       <div className="observer-element h-4 md:h-12" ref={sentinelRef}></div>
       <div
-        className={`sticky-nav m-auto w-full h-6 flex flex-row justify-between items-center mb-2 md:mb-12 py-8 bg-opacity-60 ${
+        className={`sticky-nav group m-auto w-full h-6 flex flex-row justify-between items-center mb-2 md:mb-12 py-8 bg-opacity-60 ${
           !fullWidth ? 'max-w-3xl px-4' : 'px-4 md:px-24'
         }`}
         id="sticky-nav"
         ref={navRef}
+        onClick={handleClickHeader}
       >
+        <svg
+          viewBox="0 0 24 24"
+          className="caret w-6 h-6 absolute inset-x-0 bottom-0 mx-auto pointer-events-none opacity-30 group-hover:opacity-100 transition duration-100"
+        >
+          <path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="#000" />
+        </svg>
         <div className="flex items-center">
           <Link href="/" aria-label={BLOG.title}>
             <div className="h-6">
@@ -95,11 +110,19 @@ const Header = ({ navBarTitle, fullWidth }) => {
             </div>
           </Link>
           {navBarTitle ? (
-            <p className="ml-2 font-medium text-day dark:text-night header-name">
+            <p
+              ref={titleRef}
+              className="ml-2 font-medium text-day dark:text-night header-name"
+              onClick={handleClickHeader}
+            >
               {navBarTitle}
             </p>
           ) : (
-            <p className="ml-2 font-medium text-day dark:text-night header-name">
+            <p
+              ref={titleRef}
+              className="ml-2 font-medium text-day dark:text-night header-name"
+              onClick={handleClickHeader}
+            >
               {BLOG.title},{' '}
               <span className="font-normal">{BLOG.description}</span>
             </p>
