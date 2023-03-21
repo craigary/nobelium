@@ -4,7 +4,6 @@ import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import { useLocale } from '@/lib/locale'
 import BLOG from '@/blog.config'
 import { createHash } from 'crypto'
-import Page404 from '@/components/Page404'
 import Container from '@/components/Container'
 import Post from '@/components/Post'
 import Comments from '@/components/Comments'
@@ -15,9 +14,6 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
 
   // TODO: It would be better to render something
   if (router.isFallback) return null
-
-  // If no post data found, render 404
-  if (!post) return Page404({ locale })
 
   const fullWidth = post.fullWidth ?? false
 
@@ -78,7 +74,7 @@ export async function getStaticProps ({ params: { slug } }) {
   const posts = await getAllPosts({ includePages: true })
   const post = posts.find(t => t.slug === slug)
 
-  if (!post) return { props: {} }
+  if (!post) return { notFound: true }
 
   const blockMap = await getPostBlocks(post.id)
   const emailHash = createHash('md5')

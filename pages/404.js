@@ -1,8 +1,9 @@
-import Container from './Container'
+import { useLocale } from '@/lib/locale'
+import Container from '@/components/Container'
 
-// TODO: locale is provided as a prop here to ensure hooks order. It should call
-//       `useLocale()` directly. We might need refactor this part later.
-export default function Page404 ({ locale }) {
+export default function Page404 () {
+  const locale = useLocale()
+
   return (
     <Container>
       <h1 className="text-5xl text-black dark:text-white text-center">404</h1>
