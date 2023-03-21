@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import BLOG from '@/blog.config'
 import { useLocale } from '@/lib/locale'
@@ -32,28 +32,26 @@ const NavBar = () => {
 
 const Header = ({ navBarTitle, fullWidth }) => {
   const useSticky = !BLOG.autoCollapsedNavBar
-  const navRef = useRef(null)
-  const sentinelRef = useRef([])
-  const handler = ([entry]) => {
-    if (navRef && navRef.current && useSticky) {
-      if (!entry.isIntersecting && entry !== undefined) {
-        navRef.current?.classList.add('sticky-nav-full')
-      } else {
-        navRef.current?.classList.remove('sticky-nav-full')
-      }
+  const navRef = useRef(/** @type {HTMLDivElement} */ undefined)
+  const sentinelRef = useRef(/** @type {HTMLDivElement} */ undefined)
+  const handler = useCallback(([entry]) => {
+    if (useSticky && navRef.current) {
+      navRef.current?.classList.toggle('sticky-nav-full', !entry.isIntersecting)
     } else {
       navRef.current?.classList.add('remove-sticky')
     }
-  }
+  }, [useSticky])
+
   useEffect(() => {
-    const obvserver = new window.IntersectionObserver(handler)
-    obvserver.observe(sentinelRef.current)
-    // Don't touch this, I have no idea how it works XD
-    // return () => {
-    //   if (sentinalRef.current) obvserver.unobserve(sentinalRef.current)
-    // }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sentinelRef])
+    const sentinelEl = sentinelRef.current
+    const observer = new window.IntersectionObserver(handler)
+    observer.observe(sentinelEl)
+
+    return () => {
+      sentinelEl && observer.unobserve(sentinelEl)
+    }
+  }, [handler, sentinelRef])
+
   return (
     <>
       <div className="observer-element h-4 md:h-12" ref={sentinelRef}></div>
