@@ -61,12 +61,12 @@ export default function Post (props) {
           )}
         </nav>
       )}
-      <div className="self-stretch -mt-4 flex">
-        {!fullWidth && <div className="flex-1" />}
+      <div className="self-stretch -mt-4 flex flex-col items-center lg:flex-row lg:items-stretch">
+        {!fullWidth && <div className="flex-1 hidden lg:block" />}
         <div className={fullWidth ? 'flex-1 pr-4' : 'flex-none w-full max-w-2xl px-4'}>
           <NotionRenderer recordMap={blockMap} fullPage={false} darkMode={dark} />
         </div>
-        <div className={cn('min-w-[240px]', fullWidth ? 'flex-none' : 'flex-1')}>
+        <div className={cn('order-first lg:order-[unset] w-full max-w-2xl lg:w-auto lg:min-w-[160px]', fullWidth ? 'flex-none' : 'flex-1')}>
           {/* `65px` is the height of expanded nav */}
           {/* TODO: Remove the magic number */}
           <TableOfContents blockMap={blockMap} className="pt-3 sticky" style={{ top: '65px' }} />
