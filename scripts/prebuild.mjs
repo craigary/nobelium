@@ -33,7 +33,7 @@ if (!fs.existsSync(resolve(ROOT, 'blog.config.js'))) {
     isProd: VERCEL_ENV === 'production'
   })
 
-  fs.writeFileSync(resolve(ROOT, 'blog.config.js'), `const config = ${JSON.stringify(config, null, 2)}\nexport default config`, 'utf-8')
+  fs.writeFileSync(resolve(ROOT, 'blog.config.js'), `module.exports = ${JSON.stringify(config, null, 2)}`, 'utf-8')
 
   console.log('Remote config fetched successfully')
 }
