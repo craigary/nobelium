@@ -175,7 +175,7 @@ function ConfigEntry ({ entry: [name, value], level }) {
 function ConfigEntryLayout ({ name, level = 0, children }) {
   return (
     <div className="flex">
-      <div className="flex-1">
+      <div className="flex-[1.5_1.5_0]">
         <code className="text-sm leading-8" style={{ paddingLeft: INDENT * level + 'px' }}>{name}</code>
         <p className="opacity-50" style={{ paddingLeft: INDENT * level + 'px' }}>Lorem ipsum dolor sit amet.</p>
       </div>
