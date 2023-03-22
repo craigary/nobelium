@@ -19,7 +19,7 @@ import TableOfContents from '@/components/TableOfContents'
  * @prop {string}   emailHash  - Author email hash (for Gravatar)
  * @prop {boolean} [fullWidth] - Whether in full-width mode
  */
-export default function Post (props) {
+export default function Post(props) {
   const { post, blockMap, emailHash, fullWidth = false } = props
   const { dark } = useTheme()
 
@@ -50,12 +50,12 @@ export default function Post (props) {
             <span className="block">&nbsp;/&nbsp;</span>
           </div>
           <div className="mr-2 mb-4 md:ml-0">
-            {formatDate(post.date?.start_date || post.createdTime, BLOG.lang)}
+            {formatDate(post.date, BLOG.lang)}
           </div>
           {post.tags && (
             <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags">
               {post.tags.map(tag => (
-                <TagItem key={tag} tag={tag}/>
+                <TagItem key={tag} tag={tag} />
               ))}
             </div>
           )}
