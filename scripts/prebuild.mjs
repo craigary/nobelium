@@ -18,7 +18,7 @@ if (!fs.existsSync(resolve(ROOT, 'blog.config.js'))) {
     VERCEL_ENV
   } = process.env
 
-  const api = new NotionAPI()
+  const api = new NotionAPI({ authToken: NOTION_ACCESS_TOKEN })
   const everything = await api.getPage(NOTION_PAGE_ID)
   // Get the ID of database prop `type`
   const [typePropId] =
