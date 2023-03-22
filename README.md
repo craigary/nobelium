@@ -54,7 +54,16 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 - Star this repo 😉
 - Duplicate [this Notion template](https://craigary.notion.site/866916e3b939468b9b6f1d47dce99f9c), and share it to the public
 - [Fork](https://github.com/craigary/nobelium/fork) this project
-- Customize `blog.config.js`
+- Configure your blog. There are two ways to do this:
+  - **(Recommended)** Use a remote config
+    - In the Notion database you just duplicated, add a new page (row) and set the `type` property with `Config`. You can set other properties and the title with whatever you like.
+    - Open that page, add a code block to the page content. The code language is not important, but JSON is preferred.
+    - Open the [Nobelium configurator]() in your browser, fill the form with your custom config.
+    - Copy the generated JSON content and paste into the code block in the `Config` page.
+  - Use a local config
+    - Copy or rename the `blog.config.example.js` in the project folder as `blog.config.js`.
+      While they work the same for Nobelium, we recommend copy over rename to avoid possible conflicts when updating Nobelium.
+    - Update the `blog.config.js` with your custom config.
 - _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
 - Deploy on [Vercel](https://vercel.com), set following environment variables：
   - `NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
