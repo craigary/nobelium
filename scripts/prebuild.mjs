@@ -12,9 +12,9 @@ if (!fs.existsSync(resolve(ROOT, 'blog.config.js'))) {
   console.log('Local config not found. Fetch from Notion...')
 
   nextEnv.loadEnvConfig(ROOT)
-  const { NOTION_PAGE_ID } = process.env
+  const { NOTION_PAGE_ID, NOTION_ACCESS_TOKEN } = process.env
 
-  const api = new NotionAPI()
+  const api = new NotionAPI({ authToken: NOTION_ACCESS_TOKEN })
   const everything = await api.getPage(NOTION_PAGE_ID)
   // Get the ID of database prop `type`
   const [typePropId] =
