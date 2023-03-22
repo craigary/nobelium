@@ -14,6 +14,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/prebuild.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -39,6 +40,7 @@
     "use-ackee": "^3.0.1"
   },
   "devDependencies": {
+    "@next/env": "^13.2.4",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.36.0",
     "eslint-config-next": "^13.2.4",
