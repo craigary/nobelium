@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import dynamic from 'next/dynamic'
 import cn from 'classnames'
 import { fetchCusdisLang } from '@/lib/cusdisLang'
-import BLOG from '@/blog.config'
+import config from '@/lib/config'
 
 const GitalkComponent = dynamic(
   () => {
@@ -26,6 +26,7 @@ const CusdisComponent = dynamic(
 
 const Comments = ({ frontMatter }) => {
   const router = useRouter()
+  const BLOG = config()
 
   const fullWidth = frontMatter.fullWidth ?? false
 

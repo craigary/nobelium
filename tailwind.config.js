@@ -1,6 +1,9 @@
-const BLOG = require('./blog.config')
+const config = require('./lib/config')
 const { fontFamily } = require('tailwindcss/defaultTheme')
 const CJK = require('./lib/cjk')
+
+const BLOG = config()
+
 const fontSansCJK = !CJK()
   ? []
   : [`"Noto Sans CJK ${CJK()}"`, `"Noto Sans ${CJK()}"`]

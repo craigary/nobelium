@@ -2,10 +2,11 @@
 
 import dayjs from 'dayjs'
 import localizedFormat from 'dayjs/plugin/localizedFormat'
-import BLOG from '@/blog.config'
+import config from '@/lib/config'
 
 dayjs.extend(localizedFormat)
 
+const BLOG = config()
 const lang = BLOG.lang.slice(0, 2)
 import(`dayjs/locale/${lang}`)
   .then(() => {

@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import BLOG from '@/blog.config'
+import config from '@/lib/config'
 import { useLocale } from '@/lib/locale'
 
 const NavBar = () => {
+  const BLOG = config()
   const locale = useLocale()
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
@@ -31,6 +32,8 @@ const NavBar = () => {
 }
 
 const Header = ({ navBarTitle, fullWidth }) => {
+  const BLOG = config()
+
   const useSticky = !BLOG.autoCollapsedNavBar
   const navRef = useRef(/** @type {HTMLDivElement} */ undefined)
   const sentinelRef = useRef(/** @type {HTMLDivElement} */ undefined)

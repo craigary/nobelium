@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import cn from 'classnames'
-import BLOG from '@/blog.config'
+import config from '@/lib/config'
 import CJK from '@/lib/cjk'
 class MyDocument extends Document {
   static async getInitialProps (ctx) {
@@ -9,6 +9,8 @@ class MyDocument extends Document {
   }
 
   render () {
+    const BLOG = config()
+
     const initialColorScheme = {
       auto: 'color-scheme-unset',
       dark: 'dark'

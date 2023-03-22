@@ -1,8 +1,9 @@
 import Link from 'next/link'
-import BLOG from '@/blog.config'
+import config from '@/lib/config'
 import { useLocale } from '@/lib/locale'
 
 const Pagination = ({ page, showNext }) => {
+  const BLOG = config()
   const locale = useLocale()
   const currentPage = +page
   let additionalClassName = 'justify-between'

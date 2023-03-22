@@ -2,7 +2,7 @@ import Container from '@/components/Container'
 import BlogPost from '@/components/BlogPost'
 import Pagination from '@/components/Pagination'
 import { getAllPosts } from '@/lib/notion'
-import BLOG from '@/blog.config'
+import config from '@/lib/config'
 
 const Page = ({ postsToShow, page, showNext }) => {
   return (
@@ -15,6 +15,7 @@ const Page = ({ postsToShow, page, showNext }) => {
 }
 
 export async function getStaticProps (context) {
+  const BLOG = config()
   const { page } = context.params // Get Current Page No.
   const posts = await getAllPosts({ includePages: false })
   const postsToShow = posts.slice(
@@ -34,6 +35,7 @@ export async function getStaticProps (context) {
 }
 
 export async function getStaticPaths () {
+  const BLOG = config()
   const posts = await getAllPosts({ includePages: false })
   const totalPosts = posts.length
   const totalPages = Math.ceil(totalPosts / BLOG.postsPerPage)
