@@ -3,6 +3,7 @@ import { useCopyToClipboard } from 'react-use'
 import cn from 'classnames'
 import example from '@/blog.config.example'
 import Container from '@/components/Container'
+import Switch from '@/components/Switch'
 
 const INDENT = 20
 
@@ -131,13 +132,12 @@ function ConfigEntry ({ entry: [name, value], level }) {
       break
     case 'boolean':
       content = (
-        <label className="h-8 flex items-center">
-          <input
-            type="checkbox"
+        <div className="h-8 flex items-center">
+          <Switch
             checked={Boolean(value)}
-            onChange={ev => setConfig(name, ev.target.checked)}
+            onChange={checked => setConfig(name, checked)}
           />
-        </label>
+        </div>
       )
       break
     case 'array':
