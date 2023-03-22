@@ -20,8 +20,15 @@ if (!fs.existsSync(resolve(ROOT, 'blog.config.js'))) {
 
   const api = new NotionAPI()
   const everything = await api.getPage(NOTION_PAGE_ID)
-  const [typePropId] = Object.entries(Object.values(everything.collection)[0].value.schema).find(([id, value]) => value.name === 'type')
-  const [, { value: configPage }] = Object.entries(everything.block).find(([id, { value }]) => getTextContent(value.properties?.[typePropId]) === 'Config')
+  // Get the ID of database prop `type`
+  const [typePropId] =
+    Object.entries(Object.values(everything.collection)[0].value.schema)
+      .find(([id, value]) => value.name === 'type')
+  // Get the first page whose `type` is `Config`
+  const [, { value: configPage }] =
+    Object.entries(everything.block)
+      .find(([id, { value }]) => getTextContent(value.properties?.[typePropId]) === 'Config')
+  // We only treat the first code block as config source
   const configCodeBlockId = configPage.content.find(id => everything.block[id].value.type === 'code')
   const configCodeBlock = everything.block[configCodeBlockId].value
   const config = JSON.parse(getTextContent(configCodeBlock.properties.title))
@@ -33,7 +40,11 @@ if (!fs.existsSync(resolve(ROOT, 'blog.config.js'))) {
     isProd: VERCEL_ENV === 'production'
   })
 
-  fs.writeFileSync(resolve(ROOT, 'blog.config.js'), `module.exports = ${JSON.stringify(config, null, 2)}`, 'utf-8')
+  fs.writeFileSync(
+    resolve(ROOT, 'blog.config.js'),
+    `module.exports = ${JSON.stringify(config, null, 2)}`,
+    'utf-8'
+  )
 
   console.log('Remote config fetched successfully')
 }
