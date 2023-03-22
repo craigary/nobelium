@@ -45,8 +45,8 @@ export default function PageConfigurator () {
     <Container>
       <ConfigContext.Provider value={{ config, setConfig }}>
         <div className="text-night dark:text-day relative">
-          <header className="mb-7 flex items-center">
-            <h1 className="text-3xl font-bold">Configurator</h1>
+          <header className="flex items-center">
+            <h1 className="text-3xl font-bold text-black dark:text-white">Configurator</h1>
             <button
               type="button"
               className="px-3 py-1 ml-auto relative text-day dark:text-night bg-night dark:bg-day"
@@ -70,6 +70,7 @@ export default function PageConfigurator () {
               </span>
             </button>
           </header>
+          <p className="my-7">This is a GUI editor to generate the content of <code className="text-sm">blog.config.js</code>. It will NOT update your config file automatically. You will need to copy & paste the generated content to you config file.</p>
           <ConfigEntryGroup entries={entries} />
           {process.env.NODE_ENV === 'development' && (
             <pre className="absolute left-full top-0 p-2 text-xs leading-8">{JSON.stringify(config, null, 2)}</pre>
