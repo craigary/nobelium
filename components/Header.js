@@ -75,7 +75,10 @@ const Header = ({ navBarTitle, fullWidth }) => {
           viewBox="0 0 24 24"
           className="caret w-6 h-6 absolute inset-x-0 bottom-0 mx-auto pointer-events-none opacity-30 group-hover:opacity-100 transition duration-100"
         >
-          <path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z" fill="#000" />
+          <path
+            d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z"
+            className="fill-black dark:fill-white"
+          />
         </svg>
         <div className="flex items-center">
           <Link href="/" aria-label={BLOG.title}>
