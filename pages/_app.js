@@ -5,6 +5,7 @@ import App from 'next/app'
 import '@/styles/globals.css'
 import '@/styles/notion.css'
 import dynamic from 'next/dynamic'
+import loadLocale from '@/assets/i18n'
 import { ConfigProvider } from '@/lib/config'
 import { LocaleProvider } from '@/lib/locale'
 import { prepareDayjs } from '@/lib/dayjs'
@@ -14,11 +15,11 @@ import Scripts from '@/components/Scripts'
 const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
 
-export default function MyApp ({ Component, pageProps, config }) {
+export default function MyApp ({ Component, pageProps, config, locale }) {
   return (
     <ConfigProvider value={config}>
       <Scripts />
-      <LocaleProvider>
+      <LocaleProvider value={locale}>
         <ThemeProvider>
           <>
             {process.env.VERCEL_ENV === 'production' && config?.analytics?.provider === 'ackee' && (
@@ -45,6 +46,7 @@ MyApp.getInitialProps = async ctx => {
 
   return {
     ...App.getInitialProps(ctx),
-    config
+    config,
+    locale: await loadLocale('basic', config.lang)
   }
 }
