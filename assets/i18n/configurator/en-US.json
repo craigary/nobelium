@@ -1,0 +1,14 @@
+{
+  "configurator": {
+    "entry": {
+      "title": {
+        "description": "The title of your site"
+      },
+      "seo": {
+        "keywords": {
+          "description": "Comma-separated values"
+        }
+      }
+    }
+  }
+}

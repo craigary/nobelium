@@ -1,0 +1,14 @@
+{
+  "configurator": {
+    "entry": {
+      "title": {
+        "description": "站点标题"
+      },
+      "seo": {
+        "keywords": {
+          "description": "多个关键词间使用英文逗号分隔"
+        }
+      }
+    }
+  }
+}

@@ -2,28 +2,34 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import { useCopyToClipboard } from 'react-use'
 import cn from 'classnames'
 import example from '@/blog.config.example'
+import loadLocale from '@/assets/i18n'
 import Container from '@/components/Container'
 import Switch from '@/components/Switch'
+import config from '@/lib/config'
+import { get, set } from '@/lib/utils'
 
 const INDENT = 20
 
 const ConfigContext = createContext(undefined)
+const LocaleContext = createContext(undefined)
 
-export default function PageConfigurator () {
+export async function getStaticProps () {
+  const { lang } = config()
+  const locale = await loadLocale('configurator', lang)
+
+  return {
+    props: { locale }
+  }
+}
+
+export default function PageConfigurator ({ locale }) {
   const [config, _setConfig] = useState(example)
   const entries = Object.entries(config)
 
   function setConfig (key, value) {
     _setConfig(prev => {
       const config = { ...prev }
-      return [].concat(key).reduce((obj, k, idx, keys) => {
-        if (typeof obj[k] === 'object' && idx < keys.length - 1) {
-          return obj[k]
-        } else {
-          obj[k] = value
-          return config
-        }
-      }, config)
+      return set(config, [].concat(key), value)
     })
   }
 
@@ -44,14 +50,15 @@ export default function PageConfigurator () {
   return (
     <Container>
       <ConfigContext.Provider value={{ config, setConfig }}>
-        <div className="text-night dark:text-day relative">
-          <header className="flex items-center">
-            <h1 className="text-3xl font-bold text-black dark:text-white">Configurator</h1>
-            <button
-              type="button"
-              className="px-3 py-1 ml-auto relative text-day dark:text-night bg-night dark:bg-day"
-              onClick={() => copyToClipboard(JSON.stringify(config, null, 2))}
-            >
+        <LocaleContext.Provider value={ locale }>
+          <div className="text-night dark:text-day relative">
+            <header className="flex items-center">
+              <h1 className="text-3xl font-bold text-black dark:text-white">Configurator</h1>
+              <button
+                type="button"
+                className="px-3 py-1 ml-auto relative text-day dark:text-night bg-night dark:bg-day"
+                onClick={() => copyToClipboard(JSON.stringify(config, null, 2))}
+              >
               <span
                 className={cn(
                   'transition duration-100',
@@ -60,33 +67,34 @@ export default function PageConfigurator () {
               >
                 Generate config
               </span>
-              <span
-                className={cn(
-                  'absolute inset-0 transition duration-100 flex justify-center items-center',
-                  copyStatus == null ? 'opacity-0' : 'opacity-100 delay-100'
-                )}
-              >
+                <span
+                  className={cn(
+                    'absolute inset-0 transition duration-100 flex justify-center items-center',
+                    copyStatus == null ? 'opacity-0' : 'opacity-100 delay-100'
+                  )}
+                >
                 {copyStatus == null ? null : copyStatus ? 'Copied!' : 'ERROR!'}
               </span>
-            </button>
-          </header>
-          <p className="my-7">This is a GUI editor to generate the content of <code className="text-sm">blog.config.js</code>. It will NOT update your config file automatically. You will need to copy & paste the generated content to you config file.</p>
-          <ConfigEntryGroup entries={entries} />
-          {process.env.NODE_ENV === 'development' && (
-            <pre className="absolute left-full top-0 p-2 text-xs leading-8">{JSON.stringify(config, null, 2)}</pre>
-          )}
-        </div>
+              </button>
+            </header>
+            <p className="my-7">This is a GUI editor to generate the content of <code className="text-sm">blog.config.js</code>. It will NOT update your config file automatically. You will need to copy & paste the generated content to you config file.</p>
+            <ConfigEntryGroup entries={entries} />
+            {process.env.NODE_ENV === 'development' && (
+              <pre className="absolute left-full top-0 p-2 text-xs leading-8">{JSON.stringify(config, null, 2)}</pre>
+            )}
+          </div>
+        </LocaleContext.Provider>
       </ConfigContext.Provider>
     </Container>
   )
 }
 
-function ConfigEntryGroup ({ entries, level = 0 }) {
+function ConfigEntryGroup ({ entries, parent = [] }) {
   return (
     <div className="space-y-2">
       {entries.map(entry => {
         const name = entry[0]
-        return <ConfigEntry key={name} entry={entry} level={level} />
+        return <ConfigEntry key={name} entry={entry} parent={parent} />
       })}
     </div>
   )
@@ -105,9 +113,10 @@ function resolveType (value) {
   return type
 }
 
-function ConfigEntry ({ entry: [name, value], level }) {
+function ConfigEntry ({ entry: [name, value], parent = [] }) {
   const { config, setConfig } = useContext(ConfigContext)
   const valueType = resolveType(value)
+  const level = parent.length
 
   let content
   switch (valueType) {
@@ -162,22 +171,38 @@ function ConfigEntry ({ entry: [name, value], level }) {
           <div>
             <span className="leading-8" style={{ paddingLeft: INDENT * level + 'px' }}>{name}</span>
           </div>
-          <ConfigEntryGroup entries={Object.entries(value)} level={level + 1} />
+          <ConfigEntryGroup entries={Object.entries(value)} parent={parent.concat(name)} />
         </ConfigContext.Provider>
       )
     default:
       content = <span style={{ color: '#f0f' }}>{valueType}</span>
   }
 
-  return <ConfigEntryLayout name={name} level={level}>{content}</ConfigEntryLayout>
+  return <ConfigEntryLayout name={name} parent={parent}>{content}</ConfigEntryLayout>
 }
 
-function ConfigEntryLayout ({ name, level = 0, children }) {
+function ConfigEntryLayout ({ name, parent = [], children }) {
+  const locale = useContext(LocaleContext)
+  const description = get(locale, ['configurator', 'entry', ...parent, name, 'description'])
+  const level = parent.length
+
   return (
     <div className="flex">
       <div className="flex-[1.5_1.5_0]">
-        <code className="text-sm leading-8" style={{ paddingLeft: INDENT * level + 'px' }}>{name}</code>
-        <p className="opacity-50" style={{ paddingLeft: INDENT * level + 'px' }}>Lorem ipsum dolor sit amet.</p>
+        <code
+          className="text-sm leading-8"
+          style={{ paddingLeft: INDENT * level + 'px' }}
+        >
+          {name}
+        </code>
+        {description && (
+          <p
+            className="opacity-50"
+            style={{ paddingLeft: INDENT * level + 'px' }}
+          >
+            {description}
+          </p>
+        )}
       </div>
       <div className="flex-1">
         {children}
