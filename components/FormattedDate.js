@@ -1,11 +1,11 @@
 'use client';
-import dayjs from "dayjs";
 import BLOG from "@/blog.config";
-dayjs.extend(require("dayjs/plugin/localizedFormat"));
-try {
-    require(`dayjs/locale/${BLOG.lang.slice(0, 2)}`);
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+dayjs.extend(localizedFormat);
+import(`dayjs/locale/${BLOG.lang.slice(0, 2)}`).then(() => {
     dayjs.locale(BLOG.lang.slice(0, 2));
-} catch (e) { }
+}).catch(() => { console.warn("dayjs locale not found") });
 
 export default function FormattedDate({ date }) {
     return (
