@@ -57,16 +57,15 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
           <>
             <meta
               property="article:published_time"
-              content={meta.date || meta.createdTime}
+              content={meta.date}
             />
             <meta property="article:author" content={BLOG.author} />
           </>
         )}
       </Head>
       <div
-        className={`wrapper ${
-          BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
-        }`}
+        className={`wrapper ${BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
+          }`}
       >
         <Header
           navBarTitle={layout === 'blog' ? meta.title : null}

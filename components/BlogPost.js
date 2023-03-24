@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import BLOG from '@/blog.config'
-import formatDate from '@/lib/formatDate'
+import FormattedDate from '@/components/FormattedDate'
 
 const BlogPost = ({ post }) => {
   return (
@@ -11,7 +11,7 @@ const BlogPost = ({ post }) => {
             {post.title}
           </h2>
           <time className="flex-shrink-0 text-gray-600 dark:text-gray-400">
-            {formatDate(post?.date?.start_date || post.createdTime, BLOG.lang)}
+            <FormattedDate date={post.date} />
           </time>
         </header>
         <main>
