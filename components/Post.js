@@ -3,10 +3,10 @@ import Image from 'next/image'
 import cn from 'classnames'
 import BLOG from '@/blog.config'
 import useTheme from '@/lib/theme'
+import FormattedDate from '@/components/FormattedDate'
 import TagItem from '@/components/TagItem'
 import NotionRenderer from '@/components/NotionRenderer'
 import TableOfContents from '@/components/TableOfContents'
-import FormattedDate from '@/components/FormattedDate'
 
 /**
  * A post renderer
