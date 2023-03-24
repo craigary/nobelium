@@ -78,7 +78,7 @@ export default function PageConfigurator ({ locale }) {
               </span>
               </button>
             </header>
-            <p className="my-7">This is a GUI editor to generate the content of <code className="text-sm">blog.config.js</code>. It will NOT update your config file automatically. You will need to copy & paste the generated content to you config file.</p>
+            <p className="my-7" dangerouslySetInnerHTML={{ __html: locale.configurator.description }} />
             <ConfigEntryGroup entries={entries} />
             {process.env.NODE_ENV === 'development' && (
               <pre className="absolute left-full top-0 p-2 text-xs leading-8">{JSON.stringify(config, null, 2)}</pre>
@@ -92,7 +92,7 @@ export default function PageConfigurator ({ locale }) {
 
 function ConfigEntryGroup ({ entries, parent = [] }) {
   return (
-    <div className="space-y-2">
+    <div className="space-y-3">
       {entries.map(entry => {
         const name = entry[0]
         return <ConfigEntry key={name} entry={entry} parent={parent} />
@@ -116,6 +116,7 @@ function resolveType (value) {
 
 function ConfigEntry ({ entry: [name, value], parent = [] }) {
   const { config, setConfig } = useContext(ConfigContext)
+  const locale = useContext(LocaleContext)
   const valueType = resolveType(value)
   const level = parent.length
 
@@ -163,18 +164,28 @@ function ConfigEntry ({ entry: [name, value], parent = [] }) {
         />
       )
       break
-    case 'object':
+    case 'object': {
+      const description = get(locale, ['configurator', 'entry', ...parent, name, 'description'])
+
       return (
-        <ConfigContext.Provider value={{
-          config,
-          setConfig: (key, value) => setConfig([].concat(name, key), value)
-        }}>
-          <div>
-            <span className="leading-8" style={{ paddingLeft: INDENT * level + 'px' }}>{name}</span>
+        <ConfigContext.Provider
+          value={{
+            config,
+            setConfig: (key, value) => setConfig([].concat(name, key), value)
+          }}
+        >
+          <div className="text-sm">
+            <code style={{ paddingLeft: INDENT * level + 'px' }}>{name}</code>
+            {description && (
+              <p className="opacity-50" style={{ paddingLeft: INDENT * level + 'px' }}>
+                {description}
+              </p>
+            )}
           </div>
           <ConfigEntryGroup entries={Object.entries(value)} parent={parent.concat(name)} />
         </ConfigContext.Provider>
       )
+    }
     default:
       content = <span style={{ color: '#f0f' }}>{valueType}</span>
   }
@@ -189,18 +200,10 @@ function ConfigEntryLayout ({ name, parent = [], children }) {
 
   return (
     <div className="flex">
-      <div className="flex-[1.5_1.5_0]">
-        <code
-          className="text-sm leading-8"
-          style={{ paddingLeft: INDENT * level + 'px' }}
-        >
-          {name}
-        </code>
+      <div className="flex-[1.5_1.5_0] text-sm">
+        <code style={{ paddingLeft: INDENT * level + 'px' }}>{name}</code>
         {description && (
-          <p
-            className="opacity-50"
-            style={{ paddingLeft: INDENT * level + 'px' }}
-          >
+          <p className="opacity-50" style={{ paddingLeft: INDENT * level + 'px' }}>
             {description}
           </p>
         )}

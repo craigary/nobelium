@@ -1,12 +1,131 @@
 {
   "configurator": {
+    "description": "这是用于生成 Nobelium 配置数据的编辑器。<strong>它不能自动更新你的站点配置。</strong>你需要手动复制并粘贴它生成的内容到你的站点配置文件中。",
     "entry": {
       "title": {
         "description": "站点标题"
       },
+      "description": {
+        "description": "站点描述，会显示在站点标题旁边"
+      },
+      "link": {
+        "description": "站点网址"
+      },
+      "since": {
+        "description": "站点创建年份"
+      },
+      "author": {
+        "description": "作者名称"
+      },
+      "email": {
+        "description": "作者邮箱，会决定 Gravatar 返回的头像"
+      },
+      "socialLink": {
+        "description": "作者的社交账号链接，会成为作者头像的链接地址"
+      },
+      "lang": {
+        "description": "站点语言"
+      },
+      "timezone": {
+        "description": "站点时区，会决定文章时间的时区"
+      },
+      "appearance": {
+        "description": "站点外观"
+      },
+      "font": {
+        "description": "站点字体"
+      },
+      "lightBackground": {
+        "description": "亮色模式背景色"
+      },
+      "darkBackground": {
+        "description": "暗色模式背景色"
+      },
+      "postsPerPage": {
+        "description": "文章列表每页文章数"
+      },
+      "sortByDate": {
+        "description": "是否按日期排序"
+      },
+      "showAbout": {
+        "description": "是否显示“关于”链接"
+      },
+      "showArchive": {
+        "description": "是否显示“存档”链接"
+      },
+      "autoCollapsedNavBar": {
+        "description": "是否始终使用收缩的导航栏"
+      },
+      "path": {
+        "description": "站点根路径，如果你想把站点挂载到其他站点的某个路径下则需要填写此项"
+      },
+      "ogImageGenerateURL": {
+        "description": "OG 图像生成服务地址（结尾不要加斜线）"
+      },
       "seo": {
+        "description": "SEO 配置",
         "keywords": {
-          "description": "多个关键词间使用英文逗号分隔"
+          "description": "站点关键词，使用英文逗号分隔多个关键词"
+        },
+        "googleSiteVerification": {
+          "description": "Google 站点验证码"
+        }
+      },
+      "analytics": {
+        "description": "流量统计工具配置",
+        "provider": {
+          "description": "流量统计工具"
+        },
+        "ackeeConfig": {
+          "description": "Ackee 配置",
+          "tracker": {
+            "description": "追踪器地址"
+          },
+          "dataAckeeServer": {
+            "description": "追踪服务器地址（结尾不要加斜线）"
+          }
+        },
+        "gaConfig": {
+          "description": "Google Analytics 配置",
+          "measurementId": {
+            "description": "G-Tag"
+          }
+        }
+      },
+      "comment": {
+        "description": "评论工具配置",
+        "provider": {
+          "description": "评论工具"
+        },
+        "gitalkConfig": {
+          "description": "Gitalk 配置",
+          "repo": {
+            "description": "仓库名"
+          },
+          "owner": {
+            "description": "仓库所有者"
+          },
+          "admin": {
+            "description": "管理员"
+          },
+          "distractionFreeMode": {
+            "description": "是否启用无干扰模式"
+          }
+        },
+        "utterancesConfig": {
+          "description": "Utterances 配置",
+          "repo": {
+            "description": "仓库名"
+          }
+        },
+        "cusdisConfig": {
+          "description": "Cusdis 配置",
+          "host": {
+            "description": "服务地址，仅在使用自托管服务时需要修改"
+          },
+          "scriptSrc": {
+            "description": "脚本地址，仅在使用自托管服务时需要修改"
+          }
         }
       }
     }
