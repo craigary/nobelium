@@ -58,7 +58,7 @@ const components = {
   // Tweet block
   Tweet: dynamic(() => {
     return import('react-tweet-embed').then(module => {
-      const { TweetEmbed } = module
+      const { default: TweetEmbed } = module
       return function Tweet ({ id }) {
         return <TweetEmbed tweetId={id} options={{ theme: 'dark' }} />
       }
