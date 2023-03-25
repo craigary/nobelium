@@ -8,6 +8,7 @@ import Switch from '@/components/Switch'
 import ColorInput from '@/components/ColorInput'
 import config from '@/lib/config'
 import { get, set } from '@/lib/utils'
+import TextInput from '@/components/TextInput'
 
 const OVERRIDE = Symbol()
 const INDENT = 20
@@ -152,11 +153,10 @@ function ConfigEntry ({ entry: [name, value], parent = [] }) {
   switch (valueType) {
     case 'string':
       content = (
-        <input
+        <TextInput
           type="text"
           value={value}
-          className="w-full px-2 py-1 bg-transparent border border-neutral-600"
-          onInput={ev => setConfig(name, ev.target.value)}
+          onChange={value => setConfig(name, value)}
         />
       )
       break
