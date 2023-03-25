@@ -7,8 +7,8 @@ import example from '@/blog.config.example'
 import loadLocale from '@/assets/i18n'
 import Container from '@/components/Container'
 import Switch from '@/components/Switch'
-import { get, set } from '@/lib/utils'
 import ColorInput from '@/components/ColorInput'
+import { get, set } from '@/lib/utils'
 
 const OVERRIDE = Symbol()
 const INDENT = 20
