@@ -5,9 +5,9 @@ import example from '@/blog.config.example'
 import loadLocale from '@/assets/i18n'
 import Container from '@/components/Container'
 import Switch from '@/components/Switch'
+import ColorInput from '@/components/ColorInput'
 import config from '@/lib/config'
 import { get, set } from '@/lib/utils'
-import ColorInput from '@/components/ColorInput'
 
 const OVERRIDE = Symbol()
 const INDENT = 20

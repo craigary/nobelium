@@ -37,6 +37,10 @@
   src: url('/fonts/SourceSerif-Italic.var.woff2') format('woff2');
 }
 
+:root {
+  font-size: 16px;
+}
+
 html {
   --scrollbarBG: #ffffff00;
   --thumbBG: #b8b8b8;
