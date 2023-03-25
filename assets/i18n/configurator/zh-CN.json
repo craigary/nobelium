@@ -34,7 +34,7 @@
         "description": "站点语言"
       },
       "timezone": {
-        "description": "站点时区，会决定文章时间的时区"
+        "description": "站点时区，会决定文章时间的时区（需使用 IANA 标识符格式）"
       },
       "appearance": {
         "description": "站点外观"
