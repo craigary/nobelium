@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import cn from 'classnames'
 import BLOG from '@/blog.config'
 import CJK from '@/lib/cjk'
 class MyDocument extends Document {
@@ -8,8 +9,13 @@ class MyDocument extends Document {
   }
 
   render () {
+    const initialColorScheme = {
+      auto: 'color-scheme-unset',
+      dark: 'dark'
+    }[BLOG.appearance]
+
     return (
-      <Html lang={BLOG.lang}>
+      <Html lang={BLOG.lang} className={cn(initialColorScheme)}>
         <Head>
           {BLOG.font && BLOG.font === 'serif'
             ? (

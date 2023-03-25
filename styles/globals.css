@@ -54,6 +54,16 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
 }
+/* This means theme config is `auto` and `ThemeProvider` has not been executed.
+ * Therefore, we need fallback to media mode to apply color theme */
+.color-scheme-unset body {
+  @apply bg-day;
+}
+@media (prefers-color-scheme: dark) {
+  .color-scheme-unset body {
+    @apply bg-night;
+  }
+}
 
 ::selection {
   background: rgba(45, 170, 219, 0.3);
