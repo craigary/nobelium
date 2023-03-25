@@ -89,7 +89,7 @@ export default function PageConfigurator ({ locale }) {
                   copyStatus != null ? 'opacity-0' : 'delay-100'
                 )}
               >
-                {locale.configurator.action.generate.label}
+                {get(locale, 'configurator.action.generate.label')}
               </span>
                 <span
                   className={cn(
@@ -99,13 +99,13 @@ export default function PageConfigurator ({ locale }) {
                 >
                 {copyStatus != null && (
                   copyStatus
-                    ? locale.configurator.action.generate.success
-                    : locale.configurator.action.generate.error
+                    ? get(locale, 'configurator.action.generate.success')
+                    : get(locale, 'configurator.action.generate.error')
                 )}
               </span>
               </button>
             </header>
-            <p className="my-7" dangerouslySetInnerHTML={{ __html: locale.configurator.description }} />
+            <p className="my-7" dangerouslySetInnerHTML={{ __html: get(locale, 'configurator.description') }} />
             <ConfigEntryGroup entries={entries} />
             {process.env.NODE_ENV === 'development' && (
               <pre className="absolute left-full top-0 p-2 text-xs leading-8">{JSON.stringify(config, null, 2)}</pre>
