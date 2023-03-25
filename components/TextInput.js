@@ -5,7 +5,7 @@ export default function TextInput ({ value, onChange, className, style }) {
         <input
           type="text"
           value={value}
-          className="px-2 bg-transparent outline-none"
+          className="w-full px-2 bg-transparent outline-none"
           onChange={ev => onChange(ev.target.value)}
         />
       </span>
