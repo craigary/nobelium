@@ -230,7 +230,7 @@ function ConfigEntryLayout ({ name, parent = [], children }) {
       <div className="flex-[1.5_1.5_0] text-sm">
         <code style={{ paddingLeft: INDENT * level + 'px' }}>{name}</code>
         {description && (
-          <p className="opacity-50" style={{ paddingLeft: INDENT * level + 'px' }}>
+          <p className="pr-5 opacity-50" style={{ paddingLeft: INDENT * level + 'px' }}>
             {description}
           </p>
         )}
