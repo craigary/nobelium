@@ -1,6 +1,13 @@
 {
   "configurator": {
     "description": "这是用于生成 Nobelium 配置数据的编辑器。<strong>它不能自动更新你的站点配置。</strong>你需要手动复制并粘贴它生成的内容到你的站点配置文件中。",
+    "action": {
+      "generate": {
+        "label": "生成配置",
+        "success": "已复制",
+        "error": "遇到错误"
+      }
+    },
     "entry": {
       "title": {
         "description": "站点标题"

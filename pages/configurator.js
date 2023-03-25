@@ -65,7 +65,7 @@ export default function PageConfigurator ({ locale }) {
                   copyStatus != null ? 'opacity-0' : 'delay-100'
                 )}
               >
-                Generate config
+                {locale.configurator.action.generate.label}
               </span>
                 <span
                   className={cn(
@@ -73,7 +73,11 @@ export default function PageConfigurator ({ locale }) {
                     copyStatus == null ? 'opacity-0' : 'opacity-100 delay-100'
                   )}
                 >
-                {copyStatus == null ? null : copyStatus ? 'Copied!' : 'ERROR!'}
+                {copyStatus != null && (
+                  copyStatus
+                    ? locale.configurator.action.generate.success
+                    : locale.configurator.action.generate.error
+                )}
               </span>
               </button>
             </header>
