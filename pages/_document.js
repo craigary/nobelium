@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import cn from 'classnames'
 import BLOG from '@/blog.config'
+import tailwind from '@/tailwind.config'
 import CJK from '@/lib/cjk'
 class MyDocument extends Document {
   static async getInitialProps (ctx) {
@@ -102,6 +103,18 @@ class MyDocument extends Document {
             <meta name="theme-color" content={BLOG.appearance === 'dark' ? BLOG.darkBackground : BLOG.lightBackground} />
               )
           }
+          {/* To ensure the initial background color follows media preference when ThemeProvider is
+              not ready */}
+          <style>{`
+            .color-scheme-unset body {
+              background-color: ${tailwind.theme.extend.colors.day.DEFAULT};
+            }
+            @media (prefers-color-scheme: dark) {
+              .color-scheme-unset body {
+                background-color: ${tailwind.theme.extend.colors.night.DEFAULT};
+              }
+            }
+          `}</style>
         </Head>
         <body className="bg-day dark:bg-night">
           <Main />
