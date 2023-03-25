@@ -1,5 +1,9 @@
 /* NOTION CSS OVERRIDE */
 
+:root {
+  --no-leading: 2rem;
+}
+
 .notion {
   @apply text-gray-600 dark:text-gray-300;
   overflow-wrap: break-word;
@@ -8,9 +12,9 @@
 .notion-text,
 .notion-quote,
 .notion-h-title {
-  @apply leading-8;
   @apply p-0;
   @apply my-3;
+  line-height: var(--no-leading);
 }
 .notion-page-link {
   color: inherit;
@@ -22,6 +26,23 @@ svg.notion-page-icon {
 
 svg + .notion-page-title-text {
   @apply border-b-0;
+}
+
+.notion-callout > .notion-page-icon-inline {
+  max-width: unset;
+  max-height: unset;
+  height: var(--no-leading);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.05em;
+}
+
+.notion-callout-text {
+  @apply min-w-0;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .notion-bookmark {
@@ -39,10 +60,6 @@ svg + .notion-page-title-text {
   @apply text-gray-600 dark:text-gray-300;
 }
 
-.notion-code > code {
-  @apply text-gray-900;
-}
-
 pre[class*='language-'] {
   line-height: inherit;
 }
@@ -57,6 +74,9 @@ pre[class*='language-'] {
   @apply text-center;
   @apply text-gray-500 dark:text-gray-400;
 }
+.notion-asset-wrapper-tweet iframe {
+  @apply bg-day dark:bg-night;
+}
 .notion-full-width {
   @apply px-0;
 }
@@ -66,6 +86,16 @@ pre[class*='language-'] {
 }
 .notion-quote {
   padding: 0.2em 0.9em;
+}
+.notion-hr {
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+.dark .notion-hr {
+  border-top-color: rgba(255, 255, 255, 0.13);
+}
+.notion-list {
+  width: 100%;
 }
 .notion-collection {
   @apply max-w-full;
@@ -84,4 +114,41 @@ pre[class*='language-'] {
 }
 .notion-collection-row {
   @apply hidden;
+}
+
+.notion-property-checkbox {
+  width: 24px;
+  margin-right: 2px !important;
+  display: flex;
+  justify-content: center;
+}
+
+.notion-to-do-body {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.notion-list {
+  padding-inline-start: 28px;
+}
+
+.notion-list > li {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.notion-toggle {
+  padding-left: 28px;
+}
+
+.notion-toggle > summary {
+  list-style-position: outside;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.notion-toggle > summary + div {
+  margin-left: 0;
+  padding-left: 2px;
+  padding-right: 2px;
 }

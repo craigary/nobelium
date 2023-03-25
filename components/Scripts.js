@@ -10,23 +10,6 @@ const Scripts = () => (
         data-ackee-domain-id={BLOG.analytics.ackeeConfig.domainId}
       />
     )}
-    {/* {BLOG.autoCollapsedNavBar === true && (
-      <Script strategy="lazyOnload">
-        {`var windowTop=0;
-          function scrollTrigger(){
-              let scrollS = window.scrollY;
-              let nav = document.querySelector('.sticky-nav');
-              if(scrollS >= windowTop){
-                  nav.style.opacity = 0;
-                  windowTop = scrollS;
-              }else{
-                  nav.style.opacity = 1;
-                  windowTop = scrollS;
-              }
-          };
-          window.addEventListener('scroll',scrollTrigger);`}
-      </Script>
-    )} */}
     {BLOG.analytics && BLOG.analytics.provider === 'ga' && (
       <>
         <Script

@@ -9,9 +9,8 @@ const fontSerifCJK = !CJK()
   : [`"Noto Serif CJK ${CJK()}"`, `"Noto Serif ${CJK()}"`]
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
-  darkMode: BLOG.appearance === 'auto' ? 'media' : 'class', // or 'media' or 'class'
+  content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
