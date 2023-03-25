@@ -8,8 +8,31 @@ import loadLocale from '@/assets/i18n'
 import Container from '@/components/Container'
 import Switch from '@/components/Switch'
 import { get, set } from '@/lib/utils'
+import ColorInput from '@/components/ColorInput'
 
+const OVERRIDE = Symbol()
 const INDENT = 20
+
+// Override some entries for special behaviors
+
+set(
+  example,
+  ['lightBackground'],
+  {
+    [OVERRIDE]: true,
+    type: 'color',
+    default: get(example, ['lightBackground'])
+  }
+)
+set(
+  example,
+  ['darkBackground'],
+  {
+    [OVERRIDE]: true,
+    type: 'color',
+    default: get(example, ['darkBackground'])
+  }
+)
 
 const ConfigContext = createContext(undefined)
 const LocaleContext = createContext(undefined)
@@ -109,6 +132,8 @@ function resolveType (value) {
   const type = typeof value
   if (type === 'object') {
     switch (true) {
+      case value[OVERRIDE]:
+        return value.type
       case Array.isArray(value):
         return 'array'
       case value === null:
@@ -149,10 +174,7 @@ function ConfigEntry ({ entry: [name, value], parent = [] }) {
     case 'boolean':
       content = (
         <div className="h-8 flex items-center">
-          <Switch
-            checked={Boolean(value)}
-            onChange={checked => setConfig(name, checked)}
-          />
+          <Switch checked={Boolean(value)} onChange={checked => setConfig(name, checked)} />
         </div>
       )
       break
@@ -166,6 +188,11 @@ function ConfigEntry ({ entry: [name, value], parent = [] }) {
             setConfig(name, ev.target.value.split(/\s*,\s*/).filter(Boolean))
           }}
         />
+      )
+      break
+    case 'color':
+      content = (
+        <ColorInput value={value.default} onChange={value => setConfig(name, value)} />
       )
       break
     case 'object': {
