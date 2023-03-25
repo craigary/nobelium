@@ -1,0 +1,133 @@
+{
+  "configurator": {
+    "description": "これは Nobelium 配置データを生成するためのエディタです。<strong>自動的にサイトの配置を更新することはできません。</strong>生成された内容を手動でコピーしてサイトの配置ファイルに貼り付ける必要があります。",
+    "entry": {
+      "title": {
+        "description": "サイトのタイトル"
+      },
+      "description": {
+        "description": "サイトの説明。タイトルの横に表示されます。"
+      },
+      "link": {
+        "description": "サイトの URL"
+      },
+      "since": {
+        "description": "サイトの公開した年"
+      },
+      "author": {
+        "description": "作者の名前"
+      },
+      "email": {
+        "description": "作者のメールアドレス。Gravatar で返されるアバターに使います。"
+      },
+      "socialLink": {
+        "description": "作者のソーシャルアカウントのリンク。アバターにリンクされます。"
+      },
+      "lang": {
+        "description": "サイトの言語"
+      },
+      "timezone": {
+        "description": "サイトのタイムゾーン。記事の配信時間に使います。"
+      },
+      "appearance": {
+        "description": "サイトのテーマ"
+      },
+      "font": {
+        "description": "サイトのフォント"
+      },
+      "lightBackground": {
+        "description": "ライトモードの背景色"
+      },
+      "darkBackground": {
+        "description": "ダークモードの背景色"
+      },
+      "postsPerPage": {
+        "description": "1 ページあたりの記事数"
+      },
+      "sortByDate": {
+        "description": "日付順に並べ替える"
+      },
+      "showAbout": {
+        "description": "「About」リンクを表示する"
+      },
+      "showArchive": {
+        "description": "「Archive」リンクを表示する"
+      },
+      "autoCollapsedNavBar": {
+        "description": "ナビゲーションバーを常に折りたたまれる"
+      },
+      "path": {
+        "description": "サイトのルートパス。サイトを他のサイトのパスにマウントする場合は、この項目を記入する必要があります。"
+      },
+      "ogImageGenerateURL": {
+        "description": "OGP 画像生成サービスの URL（末尾にスラッシュを入れないでください）"
+      },
+      "seo": {
+        "description": "SEO の設定",
+        "keywords": {
+          "description": "サイトのキーワード。複数のキーワードを英語のカンマで区切ってください"
+        },
+        "googleSiteVerification": {
+          "description": "Google のサイト認証コード"
+        }
+      },
+      "analytics": {
+        "description": "アクセス解析ツールの設定",
+        "provider": {
+          "description": "アクセス解析ツール"
+        },
+        "ackeeConfig": {
+          "description": "Ackee の設定",
+          "tracker": {
+            "description": "トラッカー"
+          },
+          "dataAckeeServer": {
+            "description": "Ackee サーバーのURL（末尾にスラッシュを入れないでください）"
+          }
+        },
+        "gaConfig": {
+          "description": "Google アナリティクスの設定",
+          "measurementId": {
+            "description": "G-Tag"
+          }
+        }
+      },
+      "comment": {
+        "description": "コメントツールの設定",
+        "provider": {
+          "description": "コメントツール"
+        },
+        "gitalkConfig": {
+          "description": "Gitalk の設定",
+          "repo": {
+            "description": "リポジトリ名"
+          },
+          "owner": {
+            "description": "リポジトリの所有者"
+          },
+          "admin": {
+            "description": "管理者"
+          },
+          "distractionFreeMode": {
+            "description": "無干渉モードを有効にする"
+          }
+        },
+        "utterancesConfig": {
+          "description": "Utterances の設定",
+          "repo": {
+            "description": "リポジトリ名"
+          }
+        },
+        "cusdisConfig": {
+          "description": "Cusdis の設定",
+          "host": {
+            "description": "サーバーアドレス。セルフホスティングを使用する場合にのみ変更する必要があります。"
+          },
+          "scriptSrc": {
+            "description": "スクリプトのアドレス。セルフホスティングを使用する場合にのみ変更する必要があります。"
+          }
+        }
+      }
+    }
+  }
+}
