@@ -7,9 +7,9 @@ import example from '@/blog.config.example'
 import loadLocale from '@/assets/i18n'
 import Container from '@/components/Container'
 import Switch from '@/components/Switch'
+import TextInput from '@/components/TextInput'
 import ColorInput from '@/components/ColorInput'
 import { get, set } from '@/lib/utils'
-import TextInput from '@/components/TextInput'
 
 const OVERRIDE = Symbol()
 const INDENT = 20
@@ -180,13 +180,9 @@ function ConfigEntry ({ entry: [name, value], parent = [] }) {
       break
     case 'array':
       content = (
-        <input
-          type="text"
-          defaultValue={value.join(', ')}
-          className="w-full px-2 py-1 bg-transparent border border-neutral-600"
-          onChange={ev => {
-            setConfig(name, ev.target.value.split(/\s*,\s*/).filter(Boolean))
-          }}
+        <TextInput
+          value={value.join(', ')}
+          onChange={value => setConfig(name, value.split(/\s*,\s*/).filter(Boolean))}
         />
       )
       break
