@@ -2,11 +2,7 @@
   "configurator": {
     "description": "Este es un editor para generar datos de configuración de Nobelium. <strong>No actualiza automáticamente la configuración de su sitio web.</strong> Necesita copiar y pegar manualmente el contenido generado por él en su archivo de configuración del sitio.",
     "action": {
-      "generate": {
-        "label": "Generar configuración",
-        "success": "Copiado",
-        "error": "Ocurrió un error"
-      }
+      "generate": "Copiar configuración"
     },
     "entry": {
       "title": {

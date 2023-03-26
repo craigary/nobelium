@@ -2,11 +2,7 @@
   "configurator": {
     "description": "これは Nobelium 配置データを生成するためのエディタです。<strong>自動的にサイトの配置を更新することはできません。</strong>生成された内容を手動でコピーしてサイトの配置ファイルに貼り付ける必要があります。",
     "action": {
-      "generate": {
-        "label": "生成設定",
-        "success": "コピーしました",
-        "error": "エラーが発生しました"
-      }
+      "generate": "設定データをコピー"
     },
     "entry": {
       "title": {

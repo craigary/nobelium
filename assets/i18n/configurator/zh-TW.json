@@ -1,12 +1,8 @@
 {
   "configurator": {
-    "description": "這是用於生成 Nobelium 配置數據的編輯器。<strong>它不能自動更新你的站點配置。</strong>你需要手動複製並黏貼它生成的內容到你的站點配置文件中。",
+    "description": "這是用於生成 Nobelium 設定資料的編輯器。<strong>它不能自動更新你的站點設定。</strong>你需要手動複製並黏貼它生成的內容到你的站點設定文件中。",
     "action": {
-      "generate": {
-        "label": "生成配置",
-        "success": "已複製",
-        "error": "遇到錯誤"
-      }
+      "generate": "複製設定資料"
     },
     "entry": {
       "title": {
@@ -70,7 +66,7 @@
         "description": "OG 圖像生成服務地址（結尾不要加斜線）"
       },
       "seo": {
-        "description": "SEO 配置",
+        "description": "SEO 設定",
         "keywords": {
           "description": "站點關鍵字，使用英文逗號分隔多個關鍵字"
         },
@@ -84,7 +80,7 @@
           "description": "流量統計工具"
         },
         "ackeeConfig": {
-          "description": "Ackee 配置",
+          "description": "Ackee 設定",
           "tracker": {
             "description": "追蹤器地址"
           },
@@ -93,7 +89,7 @@
           }
         },
         "gaConfig": {
-          "description": "Google Analytics 配置",
+          "description": "Google Analytics 設定",
           "measurementId": {
             "description": "G-Tag"
           }
@@ -105,7 +101,7 @@
           "description": "評論工具"
         },
         "gitalkConfig": {
-          "description": "Gitalk 配置",
+          "description": "Gitalk 設定",
           "repo": {
             "description": "倉庫名"
           },
@@ -120,13 +116,13 @@
           }
         },
         "utterancesConfig": {
-          "description": "Utterances 配置",
+          "description": "Utterances 設定",
           "repo": {
             "description": "倉庫名"
           }
         },
         "cusdisConfig": {
-          "description": "Cusdis 配置",
+          "description": "Cusdis 設定",
           "host": {
             "description": "服務地址，僅在使用自託管服務時需要修改"
           },
