@@ -1,0 +1,140 @@
+{
+  "configurator": {
+    "description": "Este es un editor para generar datos de configuración de Nobelium. <strong>No actualiza automáticamente la configuración de su sitio web.</strong> Necesita copiar y pegar manualmente el contenido generado por él en su archivo de configuración del sitio.",
+    "action": {
+      "generate": {
+        "label": "Generar configuración",
+        "success": "Copiado",
+        "error": "Ocurrió un error"
+      }
+    },
+    "entry": {
+      "title": {
+        "description": "Título del sitio"
+      },
+      "description": {
+        "description": "Descripción del sitio, que se mostrará junto al título del sitio"
+      },
+      "link": {
+        "description": "URL del sitio"
+      },
+      "since": {
+        "description": "Año de creación del sitio"
+      },
+      "author": {
+        "description": "Nombre del autor"
+      },
+      "email": {
+        "description": "Correo electrónico del autor, que determinará la imagen de perfil devuelta por Gravatar"
+      },
+      "socialLink": {
+        "description": "Enlaces a las cuentas de redes sociales del autor, que se convertirán en los enlaces del avatar del autor"
+      },
+      "lang": {
+        "description": "Idioma del sitio"
+      },
+      "timezone": {
+        "description": "Zona horaria del sitio, que determinará la zona horaria de la hora de publicación del artículo (debe estar en el formato de identificador IANA)"
+      },
+      "appearance": {
+        "description": "Apariencia del sitio"
+      },
+      "font": {
+        "description": "Fuente del sitio"
+      },
+      "lightBackground": {
+        "description": "Color de fondo del modo claro"
+      },
+      "darkBackground": {
+        "description": "Color de fondo del modo oscuro"
+      },
+      "postsPerPage": {
+        "description": "Número de publicaciones por página en la lista de publicaciones"
+      },
+      "sortByDate": {
+        "description": "Ordenar por fecha"
+      },
+      "showAbout": {
+        "description": "Mostrar enlace 'Acerca de'"
+      },
+      "showArchive": {
+        "description": "Mostrar enlace 'Archivo'"
+      },
+      "autoCollapsedNavBar": {
+        "description": "Usar siempre la barra de navegación colapsada"
+      },
+      "path": {
+        "description": "Ruta raíz del sitio, si desea montar el sitio en una ruta de otro sitio"
+      },
+      "ogImageGenerateURL": {
+        "description": "URL del servicio de generación de imágenes OG (sin barra inclinada al final)"
+      },
+      "seo": {
+        "description": "Configuración de SEO",
+        "keywords": {
+          "description": "Palabras clave del sitio, separadas por comas"
+        },
+        "googleSiteVerification": {
+          "description": "Código de verificación del sitio en Google"
+        }
+      },
+      "analytics": {
+        "description": "Configuración de herramientas de análisis de tráfico",
+        "provider": {
+          "description": "Herramienta de análisis de tráfico"
+        },
+        "ackeeConfig": {
+          "description": "Configuración de Ackee",
+          "tracker": {
+            "description": "Dirección del rastreador"
+          },
+          "dataAckeeServer": {
+            "description": "Dirección del servidor de rastreo (sin barra inclinada al final)"
+          }
+        },
+        "gaConfig": {
+          "description": "Configuración de Google Analytics",
+          "measurementId": {
+            "description": "Identificación de la propiedad de Google Analytics (G-Tag)"
+          }
+        }
+      },
+      "comment": {
+        "description": "Configuración de herramientas de comentarios",
+        "provider": {
+          "description": "Herramienta de comentarios"
+        },
+        "gitalkConfig": {
+          "description": "Configuración de Gitalk",
+          "repo": {
+            "description": "Nombre del repositorio"
+          },
+          "owner": {
+            "description": "Propietario del repositorio"
+          },
+          "admin": {
+            "description": "Administradores"
+          },
+          "distractionFreeMode": {
+            "description": "Activar el modo sin distracciones"
+          }
+        },
+        "utterancesConfig": {
+          "description": "Configuración de Utterances",
+          "repo": {
+            "description": "Nombre del repositorio"
+          }
+        },
+        "cusdisConfig": {
+          "description": "Configuración de Cusdis",
+          "host": {
+            "description": "Dirección del servicio, solamente para auto-alojado"
+          },
+          "scriptSrc": {
+            "description": "Dirección del script, solamente para auto-alojado"
+          }
+        }
+      }
+    }
+  }
+}

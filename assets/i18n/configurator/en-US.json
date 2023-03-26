@@ -1,12 +1,138 @@
 {
   "configurator": {
+    "description": "This is an editor for generating Nobelium configuration data. <strong>It cannot automatically update your site configuration.</strong> You need to manually copy and paste the content it generates into your site configuration file.",
+    "action": {
+      "generate": {
+        "label": "Generate Configuration",
+        "success": "Copied",
+        "error": "Encountered Error"
+      }
+    },
     "entry": {
       "title": {
-        "description": "The title of your site"
+        "description": "Site title"
+      },
+      "description": {
+        "description": "Site description, will be displayed next to the site title"
+      },
+      "link": {
+        "description": "Site URL"
+      },
+      "since": {
+        "description": "Site creation year"
+      },
+      "author": {
+        "description": "Author name"
+      },
+      "email": {
+        "description": "Author email, will determine the avatar returned by Gravatar"
+      },
+      "socialLink": {
+        "description": "Author's social account link, will become the link address of the author's avatar"
+      },
+      "lang": {
+        "description": "Site language"
+      },
+      "timezone": {
+        "description": "Site time zone, will determine the time zone of article time (using IANA identifier format)"
+      },
+      "appearance": {
+        "description": "Site appearance"
+      },
+      "font": {
+        "description": "Site font"
+      },
+      "lightBackground": {
+        "description": "Light mode background color"
+      },
+      "darkBackground": {
+        "description": "Dark mode background color"
+      },
+      "postsPerPage": {
+        "description": "Number of articles per page in article list"
+      },
+      "sortByDate": {
+        "description": "Sort by date"
+      },
+      "showAbout": {
+        "description": "\"About\" link display"
+      },
+      "showArchive": {
+        "description": "Display \"Archive\" link"
+      },
+      "autoCollapsedNavBar": {
+        "description": "Always use a collapsed navigation bar"
+      },
+      "path": {
+        "description": "Site root path. If you want to mount the site under a certain path of another site, you need to fill in this item."
+      },
+      "ogImageGenerateURL": {
+        "description": "OG image generation service address (do not add a slash at the end)"
       },
       "seo": {
+        "description": "SEO configuration",
         "keywords": {
-          "description": "Comma-separated values"
+          "description": "Site keywords, separated by commas"
+        },
+        "googleSiteVerification": {
+          "description": "Google site verification code"
+        }
+      },
+      "analytics": {
+        "description": "Traffic statistics tool configuration",
+        "provider": {
+          "description": "Traffic statistics tool"
+        },
+        "ackeeConfig": {
+          "description": "Ackee configuration",
+          "tracker": {
+            "description": "Tracker address"
+          },
+          "dataAckeeServer": {
+            "description": "Tracking server address (do not add a slash at the end)"
+          }
+        },
+        "gaConfig": {
+          "description": "Google Analytics configuration",
+          "measurementId": {
+            "description": "G-Tag"
+          }
+        }
+      },
+      "comment": {
+        "description": "Comment tool configuration",
+        "provider": {
+          "description": "Comment tool"
+        },
+        "gitalkConfig": {
+          "description": "Gitalk configuration",
+          "repo": {
+            "description": "Repository name"
+          },
+          "owner": {
+            "description": "Repository owner"
+          },
+          "admin": {
+            "description": "Administrator"
+          },
+          "distractionFreeMode": {
+            "description": "Enable distraction-free mode"
+          }
+        },
+        "utterancesConfig": {
+          "description": "Utterances configuration",
+          "repo": {
+            "description": "Repository name"
+          }
+        },
+        "cusdisConfig": {
+          "description": "Cusdis configuration",
+          "host": {
+            "description": "Service address, only need to modify when using self-hosted service"
+          },
+          "scriptSrc": {
+            "description": "Script address, only need to modify when using self-hosted service"
+          }
         }
       }
     }
