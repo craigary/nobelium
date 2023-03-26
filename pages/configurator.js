@@ -20,12 +20,40 @@ const overrides = {
   lightBackground: { type: 'color' },
   darkBackground: { type: 'color' },
   lang: { type: 'select', options: langs },
-  appearance: { type: 'select', options: ['auto', 'light', 'dark'] },
-  font: { type: 'select', options: ['sans-serif', 'serif'] },
-  'analytics.provider': { type: 'select', options: ['', 'ga', 'ackee'] },
+  appearance: {
+    type: 'select',
+    options: [
+      ['auto', 'configurator.entry.appearance.option.auto'],
+      ['light', 'configurator.entry.appearance.option.light'],
+      ['dark', 'configurator.entry.appearance.option.dark'],
+    ]
+  },
+  font: {
+    type: 'select',
+    options: [
+      ['sans-serif', 'configurator.entry.font.option.sans'],
+      ['serif', 'configurator.entry.font.option.serif']
+    ]
+  },
+  'analytics.provider': {
+    type: 'select',
+    options: [
+      ['', 'configurator.entry.analytics.provider.option.null'],
+      ['ga', 'Google Analytics'],
+      ['ackee', 'Ackee']
+    ]
+  },
   'analytics.gaConfig': { when: ['analytics.provider', 'ga'] },
   'analytics.ackeeConfig': { when: ['analytics.provider', 'ackee'] },
-  'comment.provider': { type: 'select', options: ['', 'gitalk', 'utterances', 'cusdis'] },
+  'comment.provider': {
+    type: 'select',
+    options: [
+      ['', 'configurator.entry.comment.provider.option.null'],
+      ['gitalk', 'Gitalk'],
+      ['utterances', 'Utterances'],
+      ['cusdis', 'Cusdis']
+    ]
+  },
   'comment.gitalkConfig': { when: ['comment.provider', 'gitalk'] },
   'comment.utterancesConfig': { when: ['comment.provider', 'utterances'] },
   'comment.cusdisConfig': { when: ['comment.provider', 'cusdis'] }
@@ -125,8 +153,8 @@ export default function PageConfigurator ({ defaultLang, defaultLocale }) {
                 </svg>
               </button>
             </header>
-            <Select value={lang} className="block w-24 mt-4" onChange={value => setLang(value)}>
-              {langs.map(lang => <option key={lang} value={lang}>{lang}</option>)}
+            <Select value={lang} className="inline-block mt-4" onChange={value => setLang(value)}>
+              {langs.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
             </Select>
             <p className="my-7" dangerouslySetInnerHTML={{ __html: get(locale, 'configurator.description') }} />
             <ConfigEntryGroup entries={entries} />
@@ -226,9 +254,12 @@ function ConfigEntry ({ entry: [name, value], parent = [] }) {
     case 'select':
       content = (
         <Select value={value} onChange={value => setConfig(name, value)}>
-          {override.options.map(value => (
-            <option key={value} value={value}>{value}</option>
-          ))}
+          {override.options.map(opt => {
+            const [value, label] = typeof opt === 'string' ? [opt, opt] : opt
+            return (
+              <option key={value} value={value}>{get(locale, label, label || value)}</option>
+            )
+          })}
         </Select>
       )
       break

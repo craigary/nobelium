@@ -33,10 +33,19 @@
         "description": "Site time zone, will determine the time zone of article time (using IANA identifier format)"
       },
       "appearance": {
-        "description": "Site appearance"
+        "description": "Site appearance",
+        "option": {
+          "auto": "Auto",
+          "light": "Light theme",
+          "dark": "Dark theme"
+        }
       },
       "font": {
-        "description": "Site font"
+        "description": "Site font",
+        "option": {
+          "sans": "Sans-serif",
+          "serif": "Serif"
+        }
       },
       "lightBackground": {
         "description": "Light mode background color"
@@ -77,7 +86,10 @@
       "analytics": {
         "description": "Traffic statistics tool configuration",
         "provider": {
-          "description": "Traffic statistics tool"
+          "description": "Traffic statistics tool",
+          "option": {
+            "null": "Disabled"
+          }
         },
         "ackeeConfig": {
           "description": "Ackee configuration",
@@ -98,7 +110,10 @@
       "comment": {
         "description": "Comment tool configuration",
         "provider": {
-          "description": "Comment tool"
+          "description": "Comment tool",
+          "option": {
+            "null": "Disabled"
+          }
         },
         "gitalkConfig": {
           "description": "Gitalk configuration",

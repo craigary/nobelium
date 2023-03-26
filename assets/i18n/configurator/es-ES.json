@@ -33,10 +33,19 @@
         "description": "Zona horaria del sitio, que determinará la zona horaria de la hora de publicación del artículo (debe estar en el formato de identificador IANA)"
       },
       "appearance": {
-        "description": "Apariencia del sitio"
+        "description": "Apariencia del sitio",
+        "option": {
+          "auto": "Automático",
+          "light": "Tema claro",
+          "dark": "Tema oscuro"
+        }
       },
       "font": {
-        "description": "Fuente del sitio"
+        "description": "Fuente del sitio",
+        "option": {
+          "sans": "Fuente sin remates",
+          "serif": "Fuente con remates"
+        }
       },
       "lightBackground": {
         "description": "Color de fondo del modo claro"
@@ -77,7 +86,10 @@
       "analytics": {
         "description": "Configuración de herramientas de análisis de tráfico",
         "provider": {
-          "description": "Herramienta de análisis de tráfico"
+          "description": "Herramienta de análisis de tráfico",
+          "option": {
+            "null": "No usar"
+          }
         },
         "ackeeConfig": {
           "description": "Configuración de Ackee",
@@ -98,7 +110,10 @@
       "comment": {
         "description": "Configuración de herramientas de comentarios",
         "provider": {
-          "description": "Herramienta de comentarios"
+          "description": "Herramienta de comentarios",
+          "option": {
+            "null": "No usar"
+          }
         },
         "gitalkConfig": {
           "description": "Configuración de Gitalk",

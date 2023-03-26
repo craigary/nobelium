@@ -33,10 +33,19 @@
         "description": "站點時區，會決定文章時間的時區（需使用 IANA 標識符格式）"
       },
       "appearance": {
-        "description": "站點外觀"
+        "description": "站點外觀",
+        "option": {
+          "auto": "自動",
+          "light": "亮色主题",
+          "dark": "暗色主题"
+        }
       },
       "font": {
-        "description": "站點字體"
+        "description": "站點字體",
+        "option": {
+          "sans": "無襯線字型",
+          "serif": "有襯線字型"
+        }
       },
       "lightBackground": {
         "description": "亮色模式背景色"
@@ -77,7 +86,10 @@
       "analytics": {
         "description": "流量統計工具配置",
         "provider": {
-          "description": "流量統計工具"
+          "description": "流量統計工具",
+          "option": {
+            "null": "不使用"
+          }
         },
         "ackeeConfig": {
           "description": "Ackee 設定",
@@ -98,7 +110,10 @@
       "comment": {
         "description": "評論工具配置",
         "provider": {
-          "description": "評論工具"
+          "description": "評論工具",
+          "option": {
+            "null": "不使用"
+          }
         },
         "gitalkConfig": {
           "description": "Gitalk 設定",

@@ -33,10 +33,19 @@
         "description": "サイトのタイムゾーン（IANA タイムゾーン ID を使ってください）。記事の配信時間に使います。"
       },
       "appearance": {
-        "description": "サイトのテーマ"
+        "description": "サイトのテーマ",
+        "option": {
+          "auto": "自動",
+          "light": "ライトテーマ",
+          "dark": "ダークテーマ"
+        }
       },
       "font": {
-        "description": "サイトのフォント"
+        "description": "サイトのフォント",
+        "option": {
+          "sans": "サンセリフ体",
+          "serif": "セリフ体"
+        }
       },
       "lightBackground": {
         "description": "ライトモードの背景色"
@@ -77,7 +86,10 @@
       "analytics": {
         "description": "アクセス解析ツールの設定",
         "provider": {
-          "description": "アクセス解析ツール"
+          "description": "アクセス解析ツール",
+          "option": {
+            "null": "使用しない"
+          }
         },
         "ackeeConfig": {
           "description": "Ackee の設定",
@@ -98,7 +110,10 @@
       "comment": {
         "description": "コメントツールの設定",
         "provider": {
-          "description": "コメントツール"
+          "description": "コメントツール",
+          "option": {
+            "null": "使用しない"
+          }
         },
         "gitalkConfig": {
           "description": "Gitalk の設定",

@@ -12,6 +12,11 @@ export default function loadLocale (section, lang) {
   return requireAsset(`./${section}/${lang}.json`)
 }
 
-export const langs = requireAsset.keys()
-  .map(key => RE_LANG_PATH.exec(key)?.slice(2))
-  .filter(Boolean)
+export const langs = [
+  ['en-US', 'English'],
+  ['es-ES', 'Español'],
+  ['ja-JP', '日本語'],
+  ['zh-CN', '中文（中国大陆）'],
+  ['zh-HK', '中文（香港）'],
+  ['zh-TW', '中文（台灣）']
+]
