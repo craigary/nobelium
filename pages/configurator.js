@@ -20,6 +20,8 @@ const overrides = {
   lightBackground: { type: 'color' },
   darkBackground: { type: 'color' },
   lang: { type: 'select', options: langs },
+  appearance: { type: 'select', options: ['auto', 'light', 'dark'] },
+  font: { type: 'select', options: ['sans-serif', 'serif'] },
   'analytics.provider': { type: 'select', options: ['', 'ga', 'ackee'] },
   'analytics.gaConfig': { when: ['analytics.provider', 'ga'] },
   'analytics.ackeeConfig': { when: ['analytics.provider', 'ackee'] },
