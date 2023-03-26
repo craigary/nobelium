@@ -16,24 +16,16 @@ const INDENT = 20
 
 // Override some entries for special behaviors
 
-set(
-  example,
-  ['lightBackground'],
-  {
-    [OVERRIDE]: true,
-    type: 'color',
-    default: get(example, ['lightBackground'])
-  }
-)
-set(
-  example,
-  ['darkBackground'],
-  {
-    [OVERRIDE]: true,
-    type: 'color',
-    default: get(example, ['darkBackground'])
-  }
-)
+set(example, ['lightBackground'], {
+  [OVERRIDE]: true,
+  type: 'color',
+  default: get(example, ['lightBackground'])
+})
+set(example, ['darkBackground'], {
+  [OVERRIDE]: true,
+  type: 'color',
+  default: get(example, ['darkBackground'])
+})
 
 const ConfigContext = createContext(undefined)
 const LocaleContext = createContext(undefined)
