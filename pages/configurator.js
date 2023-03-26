@@ -4,7 +4,7 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import { useCopyToClipboard } from 'react-use'
 import cn from 'classnames'
 import example from '@/blog.config.example'
-import loadLocale from '@/assets/i18n'
+import loadLocale, { langs } from '@/assets/i18n'
 import Container from '@/components/Container'
 import Switch from '@/components/Switch'
 import TextInput from '@/components/TextInput'
@@ -35,11 +35,26 @@ export async function getStaticProps () {
   const locale = await loadLocale('configurator', lang)
 
   return {
-    props: { locale }
+    props: {
+      defaultLang: lang,
+      defaultLocale: locale
+    }
   }
 }
 
-export default function PageConfigurator ({ locale }) {
+export default function PageConfigurator ({ defaultLang, defaultLocale }) {
+  // Locale data
+
+  const [lang, _setLang] = useState(defaultLang)
+  const [locale, setLocale] = useState(defaultLocale)
+
+  async function setLang (lang) {
+    setLocale(await loadLocale('configurator', lang))
+    _setLang(lang)
+  }
+
+  // Config data
+
   const [config, _setConfig] = useState(example)
   const entries = Object.entries(config)
 
@@ -50,8 +65,11 @@ export default function PageConfigurator ({ locale }) {
     })
   }
 
+  // Copy to clipboard
+
   const [copyState, copyToClipboard] = useCopyToClipboard()
   const [copyStatus, setCopyStatus] = useState(null)
+
   useEffect(() => {
     if (copyState.error) {
       setCopyStatus(false)
@@ -66,8 +84,8 @@ export default function PageConfigurator ({ locale }) {
 
   return (
     <Container>
-      <ConfigContext.Provider value={{ config, setConfig }}>
-        <LocaleContext.Provider value={ locale }>
+      <LocaleContext.Provider value={ locale }>
+        <ConfigContext.Provider value={{ config, setConfig }}>
           <div className="text-night dark:text-day relative">
             <header className="flex items-center">
               <h1 className="text-3xl font-bold text-black dark:text-white">Configurator</h1>
@@ -98,14 +116,17 @@ export default function PageConfigurator ({ locale }) {
               </span>
               </button>
             </header>
+            <select value={lang} onChange={ev => setLang(ev.target.value)}>
+              {langs.map(lang => <option key={lang} value={lang}>{lang}</option>)}
+            </select>
             <p className="my-7" dangerouslySetInnerHTML={{ __html: get(locale, 'configurator.description') }} />
             <ConfigEntryGroup entries={entries} />
             {process.env.NODE_ENV === 'development' && (
               <pre className="absolute left-full top-0 p-2 text-xs leading-8">{JSON.stringify(config, null, 2)}</pre>
             )}
           </div>
-        </LocaleContext.Provider>
-      </ConfigContext.Provider>
+        </ConfigContext.Provider>
+      </LocaleContext.Provider>
     </Container>
   )
 }

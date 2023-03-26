@@ -1,3 +1,4 @@
+const RE_LANG_PATH = /^\.\/(\w+)\/([\w-]+)\.json$/
 const requireAsset = require.context('.', true, /^\.\/(\w+)\/([\w-]+)\.json$/, 'lazy')
 
 /**
@@ -10,3 +11,7 @@ const requireAsset = require.context('.', true, /^\.\/(\w+)\/([\w-]+)\.json$/, '
 export default function loadLocale (section, lang) {
   return requireAsset(`./${section}/${lang}.json`)
 }
+
+export const langs = requireAsset.keys()
+  .map(key => RE_LANG_PATH.exec(key)?.slice(2))
+  .filter(Boolean)
