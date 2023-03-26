@@ -52,16 +52,16 @@
         "description": "文章列表每页文章数"
       },
       "sortByDate": {
-        "description": "是否按日期排序"
+        "description": "按日期排序"
       },
       "showAbout": {
-        "description": "是否显示“关于”链接"
+        "description": "显示“关于”链接"
       },
       "showArchive": {
-        "description": "是否显示“存档”链接"
+        "description": "显示“存档”链接"
       },
       "autoCollapsedNavBar": {
-        "description": "是否始终使用收缩的导航栏"
+        "description": "始终使用收缩的导航栏"
       },
       "path": {
         "description": "站点根路径，如果你想把站点挂载到其他站点的某个路径下则需要填写此项"
@@ -116,7 +116,7 @@
             "description": "管理员"
           },
           "distractionFreeMode": {
-            "description": "是否启用无干扰模式"
+            "description": "启用无干扰模式"
           }
         },
         "utterancesConfig": {
