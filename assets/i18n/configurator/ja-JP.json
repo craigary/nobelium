@@ -34,7 +34,7 @@
         "description": "サイトの言語"
       },
       "timezone": {
-        "description": "サイトのタイムゾーン。記事の配信時間に使います。"
+        "description": "サイトのタイムゾーン（IANA タイムゾーン ID を使ってください）。記事の配信時間に使います。"
       },
       "appearance": {
         "description": "サイトのテーマ"
