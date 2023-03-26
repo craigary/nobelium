@@ -56,19 +56,19 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 - [Fork](https://github.com/craigary/nobelium/fork) this project
 - Configure your blog. There are two ways to do this:
   - **(Recommended)** Use a remote config
-    - In the Notion database you just duplicated, add a new page (row) and set the `type` property with `Config`. You can set other properties and the title with whatever you like.
-    - Open that page, add a code block to the page content. The code language is not important, but JSON is preferred.
-    - Open the [Nobelium configurator](https://nobelium.vercel.app/configurator) in your browser, fill the form with your custom config.
-    - Copy the generated JSON content and paste into the code block in the `Config` page.
+    - In the Notion database you just duplicated to, add a new page (row) and set the `type` property with `Config`. You can set other properties and the title with whatever you like
+    - Open that page, add a code block to the page content. The code language doesn’t matter, but JSON is preferred
+    - In your browser, open the [Nobelium configurator](https://nobelium.vercel.app/configurator) and fill the form with your preferences
+    - Click the copy button at the top right to generate & copy the config data, then paste into the code block you just created
   - Use a local config
-    - Copy or rename the `blog.config.example.js` in the project folder as `blog.config.js`.
-      While they work the same for Nobelium, we recommend copy over rename to avoid possible conflicts when updating Nobelium.
-    - Update the `blog.config.js` with your custom config.
+    - Copy or rename the `blog.config.example.js` in the project folder as `blog.config.js`<br>
+      While they work the same for Nobelium, we recommend copy over rename to avoid possible conflicts when updating Nobelium
+    - Update the `blog.config.js` with your preferences
 - _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
 - Deploy on [Vercel](https://vercel.com), set following environment variables：
   - `NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
-  - `NOTION_ACCESS_TOKEN` (Optional, not recommended): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`
-    - Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered
+  - `NOTION_ACCESS_TOKEN` (Optional, not recommended): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`<br>
+    Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered
 - **That's it!** Easy-peasy?
 
 <details><summary>Wait for a sec, what is Page ID？</summary>
