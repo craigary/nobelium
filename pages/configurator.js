@@ -8,6 +8,7 @@ import loadLocale, { langs } from '@/assets/i18n'
 import Container from '@/components/Container'
 import Switch from '@/components/Switch'
 import TextInput from '@/components/TextInput'
+import NumberInput from '@/components/NumberInput'
 import ColorInput from '@/components/ColorInput'
 import { get, set } from '@/lib/utils'
 
@@ -167,21 +168,12 @@ function ConfigEntry ({ entry: [name, value], parent = [] }) {
   switch (valueType) {
     case 'string':
       content = (
-        <TextInput
-          type="text"
-          value={value}
-          onChange={value => setConfig(name, value)}
-        />
+        <TextInput value={value} onChange={value => setConfig(name, value)} />
       )
       break
     case 'number':
       content = (
-        <input
-          type="number"
-          value={String(value)}
-          className="w-full px-2 py-1 bg-transparent border border-neutral-600"
-          onChange={ev => setConfig(name, Number(ev.target.value))}
-        />
+        <NumberInput value={value} onChange={value => setConfig(name, value)} />
       )
       break
     case 'boolean':
