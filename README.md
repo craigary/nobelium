@@ -58,7 +58,7 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
   - **(Recommended)** Use a remote config
     - In the Notion database you just duplicated, add a new page (row) and set the `type` property with `Config`. You can set other properties and the title with whatever you like.
     - Open that page, add a code block to the page content. The code language is not important, but JSON is preferred.
-    - Open the [Nobelium configurator]() in your browser, fill the form with your custom config.
+    - Open the [Nobelium configurator](https://nobelium.vercel.app/configurator) in your browser, fill the form with your custom config.
     - Copy the generated JSON content and paste into the code block in the `Config` page.
   - Use a local config
     - Copy or rename the `blog.config.example.js` in the project folder as `blog.config.js`.
