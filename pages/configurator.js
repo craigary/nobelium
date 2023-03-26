@@ -11,23 +11,23 @@ import Select from '@/components/Select'
 import TextInput from '@/components/TextInput'
 import NumberInput from '@/components/NumberInput'
 import ColorInput from '@/components/ColorInput'
-import { get, set } from '@/lib/utils'
+import { clone, get, set } from '@/lib/utils'
 
-const OVERRIDE = Symbol()
 const INDENT = 20
 
 // Override some entries for special behaviors
-
-set(example, ['lightBackground'], {
-  [OVERRIDE]: true,
-  type: 'color',
-  default: get(example, ['lightBackground'])
-})
-set(example, ['darkBackground'], {
-  [OVERRIDE]: true,
-  type: 'color',
-  default: get(example, ['darkBackground'])
-})
+const overrides = {
+  lightBackground: { type: 'color' },
+  darkBackground: { type: 'color' },
+  lang: { type: 'select', options: langs },
+  'analytics.provider': { type: 'select', options: ['', 'ga', 'ackee'] },
+  'analytics.gaConfig': { when: ['analytics.provider', 'ga'] },
+  'analytics.ackeeConfig': { when: ['analytics.provider', 'ackee'] },
+  'comment.provider': { type: 'select', options: ['', 'gitalk', 'utterances', 'cusdis'] },
+  'comment.gitalkConfig': { when: ['comment.provider', 'gitalk'] },
+  'comment.utterancesConfig': { when: ['comment.provider', 'utterances'] },
+  'comment.cusdisConfig': { when: ['comment.provider', 'cusdis'] }
+}
 
 const ConfigContext = createContext(undefined)
 const LocaleContext = createContext(undefined)
@@ -57,7 +57,7 @@ export default function PageConfigurator ({ defaultLang, defaultLocale }) {
 
   // Config data
 
-  const [config, _setConfig] = useState(example)
+  const [config, _setConfig] = useState(clone(example))
   const entries = Object.entries(config)
 
   function setConfig (key, value) {
@@ -148,8 +148,6 @@ function resolveType (value) {
   const type = typeof value
   if (type === 'object') {
     switch (true) {
-      case value[OVERRIDE]:
-        return value.type
       case Array.isArray(value):
         return 'array'
       case value === null:
@@ -162,8 +160,29 @@ function resolveType (value) {
 function ConfigEntry ({ entry: [name, value], parent = [] }) {
   const { config, setConfig } = useContext(ConfigContext)
   const locale = useContext(LocaleContext)
-  const valueType = resolveType(value)
   const level = parent.length
+  const keyPath = parent.concat(name).join('.')
+  const override = overrides[keyPath]
+  const exampleValue = clone(get(example, keyPath))
+  const valueType = override?.when && get(config, override.when[0]) !== override.when[1]
+    ? null
+    : override?.type ?? resolveType(exampleValue)
+
+  useEffect(
+    () => {
+      if (override?.when) {
+        if (valueType) {
+          if (get(config, keyPath) === undefined) {
+            setConfig(name, exampleValue)
+          }
+        } else {
+          setConfig(name, undefined)
+        }
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [keyPath, valueType]
+  )
 
   let content
   switch (valueType) {
@@ -194,7 +213,16 @@ function ConfigEntry ({ entry: [name, value], parent = [] }) {
       break
     case 'color':
       content = (
-        <ColorInput value={value.default} onChange={value => setConfig(name, value)} />
+        <ColorInput value={value} onChange={value => setConfig(name, value)} />
+      )
+      break
+    case 'select':
+      content = (
+        <Select value={value} onChange={value => setConfig(name, value)}>
+          {override.options.map(value => (
+            <option key={value} value={value}>{value}</option>
+          ))}
+        </Select>
       )
       break
     case 'object': {
@@ -215,15 +243,16 @@ function ConfigEntry ({ entry: [name, value], parent = [] }) {
               </p>
             )}
           </div>
-          <ConfigEntryGroup entries={Object.entries(value)} parent={parent.concat(name)} />
+          <ConfigEntryGroup
+            entries={Object.entries(value || exampleValue)}
+            parent={parent.concat(name)}
+          />
         </ConfigContext.Provider>
       )
     }
-    default:
-      content = <span style={{ color: '#f0f' }}>{valueType}</span>
   }
 
-  return <ConfigEntryLayout name={name} parent={parent}>{content}</ConfigEntryLayout>
+  return content && <ConfigEntryLayout name={name} parent={parent}>{content}</ConfigEntryLayout>
 }
 
 function ConfigEntryLayout ({ name, parent = [], children }) {
