@@ -7,6 +7,7 @@ import example from '@/blog.config.example'
 import loadLocale, { langs } from '@/assets/i18n'
 import Container from '@/components/Container'
 import Switch from '@/components/Switch'
+import Select from '@/components/Select'
 import TextInput from '@/components/TextInput'
 import NumberInput from '@/components/NumberInput'
 import ColorInput from '@/components/ColorInput'
@@ -117,9 +118,9 @@ export default function PageConfigurator ({ defaultLang, defaultLocale }) {
               </span>
               </button>
             </header>
-            <select value={lang} onChange={ev => setLang(ev.target.value)}>
+            <Select value={lang} className="block w-24 mt-4" onChange={value => setLang(value)}>
               {langs.map(lang => <option key={lang} value={lang}>{lang}</option>)}
-            </select>
+            </Select>
             <p className="my-7" dangerouslySetInnerHTML={{ __html: get(locale, 'configurator.description') }} />
             <ConfigEntryGroup entries={entries} />
             {process.env.NODE_ENV === 'development' && (
