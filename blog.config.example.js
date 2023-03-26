@@ -20,7 +20,6 @@ module.exports = {
   postsPerPage: 7,
   sortByDate: false,
   showAbout: true,
-  showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
 
   /* Technical config */
