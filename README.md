@@ -116,6 +116,10 @@ Check out our roadmap [here](https://craigary.notion.site/Public-Roadmap-89d184e
   <summary>How can I change my avatar?</summary>
   Nobelium fetches avatars from <a href="https://gravatar.com">Gravatar</a>. You need to set your avatar there with <strong>the same email address</strong> that you defined in <code>blog.config.js</code>.
 </details>
+<details>
+  <summary>My posts disappear after I set up grouping in Notion database!</summary>
+  Nobelium currently doesn’t support Notion database grouping. If you really want to manage your posts by groups, you can create views with filters instead.
+</details>
 
 ## Special Thanks
 
