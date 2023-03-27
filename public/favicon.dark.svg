@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
-  <rect width="24" height="24" fill="#000000"/>
+  <rect width="24" height="24" fill="#FFFFFF"/>
   <rect width="24" height="24" fill="url(#paint0_radial)"/>
   <defs>
     <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(45) scale(39.598)">
