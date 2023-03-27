@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import BLOG from '@/blog.config'
@@ -34,6 +34,18 @@ const NavBar = () => {
 
 const Header = ({ navBarTitle, fullWidth }) => {
   const { dark } = useTheme()
+
+  // Favicon
+
+  const resolveFavicon = fallback => !fallback && dark ? '/favicon.dark.png' : '/favicon.png'
+  const [favicon, _setFavicon] = useState(resolveFavicon())
+  const setFavicon = fallback => _setFavicon(resolveFavicon(fallback))
+
+  useEffect(
+    () => setFavicon(),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [dark]
+  )
 
   const useSticky = !BLOG.autoCollapsedNavBar
   const navRef = useRef(/** @type {HTMLDivElement} */ undefined)
@@ -87,10 +99,11 @@ const Header = ({ navBarTitle, fullWidth }) => {
         <div className="flex items-center">
           <Link href="/" aria-label={BLOG.title}>
             <Image
-              src={dark ? '/favicon.dark.png' : '/favicon.png'}
+              src={favicon}
               width={24}
               height={24}
               alt={BLOG.title}
+              onError={() => setFavicon(true)}
             />
           </Link>
           {navBarTitle ? (
