@@ -137,7 +137,7 @@ nav {
     transition: opacity 0.5s cubic-bezier(0.4, 0, 0, 1);
   }
   .sticky-nav-full .site-description {
-    @apply opacity-0 transition duration-500;
+    @apply opacity-100 transition duration-500;
   }
   .post-title {
     @apply opacity-0;
