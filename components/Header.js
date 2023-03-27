@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { forwardRef, useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import BLOG from '@/blog.config'
@@ -32,7 +32,7 @@ const NavBar = () => {
   )
 }
 
-const Header = ({ navBarTitle, fullWidth }) => {
+export default function Header ({ navBarTitle, fullWidth }) {
   const { dark } = useTheme()
 
   // Favicon
@@ -73,7 +73,10 @@ const Header = ({ navBarTitle, fullWidth }) => {
   function handleClickHeader (/** @type {MouseEvent} */ ev) {
     if (![navRef.current, titleRef.current].includes(ev.target)) return
 
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }
 
   return (
@@ -106,24 +109,13 @@ const Header = ({ navBarTitle, fullWidth }) => {
               onError={() => setFavicon(true)}
             />
           </Link>
-          {navBarTitle ? (
-            <p
-              ref={titleRef}
-              className="ml-2 font-medium text-day dark:text-night header-name"
-              onClick={handleClickHeader}
-            >
-              {navBarTitle}
-            </p>
-          ) : (
-            <p
-              ref={titleRef}
-              className="ml-2 font-medium text-day dark:text-night header-name"
-              onClick={handleClickHeader}
-            >
-              {BLOG.title},{' '}
-              <span className="font-normal">{BLOG.description}</span>
-            </p>
-          )}
+          <HeaderName
+            ref={titleRef}
+            siteTitle={BLOG.title}
+            siteDescription={BLOG.description}
+            postTitle={navBarTitle}
+            onClick={handleClickHeader}
+          />
         </div>
         <NavBar />
       </div>
@@ -131,4 +123,18 @@ const Header = ({ navBarTitle, fullWidth }) => {
   )
 }
 
-export default Header
+const HeaderName = forwardRef(function HeaderName ({ siteTitle, siteDescription, postTitle, onClick }, ref) {
+  return (
+    <p
+      ref={ref}
+      className="header-name ml-2 font-medium text-gray-600 dark:text-gray-300 grid-rows-1 grid-cols-1"
+      onClick={onClick}
+    >
+      {postTitle && <span className="post-title row-start-1 col-start-1">{postTitle}</span>}
+      <span className="row-start-1 col-start-1">
+        <span className="site-title">{siteTitle}</span>
+        <span className="site-description font-normal">, {siteDescription}</span>
+      </span>
+    </p>
+  )
+})

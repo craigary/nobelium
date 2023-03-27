@@ -91,7 +91,6 @@ body::-webkit-scrollbar-thumb {
 
 .header-name {
   display: none;
-  opacity: 0;
   overflow: hidden;
 }
 
@@ -127,13 +126,30 @@ nav {
     @apply max-w-full border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
   }
   .header-name {
-    display: block;
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0, 1);
+    display: grid;
   }
-  .sticky-nav-full .header-name {
-    opacity: 1;
-    @apply dark:text-gray-300 text-gray-600;
+  .site-title,
+  .post-title {
+    @apply transition duration-500;
+  }
+  .site-description {
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0, 1);
+  }
+  .sticky-nav-full .site-description {
+    @apply opacity-0 transition duration-500;
+  }
+  .post-title {
+    @apply opacity-0;
+  }
+  .post-title ~ span .site-description {
+    @apply hidden;
+  }
+  .sticky-nav-full .post-title {
+    @apply opacity-100;
+  }
+  .sticky-nav-full .post-title ~ span .site-title {
+    @apply opacity-0;
   }
 }
 
