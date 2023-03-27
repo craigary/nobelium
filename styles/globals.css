@@ -159,3 +159,7 @@ nav {
     @apply bg-day bg-opacity-90 dark:bg-night dark:bg-opacity-90;
   }
 }
+
+.capture-pointer-events * {
+  @apply pointer-events-none;
+}
