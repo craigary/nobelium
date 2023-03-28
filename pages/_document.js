@@ -103,16 +103,18 @@ class MyDocument extends Document {
           }
           {/* To ensure the initial background color follows media preference when ThemeProvider is
               not ready */}
-          <style>{`
-            .color-scheme-unset body {
-              background-color: ${tailwind.theme.extend.colors.day.DEFAULT};
+          <style>
+          {`
+            .color-scheme-unset, .color-scheme-unset body {
+              background-color: ${tailwind.theme.extend.colors.day.DEFAULT} !important;
             }
             @media (prefers-color-scheme: dark) {
-              .color-scheme-unset body {
-                background-color: ${tailwind.theme.extend.colors.night.DEFAULT};
+              .color-scheme-unset, .color-scheme-unset body {
+                background-color: ${tailwind.theme.extend.colors.night.DEFAULT} !important;
               }
             }
-          `}</style>
+          `}
+          </style>
         </Head>
         <body className="bg-day dark:bg-night">
           <Main />
