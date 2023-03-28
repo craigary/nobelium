@@ -1,8 +1,10 @@
 import Link from 'next/link'
-import BLOG from '@/blog.config'
+import { useConfig } from '@/lib/config'
 import FormattedDate from '@/components/FormattedDate'
 
 const BlogPost = ({ post }) => {
+  const BLOG = useConfig()
+
   return (
     <Link href={`${BLOG.path}/${post.slug}`}>
       <article key={post.id} className="mb-6 md:mb-8">

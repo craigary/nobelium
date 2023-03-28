@@ -1,6 +1,8 @@
-import BLOG from '@/blog.config'
+import { useConfig } from '@/lib/config'
 import { useEffect } from 'react'
 const Utterances = ({ issueTerm, layout }) => {
+  const BLOG = useConfig()
+
   useEffect(() => {
     const theme =
       BLOG.appearance === 'auto'

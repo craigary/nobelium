@@ -1,15 +1,18 @@
+import { clientConfig } from '@/lib/server/config'
+
 import { useRouter } from 'next/router'
 import cn from 'classnames'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import { useLocale } from '@/lib/locale'
-import BLOG from '@/blog.config'
+import { useConfig } from '@/lib/config'
 import { createHash } from 'crypto'
 import Container from '@/components/Container'
 import Post from '@/components/Post'
 import Comments from '@/components/Comments'
 
-const BlogPost = ({ post, blockMap, emailHash }) => {
+export default function BlogPost ({ post, blockMap, emailHash }) {
   const router = useRouter()
+  const BLOG = useConfig()
   const locale = useLocale()
 
   // TODO: It would be better to render something
@@ -65,7 +68,7 @@ const BlogPost = ({ post, blockMap, emailHash }) => {
 export async function getStaticPaths () {
   const posts = await getAllPosts({ includePages: true })
   return {
-    paths: posts.map(row => `${BLOG.path}/${row.slug}`),
+    paths: posts.map(row => `${clientConfig.path}/${row.slug}`),
     fallback: true
   }
 }
@@ -78,7 +81,7 @@ export async function getStaticProps ({ params: { slug } }) {
 
   const blockMap = await getPostBlocks(post.id)
   const emailHash = createHash('md5')
-    .update(BLOG.email)
+    .update(clientConfig.email)
     .digest('hex')
     .trim()
     .toLowerCase()
@@ -88,5 +91,3 @@ export async function getStaticProps ({ params: { slug } }) {
     revalidate: 1
   }
 }
-
-export default BlogPost

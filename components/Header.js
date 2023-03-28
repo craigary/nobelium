@@ -1,11 +1,12 @@
 import { forwardRef, useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import BLOG from '@/blog.config'
+import { useConfig } from '@/lib/config'
 import { useLocale } from '@/lib/locale'
 import useTheme from '@/lib/theme'
 
 const NavBar = () => {
+  const BLOG = useConfig()
   const locale = useLocale()
   const links = [
     { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
@@ -33,6 +34,7 @@ const NavBar = () => {
 }
 
 export default function Header ({ navBarTitle, fullWidth }) {
+  const BLOG = useConfig()
   const { dark } = useTheme()
 
   // Favicon

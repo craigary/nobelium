@@ -2,8 +2,8 @@ import { createElement as h } from 'react'
 import dynamic from 'next/dynamic'
 import { NotionRenderer as Renderer } from 'react-notion-x'
 import { getTextContent } from 'notion-utils'
-import BLOG from '@/blog.config'
-import tailwindConfig from '@/tailwind.config'
+import { FONTS_SANS, FONTS_SERIF } from '@/consts'
+import { useConfig } from '@/lib/config'
 import Toggle from '@/components/notion-blocks/Toggle'
 
 // Lazy-load some heavy components & override the renderers of some block types
@@ -106,10 +106,12 @@ const mapPageUrl = id => `https://www.notion.so/${id.replace(/-/g, '')}`
  * @param props - Anything that react-notion-x/NotionRenderer supports
  */
 export default function NotionRenderer (props) {
+  const config = useConfig()
+
   const font = {
-    'sans-serif': tailwindConfig.theme.extend.fontFamily.sans,
-    'serif': tailwindConfig.theme.extend.fontFamily.serif
-  }[BLOG.font]
+    'sans-serif': FONTS_SANS,
+    'serif': FONTS_SERIF
+  }[config.font]
 
   // Mark block types to be custom rendered by appending a suffix
   if (props.recordMap) {

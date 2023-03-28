@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import cn from 'classnames'
-import BLOG from '@/blog.config'
+import { config } from '@/lib/server/config'
 import tailwind from '@/tailwind.config'
 import CJK from '@/lib/cjk'
 class MyDocument extends Document {
@@ -13,12 +13,12 @@ class MyDocument extends Document {
     const initialColorScheme = {
       auto: 'color-scheme-unset',
       dark: 'dark'
-    }[BLOG.appearance]
+    }[config.appearance]
 
     return (
-      <Html lang={BLOG.lang} className={cn(initialColorScheme)}>
+      <Html lang={config.lang} className={cn(initialColorScheme)}>
         <Head>
-          {BLOG.font && BLOG.font === 'serif'
+          {config.font && config.font === 'serif'
             ? (
             <>
               <link
@@ -57,7 +57,7 @@ class MyDocument extends Document {
               )}
 
           {['zh', 'ja', 'ko'].includes(
-            BLOG.lang.slice(0, 2).toLocaleLowerCase()
+            config.lang.slice(0, 2).toLocaleLowerCase()
           ) && (
             <>
               <link
@@ -69,20 +69,20 @@ class MyDocument extends Document {
                 rel="preload"
                 as="style"
                 href={`https://fonts.googleapis.com/css2?family=Noto+${
-                  BLOG.font === 'serif' ? 'Serif' : 'Sans'
+                  config.font === 'serif' ? 'Serif' : 'Sans'
                 }+${CJK()}:wght@400;500;700&display=swap`}
               />
               <link
                 rel="stylesheet"
                 href={`https://fonts.googleapis.com/css2?family=Noto+${
-                  BLOG.font === 'serif' ? 'Serif' : 'Sans'
+                  config.font === 'serif' ? 'Serif' : 'Sans'
                 }+${CJK()}:wght@400;500;700&display=swap`}
               />
               <noscript>
                 <link
                   rel="stylesheet"
                   href={`https://fonts.googleapis.com/css2?family=Noto+${
-                    BLOG.font === 'serif' ? 'Serif' : 'Sans'
+                    config.font === 'serif' ? 'Serif' : 'Sans'
                   }+${CJK()}:wght@400;500;700&display=swap`}
                 />
               </noscript>
@@ -90,15 +90,15 @@ class MyDocument extends Document {
           )}
           <link rel="icon" href="/favicon.png" />
           <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed"></link>
-          {BLOG.appearance === 'auto'
+          {config.appearance === 'auto'
             ? (
             <>
-            <meta name="theme-color" content={BLOG.lightBackground} media="(prefers-color-scheme: light)"/>
-            <meta name="theme-color" content={BLOG.darkBackground} media="(prefers-color-scheme: dark)"/>
+            <meta name="theme-color" content={config.lightBackground} media="(prefers-color-scheme: light)"/>
+            <meta name="theme-color" content={config.darkBackground} media="(prefers-color-scheme: dark)"/>
             </>
               )
             : (
-            <meta name="theme-color" content={BLOG.appearance === 'dark' ? BLOG.darkBackground : BLOG.lightBackground} />
+            <meta name="theme-color" content={config.appearance === 'dark' ? config.darkBackground : config.lightBackground} />
               )
           }
           {/* To ensure the initial background color follows media preference when ThemeProvider is
