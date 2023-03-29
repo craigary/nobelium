@@ -62,9 +62,6 @@
       "showAbout": {
         "description": "顯示“關於”鏈接"
       },
-      "showArchive": {
-        "description": "顯示“存檔”鏈接"
-      },
       "autoCollapsedNavBar": {
         "description": "始終使用收縮的導航欄"
       },

@@ -24,7 +24,7 @@
         "description": "Author email, will determine the avatar returned by Gravatar"
       },
       "socialLink": {
-        "description": "Author's social account link, will become the link address of the author's avatar"
+        "description": "Author’s social account link, will become the link address of the author’s avatar"
       },
       "lang": {
         "description": "Site language"
@@ -60,10 +60,7 @@
         "description": "Sort by date"
       },
       "showAbout": {
-        "description": "\"About\" link display"
-      },
-      "showArchive": {
-        "description": "Display \"Archive\" link"
+        "description": "Display “About” link"
       },
       "autoCollapsedNavBar": {
         "description": "Always use a collapsed navigation bar"
@@ -72,7 +69,7 @@
         "description": "Site root path. If you want to mount the site under a certain path of another site, you need to fill in this item."
       },
       "ogImageGenerateURL": {
-        "description": "OG image generation service address (do not add a slash at the end)"
+        "description": "OG image generation service address (don’t add a slash at the end)"
       },
       "seo": {
         "description": "SEO configuration",
@@ -97,7 +94,7 @@
             "description": "Tracker address"
           },
           "dataAckeeServer": {
-            "description": "Tracking server address (do not add a slash at the end)"
+            "description": "Tracking server address (don’t add a slash at the end)"
           }
         },
         "gaConfig": {

@@ -62,9 +62,6 @@
       "showAbout": {
         "description": "显示“关于”链接"
       },
-      "showArchive": {
-        "description": "显示“存档”链接"
-      },
       "autoCollapsedNavBar": {
         "description": "始终使用收缩的导航栏"
       },

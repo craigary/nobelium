@@ -62,9 +62,6 @@
       "showAbout": {
         "description": "Mostrar enlace 'Acerca de'"
       },
-      "showArchive": {
-        "description": "Mostrar enlace 'Archivo'"
-      },
       "autoCollapsedNavBar": {
         "description": "Usar siempre la barra de navegación colapsada"
       },

@@ -62,9 +62,6 @@
       "showAbout": {
         "description": "「About」リンクを表示する"
       },
-      "showArchive": {
-        "description": "「Archive」リンクを表示する"
-      },
       "autoCollapsedNavBar": {
         "description": "ナビゲーションバーを常に折りたたまれる"
       },
