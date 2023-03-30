@@ -1,5 +1,7 @@
 import dynamic from 'next/dynamic'
 import { NotionRenderer as Renderer } from 'react-notion-x'
+import BLOG from '@/blog.config'
+import tailwindConfig from '@/tailwind.config'
 
 // Lazy-load some heavy components
 const components = {
@@ -76,11 +78,25 @@ const mapPageUrl = id => `https://www.notion.so/${id.replace(/-/g, '')}`
  * @param props - Anything that react-notion-x/NotionRenderer supports
  */
 export default function NotionRenderer (props) {
+  const font = {
+    'sans-serif': tailwindConfig.theme.extend.fontFamily.sans,
+    'serif': tailwindConfig.theme.extend.fontFamily.serif
+  }[BLOG.font]
+
   return (
-    <Renderer
-      components={components}
-      mapPageUrl={mapPageUrl}
-      {...props}
-    />
+    <>
+      <style jsx global>
+        {`
+        .notion {
+          --notion-font: ${font};
+        }
+        `}
+      </style>
+      <Renderer
+        components={components}
+        mapPageUrl={mapPageUrl}
+        {...props}
+      />
+    </>
   )
 }
