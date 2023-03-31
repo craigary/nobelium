@@ -137,18 +137,61 @@ pre[class*='language-'] {
   padding-right: 2px;
 }
 
-.notion-toggle {
-  padding-left: 28px;
+/* Every block */
+
+.nobelium-block {
+  @apply my-0.5; /* OVERRIDES */
 }
 
-.notion-toggle > summary {
-  list-style-position: outside;
-  padding-left: 2px;
-  padding-right: 2px;
+/* Toggle block */
+
+.nobelium-toggle {
+  @apply w-full;
+
 }
 
-.notion-toggle > summary + div {
-  margin-left: 0;
-  padding-left: 2px;
-  padding-right: 2px;
+.nobelium-toggle ::marker {
+  content: '';
+}
+
+.nobelium-toggle > summary {
+  @apply cursor-pointer flex items-start;
+}
+
+.nobelium-toggle-empty > summary {
+  @apply cursor-default;
+}
+
+.nobelium-toggle-triangle {
+  @apply flex-none w-7 text-center;
+  line-height: inherit;
+}
+
+.nobelium-toggle-triangle svg {
+  @apply inline-block fill-current;
+  width: 0.6875em;
+  height: 0.6875em;
+  backface-visibility: hidden;
+  transition: transform 200ms ease-out 0s;
+  transform: rotateZ(90deg);
+}
+
+.nobelium-toggle[open]:not(.nobelium-toggle-empty) > * > .nobelium-toggle-triangle svg {
+  transform: rotateZ(180deg);
+}
+
+.nobelium-toggle-empty > * > .nobelium-toggle-triangle svg {
+  @apply opacity-50;
+}
+
+.nobelium-toggle-title {
+  @apply flex-1;
+}
+
+.nobelium-toggle-content {
+  @apply pl-7 mt-0.5;
+}
+
+.nobelium-toggle-content > * {
+  @apply my-0.5; /* OVERRIDES */
 }

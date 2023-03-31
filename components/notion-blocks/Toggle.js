@@ -1,15 +1,24 @@
 import { Text } from 'react-notion-x'
+import cn from 'classnames'
 
 export default function Toggle ({ block, children }) {
   return (
-    <details className="w-full mt-4 border border-dashed border-violet-600">
+    <details className={cn('nobelium-block nobelium-toggle', { 'nobelium-toggle-empty': !children })}>
       <summary className="relative">
-        <Text value={block.properties?.title} block={block} />
-        <span className="text-xs absolute top-0 right-0 text-gray-400">Rendered by Nobelium</span>
+        <span className="nobelium-toggle-triangle">
+          <svg viewBox="0 0 100 100">
+            <polygon points="5.9,88.2 50,11.8 94.1,88.2" />
+          </svg>
+        </span>
+        <span className="nobelium-toggle-title">
+          <Text value={block.properties?.title} block={block} />
+        </span>
       </summary>
-      <div>
-        {children}
-      </div>
+      {children && (
+        <div className="nobelium-toggle-content">
+          {children}
+        </div>
+      )}
     </details>
   )
 }
