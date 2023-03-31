@@ -1,6 +1,7 @@
-const BLOG = require('./blog.config')
+import BLOG from './blog.config'
 
-module.exports = {
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
   content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
   darkMode: 'class',
   theme: {
