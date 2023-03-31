@@ -189,11 +189,15 @@ pre[class*='language-'] {
   @apply my-0.5; /* OVERRIDES */
 }
 
+.nobelium-block .nobelium-block {
+  @apply mt-1 mb-0;
+}
+
 /* Toggle block */
 
 .nobelium-toggle {
   @apply w-full;
-
+  @apply py-0; /* OVERRIDES */
 }
 
 .nobelium-toggle ::marker {
@@ -240,4 +244,8 @@ pre[class*='language-'] {
 
 .nobelium-toggle-content > * {
   @apply my-0.5; /* OVERRIDES */
+}
+
+.nobelium-toggle-content > :last-child {
+  @apply mb-0;
 }
