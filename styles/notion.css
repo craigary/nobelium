@@ -2,6 +2,52 @@
 
 :root {
   --no-leading: 2rem;
+
+  /* Notion colors */
+
+  --notion-gray: rgb(120, 119, 116);
+  --notion-brown: rgb(159, 107, 83);
+  --notion-orange: rgb(217, 115, 13);
+  --notion-yellow: rgb(203, 145, 47);
+  --notion-teal: rgb(68, 131, 97);
+  --notion-blue: rgb(51, 126, 169);
+  --notion-purple: rgb(144, 101, 176);
+  --notion-pink: rgb(193, 76, 138);
+  --notion-red: rgb(212, 76, 71);
+
+  --notion-gray_background: rgb(241, 241, 239);
+  --notion-brown_background: rgb(244, 238, 238);
+  --notion-orange_background: rgb(251, 236, 221);
+  --notion-yellow_background: rgb(251, 243, 219);
+  --notion-teal_background: rgb(237, 243, 236);
+  --notion-blue_background: rgb(231, 243, 248);
+  --notion-purple_background: rgba(244, 240, 247, 0.8);
+  --notion-pink_background: rgba(249, 238, 243, 0.8);
+  --notion-red_background: rgb(253, 235, 236);
+}
+
+:root.dark {
+  /* Notion colors */
+
+  --notion-gray: rgb(155, 155, 155);
+  --notion-brown: rgb(186, 133, 111);
+  --notion-orange: rgb(199, 125, 72);
+  --notion-yellow: rgb(202, 152, 73);
+  --notion-teal: rgb(82, 158, 114);
+  --notion-blue: rgb(94, 135, 201);
+  --notion-purple: rgb(157, 104, 211);
+  --notion-pink: rgb(209, 87, 150);
+  --notion-red: rgb(223, 84, 82);
+
+  --notion-gray_background: rgb(47, 47, 47);
+  --notion-brown_background: rgb(74, 50, 40);
+  --notion-orange_background: rgb(92, 59, 35);
+  --notion-yellow_background: rgb(86, 67, 40);
+  --notion-teal_background: rgb(36, 61, 48);
+  --notion-blue_background: rgb(20, 58, 78);
+  --notion-purple_background: rgb(60, 45, 73);
+  --notion-pink_background: rgb(78, 44, 60);
+  --notion-red_background: rgb(82, 46, 42);
 }
 
 .notion {
@@ -137,18 +183,69 @@ pre[class*='language-'] {
   padding-right: 2px;
 }
 
-.notion-toggle {
-  padding-left: 28px;
+/* Every block */
+
+.nobelium-block {
+  @apply my-0.5; /* OVERRIDES */
 }
 
-.notion-toggle > summary {
-  list-style-position: outside;
-  padding-left: 2px;
-  padding-right: 2px;
+.nobelium-block .nobelium-block {
+  @apply mt-1 mb-0;
 }
 
-.notion-toggle > summary + div {
-  margin-left: 0;
-  padding-left: 2px;
-  padding-right: 2px;
+/* Toggle block */
+
+.nobelium-toggle {
+  @apply w-full;
+  @apply py-0; /* OVERRIDES */
+}
+
+.nobelium-toggle ::marker {
+  content: '';
+}
+
+.nobelium-toggle > summary {
+  @apply cursor-pointer flex items-start;
+}
+
+.nobelium-toggle-empty > summary {
+  @apply cursor-default;
+}
+
+.nobelium-toggle-triangle {
+  @apply flex-none w-7 text-center;
+  line-height: inherit;
+}
+
+.nobelium-toggle-triangle svg {
+  @apply inline-block fill-current;
+  width: 0.6875em;
+  height: 0.6875em;
+  backface-visibility: hidden;
+  transition: transform 200ms ease-out 0s;
+  transform: rotateZ(90deg);
+}
+
+.nobelium-toggle[open]:not(.nobelium-toggle-empty) > * > .nobelium-toggle-triangle svg {
+  transform: rotateZ(180deg);
+}
+
+.nobelium-toggle-empty > * > .nobelium-toggle-triangle svg {
+  @apply opacity-50;
+}
+
+.nobelium-toggle-title {
+  @apply flex-1;
+}
+
+.nobelium-toggle-content {
+  @apply pl-7 mt-0.5;
+}
+
+.nobelium-toggle-content > * {
+  @apply my-0.5; /* OVERRIDES */
+}
+
+.nobelium-toggle-content > :last-child {
+  @apply mb-0;
 }
