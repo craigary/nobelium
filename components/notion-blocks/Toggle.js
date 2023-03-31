@@ -3,7 +3,11 @@ import cn from 'classnames'
 
 export default function Toggle ({ block, children }) {
   return (
-    <details className={cn('nobelium-block nobelium-toggle', { 'nobelium-toggle-empty': !children })}>
+    <details className={cn(
+      'nobelium-block nobelium-toggle',
+      { 'nobelium-toggle-empty': !children },
+      block.format?.block_color && `notion-${block.format.block_color}`
+    )}>
       <summary className="relative">
         <span className="nobelium-toggle-triangle">
           <svg viewBox="0 0 100 100">
