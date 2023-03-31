@@ -4,9 +4,12 @@ import { NotionRenderer as Renderer } from 'react-notion-x'
 import { getTextContent } from 'notion-utils'
 import BLOG from '@/blog.config'
 import tailwindConfig from '@/tailwind.config'
+import Toggle from '@/components/notion-blocks/Toggle'
 
-// Lazy-load some heavy components
+// Lazy-load some heavy components & override the renderers of some block types
 const components = {
+  /* Lazy-load */
+
   // Code block
   Code: dynamic(async () => {
     return function CodeSwitch (props) {
@@ -84,7 +87,13 @@ const components = {
         return <TweetEmbed tweetId={id} options={{ theme: 'dark' }} />
       }
     })
-  })
+  }),
+
+  /* Overrides */
+
+  toggle_nobelium: ({ block, children }) => (
+    <Toggle block={block}>{children}</Toggle>
+  )
 }
 
 const mapPageUrl = id => `https://www.notion.so/${id.replace(/-/g, '')}`
@@ -101,6 +110,17 @@ export default function NotionRenderer (props) {
     'sans-serif': tailwindConfig.theme.extend.fontFamily.sans,
     'serif': tailwindConfig.theme.extend.fontFamily.serif
   }[BLOG.font]
+
+  // Mark block types to be custom rendered by appending a suffix
+  if (props.recordMap) {
+    for (const { value: block } of Object.values(props.recordMap.block)) {
+      switch (block.type) {
+        case 'toggle':
+          block.type += '_nobelium'
+          break
+      }
+    }
+  }
 
   return (
     <>

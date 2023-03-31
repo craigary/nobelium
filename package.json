@@ -50,5 +50,10 @@
   "bugs": {
     "url": "https://github.com/craigary/nobelium/issues",
     "email": "i@craigary.net"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "react-notion-x@6.16.0": "patches/react-notion-x@6.16.0.patch"
+    }
   }
 }

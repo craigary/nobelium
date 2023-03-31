@@ -1,0 +1,14 @@
+diff --git a/build/index.js b/build/index.js
+index a18bcfde162936c6f9c95c1387369d9bb43b5fff..69e07f11eb10ba60914bb55cb81fc23a5267f54d 100644
+--- a/build/index.js
++++ b/build/index.js
+@@ -2606,6 +2606,9 @@ var Block = (props) => {
+         className: blockId
+       });
+     default:
++      if (components[block.type]) {
++        return /* @__PURE__ */ React28.createElement(components[block.type], { block }, children)
++      }
+       if (true) {
+         console.log(
+           "Unsupported type " + block.type,
