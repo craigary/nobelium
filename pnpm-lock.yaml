@@ -1,6 +1,9 @@
 lockfileVersion: 5.4
 
 patchedDependencies:
+  notion-utils@6.16.0:
+    hash: jbbxfh6oczxvsqepw4jd23wxpm
+    path: patches/notion-utils@6.16.0.patch
   react-notion-x@6.16.0:
     hash: 24yk44o3vcryhrxjr4uu2o367u
     path: patches/react-notion-x@6.16.0.patch
@@ -40,7 +43,7 @@ dependencies:
   mermaid: 10.0.2
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
   notion-client: 6.16.0
-  notion-utils: 6.16.0
+  notion-utils: 6.16.0_jbbxfh6oczxvsqepw4jd23wxpm
   preact: 10.13.1
   prop-types: 15.8.1
   react: 18.2.0
@@ -2693,7 +2696,7 @@ packages:
     dependencies:
       got: 11.8.6
       notion-types: 6.16.0
-      notion-utils: 6.16.0
+      notion-utils: 6.16.0_jbbxfh6oczxvsqepw4jd23wxpm
       p-map: 5.5.0
     dev: false
 
@@ -2702,7 +2705,7 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /notion-utils/6.16.0:
+  /notion-utils/6.16.0_jbbxfh6oczxvsqepw4jd23wxpm:
     resolution: {integrity: sha512-DxToriZAJW/64O1xlAjyU/50dRmkO1e54+i0dEAPDij0MlHyihEivAMsdEG/6/4eFC972BIsEKZ6BXsSTUYKlQ==}
     engines: {node: '>=12'}
     dependencies:
@@ -2712,6 +2715,7 @@ packages:
       notion-types: 6.16.0
       p-queue: 7.3.4
     dev: false
+    patched: true
 
   /object-assign/4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
@@ -3177,7 +3181,7 @@ packages:
       '@matejmazur/react-katex': 3.1.3_katex@0.15.6+react@18.2.0
       katex: 0.15.6
       notion-types: 6.16.0
-      notion-utils: 6.16.0
+      notion-utils: 6.16.0_jbbxfh6oczxvsqepw4jd23wxpm
       prismjs: 1.29.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
