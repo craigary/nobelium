@@ -1,4 +1,4 @@
-import config from './lib/server/config'
+import { config } from './lib/server/config'
 import { FONTS_SANS, FONTS_SERIF } from './consts'
 
 // eslint-disable-next-line import/no-anonymous-default-export
