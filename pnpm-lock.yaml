@@ -5,7 +5,7 @@ patchedDependencies:
     hash: jbbxfh6oczxvsqepw4jd23wxpm
     path: patches/notion-utils@6.16.0.patch
   react-notion-x@6.16.0:
-    hash: 24yk44o3vcryhrxjr4uu2o367u
+    hash: yir45aqvaz5igbuxsxnbc4p6gy
     path: patches/react-notion-x@6.16.0.patch
 
 dependencies:
@@ -53,7 +53,7 @@ dependencies:
     version: 18.2.0(react@18.2.0)
   react-notion-x:
     specifier: ^6.16.0
-    version: 6.16.0(patch_hash=24yk44o3vcryhrxjr4uu2o367u)(@babel/runtime@7.21.0)(react-dom@18.2.0)(react@18.2.0)(webpack@5.77.0)
+    version: 6.16.0(patch_hash=yir45aqvaz5igbuxsxnbc4p6gy)(@babel/runtime@7.21.0)(react-dom@18.2.0)(react@18.2.0)(webpack@5.77.0)
   react-tweet-embed:
     specifier: ^2.0.0
     version: 2.0.0(react@18.2.0)
@@ -3445,7 +3445,7 @@ packages:
       warning: 4.0.3
     dev: false
 
-  /react-notion-x@6.16.0(patch_hash=24yk44o3vcryhrxjr4uu2o367u)(@babel/runtime@7.21.0)(react-dom@18.2.0)(react@18.2.0)(webpack@5.77.0):
+  /react-notion-x@6.16.0(patch_hash=yir45aqvaz5igbuxsxnbc4p6gy)(@babel/runtime@7.21.0)(react-dom@18.2.0)(react@18.2.0)(webpack@5.77.0):
     resolution: {integrity: sha512-YdJikX38YNX5eIKAO9diw/tEhsc0ypnaqOqcdXEr7zFf0h/+eoppEzlLdzYJktnZy4n2q0z5ooXWAQi4QLi8Zw==}
     engines: {node: '>=12'}
     peerDependencies:

@@ -12,3 +12,16 @@ index a18bcfde162936c6f9c95c1387369d9bb43b5fff..69e07f11eb10ba60914bb55cb81fc23a
        if (true) {
          console.log(
            "Unsupported type " + block.type,
+diff --git a/build/third-party/equation.js b/build/third-party/equation.js
+index 3a41f237f74ec4cecc26c853c45283710b2908ab..3fdaf22d01cd5e41be239cc1a52c69601bebdf2e 100644
+--- a/build/third-party/equation.js
++++ b/build/third-party/equation.js
+@@ -1771,7 +1771,7 @@ var Equation = (_a) => {
+     )
+   }, /* @__PURE__ */ React21.createElement(Katex, __spreadValues({
+     math,
+-    settings: katexSettings
++    settings: { ...katexSettings, displayMode: !inline }
+   }, rest)));
+ };
+ export {
