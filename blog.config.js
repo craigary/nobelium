@@ -1,5 +1,5 @@
 const BLOG = {
-  title: 'RIZKIRMDHN',
+  title: 'Rizpedia',
   author: 'Rizkirmdhn',
   email: 'achmadrizkiramadhan0101@gmail.com',
   link: 'https://blog.rizpedia.my.id',
