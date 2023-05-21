@@ -1,26 +1,24 @@
 const BLOG = {
-  title: 'CRAIGARY',
-  author: 'Craig Hart',
-  email: 'i@craigary.net',
-  link: 'https://nobelium.vercel.app',
-  description: 'This gonna be an awesome website.',
-  lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
-  timezone: 'Asia/Shanghai', // Your Notion posts' date will be interpreted as this timezone. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
+  title: 'Viefane Blog',
+  author: 'Viefane',
+  email: 'suhestyle@gmail.com',
+  link: 'https://viefane.vercel.app',
+  description: 'In Your Wildest Dreams | 白 日 梦.',
+  lang: 'zh-cn',
   appearance: 'auto', // ['light', 'dark', 'auto'],
-  font: 'sans-serif', // ['sans-serif', 'serif']
+  font: 'serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
-  darkBackground: '#18181B', // use hex value, don't forget '#'
+  darkBackground: '#111827', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy Nobelium in a folder
-  since: 2021, // If leave this empty, current year will be used.
-  postsPerPage: 7,
+  since: 2019, // if leave this empty, current year will be used.
+  postsPerPage: 10,
   sortByDate: false,
-  showAbout: true,
-  showArchive: true,
-  autoCollapsedNavBar: false, // The automatically collapsed navigation bar
-  ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
-  socialLink: 'https://twitter.com/craigaryhart',
+  showAbout: true, // WIP
+  showArchive: true, // WIP
+  autoCollapsedNavBar: false, // the automatically collapsed navigation bar
+  socialLink: 'https://twitter.com/viefaneho',
   seo: {
-    keywords: ['Blog', 'Website', 'Notion'],
+    keywords: ['Blog', 'Website', 'Notion','viefane','devops','sre'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS！！！
@@ -36,15 +34,15 @@ const BLOG = {
       measurementId: '' // e.g: G-XXXXXXXXXX
     }
   },
-  comment: {
+comment: {
     // support provider: gitalk, utterances, cusdis
-    provider: '', // leave it empty if you don't need any comment plugin
+    provider: 'gitalk', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
-      repo: '', // The repository of store comments
-      owner: '',
-      admin: [],
-      clientID: '',
-      clientSecret: '',
+      repo: 'blog', // The repository of store comments
+      owner: 'viefane',
+      admin: 'viefane',
+      clientID: '4a60a953038ff2099ea0',
+      clientSecret: '1c26ca0552347babb8f95a7330c29a8b9fad881e',
       distractionFreeMode: false
     },
     utterancesConfig: {
@@ -55,8 +53,7 @@ const BLOG = {
       host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
       scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // change this if you're using self-hosted version
     }
-  },
-  isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
+  }
 }
 // export default BLOG
 module.exports = BLOG
