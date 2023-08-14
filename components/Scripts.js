@@ -28,6 +28,9 @@ const Scripts = () => {
           </Script>
         </>
       )}
+      {BLOG.analytics && BLOG.analytics.provider === 'vercel' && (
+        <script defer src="/_vercel/insights/script.js"></script>
+      )}
     </>
   )
 }
