@@ -1,9 +1,9 @@
 const BLOG = {
-  title: '礼物理-开源投资代码',
+  title: '礼物理',
   author: '尼克古月',
   email: 'love@liwuli.com',
   link: 'https://b.liwuli.com',
-  description: '可视化的投资，开源的认知，精进的代码',
+  description: '投资，开源，代码',
   lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   timezone: 'Asia/Shanghai', // Your Notion posts' date will be interpreted as this timezone. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
   appearance: 'auto', // ['light', 'dark', 'auto'],
@@ -18,7 +18,7 @@ const BLOG = {
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
-  socialLink: 'https://twitter.com/craigaryhart',
+  socialLink: '',
   seo: {
     keywords: ['投资', '代码', '开源'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
