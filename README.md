@@ -72,24 +72,11 @@ Unofficial, thanks to [@Vaayne](https://github.com/craigary/nobelium/pull/157)'s
 
 ### Build Docker image yourself
 ```
-# set env
-export NOTION_PAGE_ID=xxx # your NOTION_PAGE_ID
-export IMAGE=nobelium:latest
-
 # build with docker
-docker build -t ${IMAGE} --build-arg NOTION_PAGE_ID .
+docker build -t nobelium-ts:latest  --build-arg "NOTION_PAGE_ID=<your NOTION_PAGE_ID>" .
 
 # run with docker
-docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} nobelium:latest
-```
-
-### Use default docker image
-```
-# pull image
-docker pull ghcr.io/craigary/nobelium:main
-
-# run with docker
-docker run -d --name nobelium -p 3000:3000 -e NOTION_PAGE_ID=${NOTION_PAGE_ID} ghcr.io/craigary/nobelium:main
+docker run -d --name nobelium-ts -p 3000:3000 -e NOTION_PAGE_ID=<your NOTION_PAGE_ID> nobelium-ts:latest
 ```
 
 ## Roadmap
