@@ -2,18 +2,21 @@ import { useState } from 'react'
 import BlogPost from '@/components/BlogPost'
 import Container from '@/components/Container'
 import Tags from '@/components/Tags'
-import PropTypes from 'prop-types'
+import { PostToShow } from '@/lib/notion/getAllPosts'
 
-const SearchLayout = ({ tags, posts, currentTag }) => {
+type SearchLayoutProps = {
+  posts?: PostToShow[];
+  tags: Record<string, number>;
+  currentTag?: string
+}
+
+const SearchLayout: React.FC<SearchLayoutProps> = ({ tags, posts = [], currentTag }) => {
   const [searchValue, setSearchValue] = useState('')
-  let filteredBlogPosts = []
-  if (posts) {
-    filteredBlogPosts = posts.filter(post => {
-      const tagContent = post.tags ? post.tags.join(' ') : ''
-      const searchContent = post.title + post.summary + tagContent
-      return searchContent.toLowerCase().includes(searchValue.toLowerCase())
-    })
-  }
+  const filteredBlogPosts = posts.filter(post => {
+    const tagContent = post.tags ? post.tags.join(' ') : ''
+    const searchContent = post.title + post.summary + tagContent
+    return searchContent.toLowerCase().includes(searchValue.toLowerCase())
+  })
 
   return (
     <Container>
@@ -56,9 +59,5 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
     </Container>
   )
 }
-SearchLayout.propTypes = {
-  posts: PropTypes.array.isRequired,
-  tags: PropTypes.object.isRequired,
-  currentTag: PropTypes.string
-}
+
 export default SearchLayout

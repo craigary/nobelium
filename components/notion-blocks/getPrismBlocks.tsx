@@ -1,6 +1,7 @@
 // @ts-nocheck
 
 // Additional prismjs syntax
+// eslint-disable-next-line import/no-anonymous-default-export
 export default () => [
     import('prismjs/components/prism-markup-templating'),
     import('prismjs/components/prism-markup'),

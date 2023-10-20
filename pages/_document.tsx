@@ -13,6 +13,7 @@ class MyDocument extends Document {
   render () {
     const initialColorScheme = {
       auto: 'color-scheme-unset',
+      light: 'light',
       dark: 'dark'
     }[config.appearance]
 
