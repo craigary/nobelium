@@ -1,4 +1,5 @@
 import Logo from '@/components/Logo'
+import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 import PageIcon from '@/components/notion/PageIcon'
 import { getSocialLinks } from '@/lib/get-social-links'
 import { getAvailablePages } from '@/lib/notion/get-available-pages'
@@ -49,6 +50,7 @@ const NavContent = async () => {
     <div className="h-full px-4 w-full flex flex-col">
       <div className="py-4">
         <Logo />
+        <ThemeSwitcher />
       </div>
       <Divider />
       <ul className="py-4 space-y-1">
@@ -57,7 +59,7 @@ const NavContent = async () => {
             <Button
               color="primary"
               variant="light"
-              className="justify-start text-black px-2 py-2"
+              className="justify-start text-foreground px-2 py-2"
               fullWidth
               as={Link}
               href={`/${item.slug}`}
@@ -79,10 +81,10 @@ const NavContent = async () => {
               <Button
                 color="primary"
                 variant="light"
-                className="justify-start text-black px-2 py-2"
+                className="justify-start text-foreground px-2 py-2"
                 fullWidth
                 as={Link}
-                href={`/tag/${item}`}
+                href={`/search/${item}`}
               >
                 <IconPoint size="18" stroke="1.5" />
                 {item}
@@ -102,7 +104,7 @@ const NavContent = async () => {
               <Button
                 color="primary"
                 variant="light"
-                className="justify-start text-black px-2 py-2"
+                className="justify-start text-foreground px-2 py-2"
                 fullWidth
                 as={'a'}
                 href={item.link}

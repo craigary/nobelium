@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Providers>
           <main className="relative h-screen flex bg-gray-50">
-            {/* Frosted Glass Effect */}
             <div
               style={{ backgroundSize: '400% 400%' }}
               className="absolute inset-0 z-0 h-full w-full animate-gradient bg-gradient-to-br from-blue-500 via-orange-400 to-purple-500"

@@ -8,7 +8,6 @@ const config = {
   timezone: 'Asia/Shanghai', // Your Notion posts' date will be interpreted as this timezone. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
-
   blogListPage: {
     showPagination: true,
     showDescription: true,
@@ -21,8 +20,12 @@ const config = {
     pageSize: 7
   },
 
-  //
   homePage: '031055d41da74f11996d92f491a21f7a',
+
+  images: {
+    useWordpressCDN: true,
+    useBlurredPlaceholder: false // You Must Specify UPSTASH_REDIS_REST_TOKEN and UPSTASH_REDIS_REST_URL in Environment variables
+  },
 
   socialLinks: [
     {

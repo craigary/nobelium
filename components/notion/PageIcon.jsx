@@ -12,7 +12,13 @@ const PageIcon = async ({ type, data, size }) => {
       return <Icon size={size} stroke="1.5" />
     case 'notion-icon':
       return (
-        <Image src={data} height={size} width={size} alt="" className="grayscale brightness-0" />
+        <Image
+          src={data}
+          height={size}
+          width={size}
+          alt=""
+          className="grayscale brightness-0 dark:brightness-[30]"
+        />
       )
     case 'image':
       return <ImageIcon size={size} src={data} />

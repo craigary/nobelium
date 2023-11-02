@@ -1,4 +1,6 @@
+import Heading from '@/components/Headings'
 import { generatePaginationParams, getAvailablePosts } from '@/lib/notion/get-available-posts'
+import { getDatabaseDescription } from '@/lib/notion/get-database-description'
 import config from '@/nobelium.config'
 import { redirect } from 'next/navigation'
 
@@ -27,8 +29,11 @@ const BlogListPage = async ({ params }) => {
     postsToShow = posts
   }
 
+  const description = await getDatabaseDescription()
+
   return (
     <div>
+      <Heading title="Blog">{description} </Heading>
       <ul>
         {postsToShow.map(post => (
           <li key={post.id}>{post.title}</li>
