@@ -1,36 +1,45 @@
-import { config } from './lib/server/config'
-import { FONTS_SANS, FONTS_SERIF } from './consts'
+/** @type {import('tailwindcss').Config} */
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default {
-  content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
-  darkMode: 'class',
+import { nextui } from '@nextui-org/react'
+
+module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
+  ],
   theme: {
     extend: {
-      colors: {
-        day: {
-          DEFAULT: config.lightBackground || '#ffffff'
-        },
-        night: {
-          DEFAULT: config.darkBackground || '#111827'
-        }
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
-      fontFamily: {
-        sans: FONTS_SANS,
-        serif: FONTS_SERIF,
-        noEmoji: [
-          '"IBM Plex Sans"',
-          'ui-sans-serif',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'sans-serif'
-        ]
+      animation: {
+        'slide-in': 'slide-in 0.3s forwards'
+      },
+      keyframes: {
+        'slide-in': {
+          '0%': {
+            transform: 'translateX(-100%)'
+          },
+          '100%': {
+            transform: 'translateX(0%)'
+          }
+        }
       }
     }
   },
-  variants: {
-    extend: {}
-  },
-  plugins: []
+  darkMode: 'class',
+  plugins: [
+    nextui({
+      layout: {
+        radius: {
+          small: '2px', // rounded-small
+          medium: '4px', // rounded-medium
+          large: '8px' // rounded-large
+        }
+      }
+    })
+  ]
 }

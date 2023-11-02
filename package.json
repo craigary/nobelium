@@ -1,60 +1,32 @@
 {
-  "name": "nobelium",
-  "version": "1.3.0",
-  "homepage": "https://nobelium.js.org",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/craigary/nobelium.git"
-  },
-  "author": {
-    "name": "Craig Hart",
-    "email": "i@craigary.net",
-    "url": "http://craigary.net"
-  },
+  "name": "nobelium-next",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap --config next-sitemap.config.js"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "axios": "^1.3.4",
-    "classnames": "^2.3.2",
-    "dayjs": "^1.11.7",
-    "feed": "^4.2.2",
-    "gitalk": "^1.7.2",
-    "mermaid": "^10.0.2",
-    "next": "^13.2.4",
+    "@nextui-org/react": "^2.1.13",
+    "@tabler/icons-react": "^2.40.0",
+    "framer-motion": "^10.16.4",
+    "next": "14.0.1",
+    "next-themes": "^0.2.1",
     "notion-client": "^6.16.0",
     "notion-utils": "^6.16.0",
-    "preact": "^10.5.15",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-cusdis": "^2.1.3",
-    "react-dom": "^18.2.0",
-    "react-notion-x": "^6.16.0",
-    "react-tweet-embed": "^2.0.0",
-    "react-use": "^17.4.0",
-    "use-ackee": "^3.0.1"
+    "react": "^18",
+    "react-dom": "^18",
+    "react-modern-drawer": "^1.2.2",
+    "react-notion-x": "^6.16.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.36.0",
-    "eslint-config-next": "^13.2.4",
-    "next-sitemap": "^4.0.5",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.1"
-  },
-  "bugs": {
-    "url": "https://github.com/craigary/nobelium/issues",
-    "email": "i@craigary.net"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "react-notion-x@6.16.0": "patches/react-notion-x@6.16.0.patch",
-      "notion-utils@6.16.0": "patches/notion-utils@6.16.0.patch"
-    }
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
   }
 }
