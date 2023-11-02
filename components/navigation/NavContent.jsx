@@ -1,10 +1,11 @@
-import Logo from '@/components/basic/Logo'
+import Logo from '@/components/Logo'
+import PageIcon from '@/components/notion/PageIcon'
 import { getSocialLinks } from '@/lib/get-social-links'
 import { getAvailablePages } from '@/lib/notion/get-available-pages'
 import { getAvailableTags } from '@/lib/notion/get-available-tags'
 import config from '@/nobelium.config'
 import { Button, Divider } from '@nextui-org/react'
-import { IconPoint } from '@tabler/icons-react'
+import { IconHome, IconPoint, IconSignature } from '@tabler/icons-react'
 import Link from 'next/link'
 import { idToUuid } from 'notion-utils'
 
@@ -19,7 +20,11 @@ const NavContent = async () => {
       pages.push({
         id: 'blog',
         slug: 'blog',
-        title: 'Blog'
+        title: 'Blog',
+        icon: {
+          type: 'component',
+          data: IconSignature
+        }
       })
       pages.unshift(targetPage)
       pages.push(...data.filter(item => item.id !== homePageUUID))
@@ -29,6 +34,10 @@ const NavContent = async () => {
     pages.unshift({
       id: 'home',
       slug: '',
+      icon: {
+        type: 'component',
+        data: IconHome
+      },
       title: 'Home'
     })
   }
@@ -53,17 +62,7 @@ const NavContent = async () => {
               as={Link}
               href={`/${item.slug}`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 64 64"
-                className="h-[18px] w-[18px] grayscale brightness-0"
-              >
-                <defs fill="#A6A299" />
-                <path
-                  d="m51.76,36l-16.76-16.76v36.76h-6V19.24l-16.76,16.76-4.24-4.24L32,7.76l24,24-4.24,4.24Z"
-                  fill="#A6A299"
-                />
-              </svg>
+              <PageIcon type={item.icon.type} data={item.icon.data} size={18} />
               {item.title}
             </Button>
           </li>

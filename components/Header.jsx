@@ -1,6 +1,6 @@
 'use client'
 
-import Logo from '@/components/basic/Logo'
+import Logo from '@/components/Logo'
 import { Button } from '@nextui-org/react'
 import { IconMenu2 } from '@tabler/icons-react'
 import { useState } from 'react'
