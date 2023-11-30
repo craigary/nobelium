@@ -60,10 +60,15 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
   - `NOTION_PAGE_ID` (Required): The ID of the Notion page you previously shared to the web, usually has 32 digits after your workspace address
   - `NOTION_ACCESS_TOKEN` (Optional, not recommended): If you decide not to share your database, you can use token to let Nobelium grab data from Notion database. You can find it in your browser cookies called `token_v2`
     - Keep in mind Notion token is only valid for 180 days, make sure to update manually in vercel dashboard, we probably switch to Official API to resolve this issue in the future. Also, images in Notion database will not properly rendered
+- (Another Option) 
 - **That's it!** Easy-peasy?
 
 <details><summary>Wait for a sec, what is Page ID？</summary>
   <img src="https://github.com/craigary/nobelium/blob/main/pageid.png?raw=true">
+</details>
+
+<details><summary>Deploy on Zeabur</summary>
+  <a href="https://zeabur.com/templates/GK4ABU"><img src="https://zeabur.com/button.svg" alt="Deploy on Zeabur"/></a>
 </details>
 
 ## Play With Docker
