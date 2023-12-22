@@ -4,6 +4,17 @@ import Image from 'next/image'
 import { useConfig } from '@/lib/config'
 import { useLocale } from '@/lib/locale'
 import useTheme from '@/lib/theme'
+import { FaSun, FaMoon } from 'react-icons/fa';
+
+const ThemeChangeIcon = () => {
+  const { dark, toggleTheme } = useTheme();
+
+  return (
+    <div className="ml-4 cursor-pointer" onClick={toggleTheme}>
+      {dark ? <FaSun size={20} color='white'/> : <FaMoon size={20} />} {/* İkonları kullanın */}
+    </div>
+  );
+};
 
 const NavBar = () => {
   const BLOG = useConfig()
@@ -120,6 +131,7 @@ export default function Header ({ navBarTitle, fullWidth }) {
           />
         </div>
         <NavBar />
+        <ThemeChangeIcon />
       </div>
     </>
   )
