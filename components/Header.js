@@ -39,6 +39,7 @@ const NavBar = () => {
               </li>
             )
         )}
+        <ThemeChangeIcon />
       </ul>
     </div>
   )
@@ -131,7 +132,6 @@ export default function Header ({ navBarTitle, fullWidth }) {
           />
         </div>
         <NavBar />
-        <ThemeChangeIcon />
       </div>
     </>
   )
