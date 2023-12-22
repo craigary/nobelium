@@ -1,0 +1,21 @@
+{
+  "NAV": {
+    "INDEX": "Blog",
+    "RSS": "RSS",
+    "SEARCH": "Arama",
+    "ABOUT": "Hakkımda"
+  },
+  "PAGINATION": {
+    "PREV": "Önceki",
+    "NEXT": "Sonraki"
+  },
+  "POST": {
+    "BACK": "Geri",
+    "TOP": "Yukarı"
+  },
+  "PAGE": {
+    "ERROR_404": {
+      "MESSAGE": "Burada birşey yok"
+    }
+  }
+}
