@@ -41,7 +41,7 @@ const BLOG = {
     provider: 'gitalk', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
       repo: 'aydevblog-comments', // The repository of store comments
-      owner: 'aliyorulmazdev',
+      owner: [aliyorulmazdev],
       admin: [aliyorulmazdev],
       clientID: '3b5f2601d3760f0b9f3b',
       clientSecret: '9ac0e659cee17e202436727c5ccd574d2d90d662',
