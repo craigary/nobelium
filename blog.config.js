@@ -38,11 +38,11 @@ const BLOG = {
   },
   comment: {
     // support provider: gitalk, utterances, cusdis
-    provider: 'gitalk', // leave it empty if you don't need any comment plugin
+    provider: '', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
       repo: 'aydevblog-comments', // The repository of store comments
       owner: '',
-      admin: [aliyorulmazdev],
+      admin: [],
       clientID: '3b5f2601d3760f0b9f3b',
       clientSecret: '9ac0e659cee17e202436727c5ccd574d2d90d662',
       distractionFreeMode: false
