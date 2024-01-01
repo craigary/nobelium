@@ -24,7 +24,7 @@ const NavBar = () => {
                 key={link.id}
                 className="block ml-4 text-black dark:text-gray-50 nav"
               >
-                <Link href={link.to}>{link.name}</Link>
+                <Link href={link.to} target={link.external ? '_blank' : null}>{link.name}</Link>
               </li>
             )
         )}
@@ -139,7 +139,7 @@ const HeaderName = forwardRef(function HeaderName(
   return (
     <p
       ref={ref}
-      className="header-name ml-2 font-medium text-gray-600 dark:text-gray-300 capture-pointer-events grid-rows-1 grid-cols-1"
+      className="header-name ml-2 font-medium text-gray-600 dark:text-gray-300 capture-pointer-events grid-rows-1 grid-cols-1 items-center"
       onClick={onClick}
     >
       {postTitle && (

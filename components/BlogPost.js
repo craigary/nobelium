@@ -1,9 +1,9 @@
-import Link from 'next/link'
-import { useConfig } from '@/lib/config'
-import FormattedDate from '@/components/FormattedDate'
+import FormattedDate from "@/components/FormattedDate";
+import { useConfig } from "@/lib/config";
+import Link from "next/link";
 
 const BlogPost = ({ post }) => {
-  const BLOG = useConfig()
+  const BLOG = useConfig();
 
   return (
     <Link href={`${BLOG.path}/${post.slug}`}>
@@ -23,7 +23,7 @@ const BlogPost = ({ post }) => {
         </main>
       </article>
     </Link>
-  )
-}
+  );
+};
 
-export default BlogPost
+export default BlogPost;
