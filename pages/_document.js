@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import BLOG from '@/blog.config'
+import cn from 'classnames'
+import { config } from '@/lib/server/config'
+import tailwind from '@/tailwind.config'
 import CJK from '@/lib/cjk'
 class MyDocument extends Document {
   static async getInitialProps (ctx) {
@@ -8,13 +10,15 @@ class MyDocument extends Document {
   }
 
   render () {
+    const initialColorScheme = {
+      auto: 'color-scheme-unset',
+      dark: 'dark'
+    }[config.appearance]
+
     return (
-      <Html
-        lang={BLOG.lang}
-        className={BLOG.appearance === 'dark' ? 'dark' : undefined}
-      >
+      <Html lang={config.lang} className={cn(initialColorScheme)}>
         <Head>
-          {BLOG.font && BLOG.font === 'serif'
+          {config.font && config.font === 'serif'
             ? (
             <>
               <link
@@ -53,7 +57,7 @@ class MyDocument extends Document {
               )}
 
           {['zh', 'ja', 'ko'].includes(
-            BLOG.lang.slice(0, 2).toLocaleLowerCase()
+            config.lang.slice(0, 2).toLocaleLowerCase()
           ) && (
             <>
               <link
@@ -65,40 +69,52 @@ class MyDocument extends Document {
                 rel="preload"
                 as="style"
                 href={`https://fonts.googleapis.com/css2?family=Noto+${
-                  BLOG.font === 'serif' ? 'Serif' : 'Sans'
+                  config.font === 'serif' ? 'Serif' : 'Sans'
                 }+${CJK()}:wght@400;500;700&display=swap`}
               />
               <link
                 rel="stylesheet"
                 href={`https://fonts.googleapis.com/css2?family=Noto+${
-                  BLOG.font === 'serif' ? 'Serif' : 'Sans'
+                  config.font === 'serif' ? 'Serif' : 'Sans'
                 }+${CJK()}:wght@400;500;700&display=swap`}
               />
               <noscript>
                 <link
                   rel="stylesheet"
                   href={`https://fonts.googleapis.com/css2?family=Noto+${
-                    BLOG.font === 'serif' ? 'Serif' : 'Sans'
+                    config.font === 'serif' ? 'Serif' : 'Sans'
                   }+${CJK()}:wght@400;500;700&display=swap`}
                 />
               </noscript>
             </>
           )}
-          <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png"></link>
+          <link rel="icon" href="/favicon.png" />
           <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed"></link>
-          {BLOG.appearance === 'auto'
+          {config.appearance === 'auto'
             ? (
             <>
-            <meta name="theme-color" content={BLOG.lightBackground} media="(prefers-color-scheme: light)"/>
-            <meta name="theme-color" content={BLOG.darkBackground} media="(prefers-color-scheme: dark)"/>
+            <meta name="theme-color" content={config.lightBackground} media="(prefers-color-scheme: light)"/>
+            <meta name="theme-color" content={config.darkBackground} media="(prefers-color-scheme: dark)"/>
             </>
               )
             : (
-            <meta name="theme-color" content={BLOG.appearance === 'dark' ? BLOG.darkBackground : BLOG.lightBackground} />
+            <meta name="theme-color" content={config.appearance === 'dark' ? config.darkBackground : config.lightBackground} />
               )
           }
+          {/* To ensure the initial background color follows media preference when ThemeProvider is
+              not ready */}
+          <style>
+          {`
+            .color-scheme-unset, .color-scheme-unset body {
+              background-color: ${tailwind.theme.extend.colors.day.DEFAULT} !important;
+            }
+            @media (prefers-color-scheme: dark) {
+              .color-scheme-unset, .color-scheme-unset body {
+                background-color: ${tailwind.theme.extend.colors.night.DEFAULT} !important;
+              }
+            }
+          `}
+          </style>
         </Head>
         <body className="bg-day dark:bg-night">
           <Main />

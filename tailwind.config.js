@@ -1,30 +1,23 @@
-const BLOG = require('./blog.config')
-const { fontFamily } = require('tailwindcss/defaultTheme')
-const CJK = require('./lib/cjk')
-const fontSansCJK = !CJK()
-  ? []
-  : [`"Noto Sans CJK ${CJK()}"`, `"Noto Sans ${CJK()}"`]
-const fontSerifCJK = !CJK()
-  ? []
-  : [`"Noto Serif CJK ${CJK()}"`, `"Noto Serif ${CJK()}"`]
+import { config } from './lib/server/config'
+import { FONTS_SANS, FONTS_SERIF } from './consts'
 
-module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
-  darkMode: BLOG.appearance === 'auto' ? 'media' : 'class', // or 'media' or 'class'
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+  content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         day: {
-          DEFAULT: BLOG.lightBackground || '#ffffff'
+          DEFAULT: config.lightBackground || '#ffffff'
         },
         night: {
-          DEFAULT: BLOG.darkBackground || '#111827'
+          DEFAULT: config.darkBackground || '#111827'
         }
       },
       fontFamily: {
-        sans: ['"IBM Plex Sans"', ...fontFamily.sans, ...fontSansCJK],
-        serif: ['"Source Serif"', ...fontFamily.serif, ...fontSerifCJK],
+        sans: FONTS_SANS,
+        serif: FONTS_SERIF,
         noEmoji: [
           '"IBM Plex Sans"',
           'ui-sans-serif',
