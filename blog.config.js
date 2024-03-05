@@ -1,7 +1,7 @@
 const BLOG = {
   title: 'Ethanyi\'s Blog',
-  author: 'Craig Hart',
-  email: 'i@craigary.net',
+  author: 'Ethanyi',
+  email: 'ethanyi930@gmail.com',
   link: 'https://nobelium.vercel.app',
   description: 'This gonna be an awesome website.',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
