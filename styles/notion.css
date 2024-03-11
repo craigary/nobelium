@@ -59,7 +59,7 @@
 .notion-quote,
 .notion-h-title {
   @apply p-0;
-  @apply my-3;
+  @apply my-1;
   line-height: var(--no-leading);
 }
 .notion-page-link {
