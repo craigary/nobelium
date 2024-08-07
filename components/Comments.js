@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import cn from 'classnames'
 import { fetchCusdisLang } from '@/lib/cusdisLang'
 import { useConfig } from '@/lib/config'
+import Giscus from '@giscus/react';
 
 const GitalkComponent = dynamic(
   () => {
@@ -53,6 +54,23 @@ const Comments = ({ frontMatter }) => {
       )}
       {BLOG.comment && BLOG.comment.provider === 'utterances' && (
         <UtterancesComponent issueTerm={frontMatter.id} />
+      )}
+      {BLOG.comment && BLOG.comment.provider === 'giscus' && (
+        <Giscus
+          id="comments"
+          repo={BLOG.comment.giscusConfig.repo} 
+          repoId={BLOG.comment.giscusConfig.repoId}
+          category={BLOG.comment.giscusConfig.category}
+          categoryId={BLOG.comment.giscusConfig.categoryId}
+          mapping={BLOG.comment.giscusConfig.mapping}
+          term="Welcome to @giscus/react component!"
+          reactionsEnabled={BLOG.comment.giscusConfig.reactionsEnabled}
+          emitMetadata="0"
+          inputPosition={BLOG.comment.giscusConfig.inputPosition}
+          theme={BLOG.comment.giscusConfig.theme}
+          lang={BLOG.comment.giscusConfig.lang}
+          loading={BLOG.comment.giscusConfig.loading}
+        />
       )}
       {BLOG.comment && BLOG.comment.provider === 'cusdis' && (
         <CusdisComponent
