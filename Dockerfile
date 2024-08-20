@@ -1,21 +1,18 @@
-ARG NOTION_PAGE_ID = 
-# Install dependencies only when needed
-FROM node:14-alpine AS deps
-# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-RUN apk add --no-cache libc6-compat
+FROM node:21.7.3-alpine AS deps
+RUN apk add --no-cache make gcc g++ python3 pkgconfig pixman-dev cairo-dev pango-dev libjpeg-turbo-dev
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+COPY package.json pnpm-lock.yaml ./
+COPY patches ./patches
+RUN npm add -g pnpm && pnpm install
 
-# Rebuild the source code only when needed
-FROM node:14-alpine AS builder
-ARG NOTION_PAGE_ID
+FROM node:21.7.3-alpine AS builder
+ENV NOTION_PAGE_ID=
 WORKDIR /app
 COPY . .
 COPY --from=deps /app/node_modules ./node_modules
-RUN yarn build
+RUN npm add -g pnpm && pnpm build
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 EXPOSE 3000
 
@@ -24,4 +21,4 @@ EXPOSE 3000
 # Uncomment the following line in case you want to disable telemetry.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-CMD ["yarn", "start"]
+CMD ["pnpm", "start"]
