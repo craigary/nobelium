@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: .
+      args:
+        NOTION_PAGE_ID: your_notion_page_id
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      NOTION_PAGE_ID: your_notion_page_id
