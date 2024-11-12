@@ -52,7 +52,7 @@ Demo: [https://nobelium.vercel.app/](https://nobelium.vercel.app/)
 ## Quick Start
 
 - Star this repo 😉
-- Duplicate [this Notion template](https://craigary.notion.site/ee99f65a23ab44f8ac80270122ee8138), and share it to the public
+- Duplicate [this Notion template](https://craigary.notion.site/13c7c93164878028b544caf2c8851234), and share it to the public
 - [Fork](https://github.com/craigary/nobelium/fork) this project
 - Customize `blog.config.js`
 - _(Optional)_ Replace `favicon.svg`, and `favicon.ico` in `/public` folder with your own
