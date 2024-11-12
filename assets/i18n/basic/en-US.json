@@ -4,7 +4,8 @@
     "RSS": "RSS",
     "SEARCH": "Search",
     "ABOUT": "About",
-    "TAGS": "Tags"
+    "TAGS": "Tags",
+    "LOG": "Log"
   },
   "PAGINATION": {
     "PREV": "Prev",
